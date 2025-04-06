@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="en">
+
+
+<!-- Mirrored from psikosaglikdanismanlik.co/hakkimizda by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Mar 2025 05:31:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hakkımızda | Ensar Deniz Danışmanlık</title>
+    <link rel="canonical" href="index.html"/>
+    <base >
+    <meta name="description" content="Psiko Sağlık Danışmanlık, uzman terapistlerle sağladığı bireysel ve çift terapisiyle psikolojik sağlık hizmetleri sunan önde gelen bir danışmanlık merkezidir. Depresyon, kaygı, ilişki sorunları ve daha fazlası gibi konularda uzmanlaşmış ekibimiz, sizi destekleyerek içsel iyilik halinizi yeniden keşfetmenize yardımcı olur.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.webp">
+
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/sal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/euclid-circulara.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/magnify.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/odometer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/animation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/magnigy-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+    
+    <script src="../static/js/vendor/jquery.js"></script>
+    <script src="../cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../static/js/vue.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+            '../connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1152557622805558');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img loading="lazy" height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1152557622805558&amp;ev=PageView&amp;noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9TWP7FWTJ"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-S9TWP7FWTJ');
+      </script>
+      <!-- Google tag (gtag.js) end -->
+
+  </head>
+
+  <body class="rbt-header-sticky">
+    <div id="app">
+    <header class="rbt-header rbt-header-9">
+        <!-- Header Area -->
+        {% include '../header.html' %}
+
+        <!-- Navbar Area -->
+        {% include '../navbar.html' %}
+    </header>
+
+</header>
+
+<!-- Mobile Menu Section -->
+<div class="popup-mobile-menu">
+    <div class="inner-wrapper">
+        <div class="inner-top">
+            <div class="content">
+                <div class="logo">
+                    <a href="{% url 'core:home' %}" title="Ensar Deniz Danışmanlık">
+                        <img loading="lazy" src="resimler/header-logo.png" alt="Ensar Deniz Danışmanlık">
+                    </a>
+                </div>
+                <div class="rbt-btn-close">
+                    <button class="close-button rbt-round-btn"><i class="feather-x"></i></button>
+                </div>
+            </div>
+            
+            <ul class="navbar-top-left rbt-information-list justify-content-start">
+                                    <li>
+                        <a href="mailto:info@psikosaglikdanismanlik.co" title="Email Adresimiz"><i class="feather-mail"></i>info@psikosaglikdanismanlik.co</a>
+                    </li>
+                                                    <li>
+                        <a href="tel:0850 308 21 53" title="Telefon Numaramız"><i class="feather-phone"></i>0850 308 21 53</a>
+                    </li>
+                            </ul>
+        </div>
+
+        <nav class="mainmenu-nav">
+            <ul class="mainmenu">
+                <li class="position-static">
+                    <a href="{% url 'core:home' %}" title="Ana Sayfa">Ana Sayfa</a>
+                </li>
+
+
+                <li class="has-dropdown has-menu-child-item">
+                    <a href="#" title="Kurumsal">Kurumsal
+                        <i class="feather-chevron-down"></i>
+                    </a>
+                    <ul class="submenu">
+                            <li class=""><a href="hakkimizda.html" title="Hakkımızda">Hakkımızda</a></li>
+                            <li class=""><a href="ekibimiz.html" title="Kadromuz">Kadromuz</a></li>
+                            <li class=""><a href="videolar.html" title="Videolar">Videolar</a></li>
+                            <li class=""><a href="galeri.html" title="Galeri">Galeri</a></li>
+
+                    </ul>
+                </li>
+
+
+                <li class="has-dropdown has-menu-child-item">
+                    <a href="uygulamalar.html" title="Uygulamalar">Uygulamalar
+                        <i class="feather-chevron-down"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li class=""><a href="uygulamalar.html" title="Tüm Uygulamalar">Tüm Uygulamalar</a></li>
+                                                    <li class=""><a href="uygulama/fatih-hoca-ile-yetiskinlik-yolculugu.html" title="Fatih Hoca ile Yetişkinlik Yolculuğu">Fatih Hoca ile Yetişkinlik Yolculuğu</a></li>
+                                                    <li class=""><a href="uygulama/kadinligin-kesfi.html" title="Kadınlığın Keşfi">Kadınlığın Keşfi</a></li>
+                                                    <li class=""><a href="uygulama/kaygiyi-yenme-okulu.html" title="Kaygıyı Yenme Okulu">Kaygıyı Yenme Okulu</a></li>
+                                                    <li class=""><a href="uygulama/kurumsal-egitimler.html" title="Kurumsal Eğitimler">Kurumsal Eğitimler</a></li>
+                                                    <li class=""><a href="uygulama/o-kadin-olmak.html" title="'O' Kadın Olmak">'O' Kadın Olmak</a></li>
+                                            </ul>
+                </li>
+                <li class="position-static">
+                    <a href="seanslar.html" title="Seanslar">Seanslar</a>
+                </li>
+
+
+                <li class="position-static">
+                    <a href="kurumsal-egitimler.html" title="Kurumsal Eğitimler">Kurumsal Eğitimler</a>
+                </li>
+
+                <li class="position-static">
+                    <a href="blog.html" title="Blog">Blog</a>
+                </li>
+
+                <li class="position-static">
+                    <a href="iletisim.html" title="İletişim">İletişim</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="mobile-menu-bottom">
+                            <div class="rbt-btn-wrapper mb--20">
+                    <a class="rbt-btn btn-border-gradient radius-round btn-sm hover-transform-none w-100 justify-content-center text-center" href="giris-yap.html" title="Giriş Yap">
+                        <span>Giriş Yap</span>
+                    </a>
+                </div>
+            
+            <div class="social-share-wrapper">
+                <span class="rbt-short-title d-block">Sosyal Medya Hesaplarımız</span>
+                <ul class="social-icon social-default transparent-with-border justify-content-start mt--20">
+                                       <li>
+                        <a href="https://www.facebook.com/FatihResitCivelekoglu" target="_blank" title="Facebook Adresimiz">
+                            <i class="feather-facebook"></i>
+                        </a>
+                    </li>
+                
+                                    <li>
+                        <a href="https://www.instagram.com/psk.fatihresitcivelekoglu/" target="_blank" title="Instagram Adresimiz">
+                            <i class="feather-instagram"></i>
+                        </a>
+                    </li>
+                
+                                    <li>
+                        <a href="https://twitter.com/fatihresit" target="_blank" title="Twitter Adresimiz">
+                            <i class="feather-twitter"></i>
+                        </a>
+                    </li>
+                
+
+                                    <li>
+                        <a href="https://www.youtube.com/c/PskFatihReşitCivelekoğlu" target="_blank" title="Youtube Adresimiz">
+                            <i class="feather-youtube"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+</div>
+</div>
+<!-- Start Side Vav -->
+<div class="rbt-cart-side-menu">
+    <div class="inner-wrapper">
+        <div class="inner-top">
+            <div class="content">
+                <div class="title">
+                    <h4 class="title mb--0">Liste</h4>
+                </div>
+                <div class="rbt-btn-close" id="btn_sideNavClose">
+                    <button class="minicart-close-button rbt-round-btn"><i class="feather-x"></i></button>
+                </div>
+            </div>
+        </div>
+        <nav class="side-nav w-100">
+            <ul class="rbt-minicart-wrapper">
+
+                <li class="minicart-item" v-for="(item,index) in sepet"  v-if="sepetCount > 0">
+                    <div class="thumbnail">
+                        <a :href="'uygulama/'+item.uygulamaurl" :title="item.uygulamabaslik">
+                            <img loading="lazy" :src="item.uygulamagorsel" :alt="item.uygulamabaslik">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h6 class="title"><a :href="'uygulama/'+item.uygulamaurl" :title="item.uygulamabaslik">{{item.uygulamabaslik}}</a></h6>
+
+                        <span class="quantity" v-if="item.uygulamaindirimlifiyat > 0">{{item.adet}} * <span class="price">{{item.uygulamaindirimlifiyat}}₺</span></span>
+                        <span class="quantity" v-else="item.uygulamafiyat">{{item.adet}} * <span class="price">{{item.uygulamafiyat}}₺</span></span>
+                    </div>
+                    <div class="close-btn">
+                        <button class="rbt-round-btn"  @click="sepetUrunSil(index)" ><i class="feather-x"></i></button>
+                    </div>
+                </li>
+                
+
+                <li class="minicart-item" v-for="(item,index) in seansSepet"  v-if="seansSepetCount > 0">
+                    <div class="thumbnail">
+                        <a :href="'seans/'+item.seansurl" :title="item.seansbaslik">
+                            <img loading="lazy" :src="item.seansgorsel" :alt="item.seansbaslik">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h6 class="title"><a :href="'seans/'+item.seansurl" :title="item.seansbaslik"></a></h6>
+
+                        <span class="quantity" v-if="item.seansindirimlifiyat > 0">{{item.adet}} * <span class="price">{{item.seansindirimlifiyat}}₺</span></span>
+                        <span class="quantity" v-else="item.seansfiyat"><span class="price">{{item.seansfiyat}}₺</span> <br> ({{item.seanspaketbaslik}})</span>
+                    </div>
+                    <div class="close-btn">
+                        <button class="rbt-round-btn"  @click="seansSepetUrunSil(index)" ><i class="feather-x"></i></button>
+                    </div>
+                </li>
+                
+                <li class="minicart-item" v-if="sepetCount <= 0 && seansSepetCount <= 0">
+                    <h5>Listeniz boş.</h5>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="rbt-minicart-footer" v-if="sepetCount > 0 || seansSepetCount > 0">
+            <hr class="mb--0">
+            <div class="rbt-cart-subttotal">
+                <p class="subtotal"><strong>Toplam:</strong></p>
+                <p class="price">{{sepetToplam}}₺</p>
+            </div>
+            <hr class="mb--0">
+            <div class="rbt-minicart-bottom mt--20">
+
+                <div class="checkout-btn mt--20">
+                    <a class="rbt-btn btn-gradient icon-hover w-100 text-center" href="sepet.html" title="Sepet">
+                        <span class="btn-text">Listeyi Görüntüle</span>
+                        <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+<!-- End Side Vav -->
+<a class="close_side_menu" href="javascript:void(0);" title="Menüyü Kapat"></a>
+
+
+<div class="rbt-breadcrumb-default ptb--50 ptb_md--50 ptb_sm--30 bg-gradient-1">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="breadcrumb-inner text-center">
+					<h2 class="title">{% trans "Hakkımızda" %}</h2>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Breadcrumb Area -->
+
+<div class="rbt-about-area about-style-1 bg-color-white rbt-section-gap">
+	<div class="container">
+		<div class="row g-5 align-items-center">
+			<div class="col-lg-6">
+				<div class="thumbnail-wrapper">
+					<div class="thumbnail d-none d-md-block" style="width: 100%;">
+						<img src="resimler/hakkimizda.webp" alt="Ensar Deniz Danışmanlık " style="width: 98%;">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="inner">
+					<div class="section-title text-start">
+						<span class="subtitle bg-coral-opacity">Kurucumuz</span>
+						<h2 class="title">Ensar DENİZ</h2>
+					</div>
+					<p class="description mt--30">{% blocktrans %}Psikolji alanındaki eğitimime ilk olarak Bursa'da başladım. Lisansımı Bursa Uludağ Üniversitesi Psikoloji bölümü'nde tamamladıktan sonra, Texas, A.B.D'de  Midwestern State Üniversitesi'nde klinik psikoloji alanında yüksek lisansımı yaparak psikoloji alanındaki eğitimime devam ettim. Eğitim sürecim boyunca çeşitli bozukluklar, yaş grupları ve kültürel geçmişlere sahip bireylerle çalışarak kapsamlı bir deneyim kazandım. Klinik psikoloji alanında yüzlerce saatlik doğrudan ve dolaylı danışan görüşmesi gerçekleştirdim. Bu süreç, bana psikolojik testler uygulama, bireysel terapi süreçleri yürütme ve farklı terapi yaklaşımlarını kullanma konusunda derinlemesine bir bilgi kazandırdı. Zeka, akademik başarı ve bunama gibi çeşitli alanlarda psikolojik testler uygulama tecrübem bulunmakta.{% endblocktrans %}
+                    </p>
+
+					<p class="description mt--30">{% blocktrans %}Klinik psikolog olarak amacım, bireylerin psikolojik sağlıklarını iyileştirmek ve onların yaşam kalitelerini artırmaktır. Çeşitli psikolojik bozukluklar, travmalar, kaygı, depresyon gibi durumlarla başa çıkmalarına yardımcı olmak için kişiselleştirilmiş bir yaklaşım sunuyorum. Farklı yaş grupları ve etnik kökenlerden gelen danışanlarla çalışarak, her bireyin benzersiz bir deneyime sahip olduğunu ve tedavi sürecinin buna göre şekillendirilmesi gerektiğini biliyorum. Bu doğrultuda, her bir danışanın ihtiyaçlarına özel terapi planları oluşturarak, onların hem duygusal hem de psikolojik sağlıklarını iyileştirmeyi hedefliyorum.{% endblocktrans %}
+                    </p>
+
+					<p class="description mt--30">{% blocktrans %}Chicago School of Psychology'den aldığım bütüncül psikoloji eğitimi ve farklı kurumlardan almış olduğum diğer eğitimleri., bana psikolojik destek sağlama ve kişisel gelişim süreçlerinde danışanlarıma daha etkili bir şekilde rehberlik etme konusunda derin bir bakış açısı kazandırdı. Bir uzman klinik psikolog olarak, insanın zihin sağlığını güçlendirmek, bireylerin potansiyellerini keşfetmelerine yardımcı olmak ve yaşamlarına anlam katmak en büyük hedefimdir.{% endblocktrans %}</p>
+
+				</div>
+			</div>
+			<!-- <div class="col-md-12">
+				<p class="description">Aynı zamanda Ankara’da Arifan Radyo’da 15 yıl süren radyo programcılığı serüvenine başlamıştı. Psikoloji alanında Türkiye’nin en uzun soluklu radyo programcısı olan Civelekoğlu, Dost FM ve Hedef Radyo’da da programlar yaparak binlerce dinleyicinin çözüm kapısı oldu.</p>
+
+				<p class="description mt--30">NLP(Neuro Linguistic Programming), Hipnoz, Rasyonel Emotif Terapi , Gestalt Terapisi, Bilişsel ve Davranışsal Terapi gibi birçok alanda çalışmalar yaptı. Doğunun hikmetiyle batının bilgeliğini ustalıkla harmanlayan ve kendine ait bir tarz oluşturarak “Psikoterapide esas, uzmanın kullandığı yöntemden çok, danışan ve terapist ilişkisinin sağlıklı olmasıdır.” ilkesinden yola çıkarak en ümitsiz gibi görünen sorunlar için bile danışanlarının hayat yolunda karşılaştıkları sorunlara çareler bulmaları sürecinde yol göstericisi ve yoldaşı oldu.</p>
+
+				<p class="description mt--30">Bu esnada Civelekoğlu’nun ilk kitabı Bebeklikten Ergenliğe Başarılı, Mutlu, Huzurlu Kız Çocuğu Nasıl Yetiştirilir binlerce okura ulaşmış, ilgi gören bu eserinin ardından Pireyi Nasıl Deve Yapıyoruz? isimli ikinci kitabı yayımlanmıştır. Eşzamanlı olarak Hilal TV’de iki sezon boyunca Çözüm Kapısı isimli TV programını ve Akra FM’de Farkındalık Atölyesi isimli programı hazırlayıp sunan yazarın üçüncü kitabı Fabrika Ayarlarımıza Dönüyoruz da önceki kitapları gibi birçok derde ilaç olmuştur. Dost TV, TV5 ve Habertürk TV’de de programlara katılmıştır.</p>
+
+				<p class="description mt--30">Moral Dünyası başta olmak üzere çok sayıda dergide yazıları yayımlanan Civelekoğlu bireysel, aile ve çocuk alanlarında psikoterapist olarak çalışmanın yanı sıra, eğitimlerine, konferanslarına ve atölyelerine devam etmektedir. Türk Psikologları Derneği (TPD), INLPTA (Uluslararası NLP Eğitmenleri Derneği) ve Avrupa Hipnoz Birliği(EIMIH) üyesidir. Uzun bir aradan sonra akademik çalışmaya geri dönmüş ve Üsküdar Üniversitesi, Klinik Psikoloji Bölümü’nde “Engelli Çocukların Kardeşlerinin Psikolojik Durumu” konulu teziyle yüksek lisansını tamamlamıştır.</p>
+
+				<p class="description mt--30">Öğretmen Şenay Civelekoğlu’nun eşi; Uzman Psikolog Elif Civelekoğlu, lise öğrencisi Mehmet Emre ve Melek Sendromlu İbrahim’in babasıdır.</p>
+			</div> -->
+		</div>
+	</div>
+</div>
+
+
+<!-- Start Footer aera -->
+{% include '../footer.html' %}
+<!-- End Footer aera -->
+
+<div class="rbt-progress-parent">
+    <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+</div>
+    <div class="whatsapp hidden-sm" id="scroll-to-top2">
+        <a href="https://wa.me/05367169453" target="_blank"
+            title="Whatsapp İletişim Hattı"><img loading="lazy" src="/static/whatsapp.png"></a>
+    </div>
+    <div class="whatsapp hidden-sm" id="scroll-to-top2">
+        <a class=""
+            href="https://api.whatsapp.com/send?phone=05367169453&amp;text=Merhaba%20bilgi%20almak%20%C4%B0stiyorum&amp;source=&amp;data="
+            title="Whatsapp İletişim Hattı" target="_blank">
+            <img loading="lazy" src="/static/whatsapp.png">
+        </a>
+    </div>
+</div>
+
+<!-- <script src="../static/js/custom.js"></script>-->
+
+<script src="../static/js/customd8a8.js?v=20250313"></script>
+
+
+
+
+
+<!-- JS
+        ============================================ -->
+<!-- Modernizer JS -->
+<script src="../static/js/vendor/modernizr.min.js"></script>
+
+<!-- Bootstrap JS -->
+<!-- sal.js -->
+<script src="../static/js/vendor/sal.js"></script>
+<script src="../static/js/vendor/swiper.js"></script>
+<script src="../static/js/vendor/magnify.min.js"></script>
+<script src="../static/js/vendor/jquery-appear.js"></script>
+<script src="../static/js/vendor/odometer.js"></script>
+<script src="../static/js/vendor/backtotop.js"></script>
+<script src="../static/js/vendor/isotop.js"></script>
+<script src="../static/js/vendor/imageloaded.js"></script>
+
+<script src="../static/js/vendor/wow.js"></script>
+<script src="../static/js/vendor/waypoint.min.js"></script>
+<script src="../static/js/vendor/easypie.js"></script>
+<script src="../static/js/vendor/text-type.js"></script>
+<script src="../static/js/vendor/jquery-one-page-nav.js"></script>
+<script src="../static/js/vendor/bootstrap-select.min.js"></script>
+<script src="../static/js/vendor/jquery-ui.js"></script>
+<script src="../static/js/vendor/magnify-popup.min.js"></script>
+<script src="../static/js/vendor/paralax-scroll.js"></script>
+<script src="../static/js/vendor/paralax.min.js"></script>
+<script src="../static/js/vendor/countdown.js"></script>
+<!-- Main JS -->
+<script src="../static/js/main.js"></script>
+
+</body>
+
+
+<!-- Mirrored from psikosaglikdanismanlik.co/hakkimizda by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Mar 2025 05:31:06 GMT -->
+</html>

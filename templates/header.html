@@ -1,0 +1,64 @@
+{% load i18n %}
+<header class="rbt-header rbt-header-9 border-bottom py-2">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+            <!-- Logo veya Site İsmi -->
+            <div class="d-flex align-items-center mb-2 mb-md-0">
+                <a href="{% url 'core:home' %}" class="navbar-brand fw-bold fs-4 text-primary">
+                    <!-- Logo görseli varsa buraya ekleyebilirsin -->
+                    Psikolog
+                </a>
+            </div>
+
+            <!-- Sosyal Medya + Dil Seçimi -->
+            <div class="d-flex align-items-center gap-3 mb-2 mb-md-0">
+
+                <!-- Sosyal Medya -->
+                <div class="d-flex gap-2">
+                    <a href="https://www.instagram.com/psk.fatihresitcivelekoglu/" target="_blank" class="text-dark">
+                        <i class="feather-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/psk.fatihresitcivelekoglu/" target="_blank" class="text-dark">
+                        <i class="feather-linkedin"></i>
+                    </a>
+                </div>
+
+                <!-- Dil Seçimi -->
+                <form action="{% url 'set_language' %}" method="post" class="d-flex gap-1">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ redirect_to }}">
+                    <button type="submit" name="language" value="tr"
+                        class="btn btn-sm {% if LANGUAGE_CODE == 'tr' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                        TR
+                    </button>
+                    <button type="submit" name="language" value="en"
+                        class="btn btn-sm {% if LANGUAGE_CODE == 'en' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                        EN
+                    </button>
+                </form>
+            </div>
+
+            <!-- Kullanıcı Giriş/Çıkış -->
+            <div class="d-flex align-items-center gap-3">
+                {% if user.is_authenticated %}
+                    <div class="dropdown">
+                        <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="feather-user"></i> {{ user.name }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Profilim</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="{% url 'users:logout' %}">Çıkış Yap</a></li>
+                        </ul>
+                    </div>
+                {% else %}
+                    <a href="{% url 'users:login' %}" class="btn btn-outline-primary">
+                        <i class="feather-user"></i> Giriş Yap
+                    </a>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+</header>

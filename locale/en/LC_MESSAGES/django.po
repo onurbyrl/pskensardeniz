@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-06 09:08+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Türkçe"
+msgstr "Turkish"
+
+msgid "English"
+msgstr "English"
+
+#: .\templates\pages\hakkimizda.html:318
+msgid ""
+"Psikolji alanındaki eğitimime ilk olarak Bursa'da başladım. Lisansımı Bursa "
+"Uludağ Üniversitesi Psikoloji bölümü'nde tamamladıktan sonra, Texas, "
+"A.B.D'de  Midwestern State Üniversitesi'nde klinik psikoloji alanında yüksek "
+"lisansımı yaparak psikoloji alanındaki eğitimime devam ettim. Eğitim sürecim "
+"boyunca çeşitli bozukluklar, yaş grupları ve kültürel geçmişlere sahip "
+"bireylerle çalışarak kapsamlı bir deneyim kazandım. Klinik psikoloji "
+"alanında yüzlerce saatlik doğrudan ve dolaylı danışan görüşmesi "
+"gerçekleştirdim. Bu süreç, bana psikolojik testler uygulama, bireysel terapi "
+"süreçleri yürütme ve farklı terapi yaklaşımlarını kullanma konusunda "
+"derinlemesine bir bilgi kazandırdı. Zeka, akademik başarı ve bunama gibi "
+"çeşitli alanlarda psikolojik testler uygulama tecrübem bulunmakta."
+msgstr ""
+"I began my education in psychology in Bursa. After completing my undergraduate "
+"degree in Psychology at Bursa Uludağ University, I continued my studies in the "
+"field by earning a master’s degree in Clinical Psychology at Midwestern State "
+"University in Texas, USA. Throughout my academic journey, I gained extensive "
+"experience working with individuals from various age groups, disorders, and "
+"cultural backgrounds. I conducted hundreds of hours of both direct and indirect "
+"client sessions in the field of clinical psychology. This experience provided me "
+"with in-depth knowledge in administering psychological tests, conducting "
+"individual therapy sessions, and utilizing different therapeutic approaches. I "
+"have experience administering psychological assessments in areas such as "
+"intelligence, academic performance, and dementia."
+
+#: .\templates\pages\hakkimizda.html:321
+msgid ""
+"Klinik psikolog olarak amacım, bireylerin psikolojik sağlıklarını "
+"iyileştirmek ve onların yaşam kalitelerini artırmaktır. Çeşitli psikolojik "
+"bozukluklar, travmalar, kaygı, depresyon gibi durumlarla başa çıkmalarına "
+"yardımcı olmak için kişiselleştirilmiş bir yaklaşım sunuyorum. Farklı yaş "
+"grupları ve etnik kökenlerden gelen danışanlarla çalışarak, her bireyin "
+"benzersiz bir deneyime sahip olduğunu ve tedavi sürecinin buna göre "
+"şekillendirilmesi gerektiğini biliyorum. Bu doğrultuda, her bir danışanın "
+"ihtiyaçlarına özel terapi planları oluşturarak, onların hem duygusal hem de "
+"psikolojik sağlıklarını iyileştirmeyi hedefliyorum."
+msgstr ""
+"As a clinical psychologist, my goal is to improve individuals’ mental health "
+"and enhance their quality of life. I provide a personalized approach to help "
+"them cope with various psychological disorders, trauma, anxiety, and depression. "
+"By working with clients from diverse age groups and ethnic backgrounds, I "
+"recognize that each individual has a unique experience and that treatment "
+"should be tailored accordingly. With this in mind, I create therapy plans "
+"designed specifically for each client's needs, aiming to support both their "
+"emotional and psychological well-being."
+
+#: .\templates\pages\hakkimizda.html:324
+msgid ""
+"Chicago School of Psychology'den aldığım bütüncül psikoloji eğitimi ve "
+"farklı kurumlardan almış olduğum diğer eğitimleri., bana psikolojik destek "
+"sağlama ve kişisel gelişim süreçlerinde danışanlarıma daha etkili bir "
+"şekilde rehberlik etme konusunda derin bir bakış açısı kazandırdı. Bir uzman "
+"klinik psikolog olarak, insanın zihin sağlığını güçlendirmek, bireylerin "
+"potansiyellerini keşfetmelerine yardımcı olmak ve yaşamlarına anlam katmak "
+"en büyük hedefimdir."
+msgstr ""
+"The integrative psychology education I received from the Chicago School of "
+"Psychology and the additional trainings I completed at various institutions "
+"have given me a profound perspective in providing psychological support and "
+"guiding my clients more effectively in their personal development processes. "
+"As a specialist clinical psychologist, my greatest goal is to strengthen mental "
+"health, help individuals discover their potential, and add meaning to their lives."
+
+msgid "Her biri alanında uzman klinik psikologlardan oluşan kadromuz ile;\n                            ergen, yetişkin, çift ve ailelere yönelik psikoterapi hizmeti verilmektedir."
+msgstr "With our team of expert clinical psychologists; psychotherapy services are provided for adolescents, adults, couples, and families."
+
+msgid "İletişime Geç"
+msgstr "Contact Us"
+
+msgid "Uygulamalar"
+msgstr "Applications"
+
+msgid "Hakkımızda"
+msgstr "About Us"
+
+msgid "İlkelerimiz"
+msgstr "Our Principles"
+
+msgid "Randevu"
+msgstr "Appointment"
+
+msgid "Hizmet Sözleşmesi"
+msgstr "Service Agreement"
+
+msgid "Online Danışmanlık Onam Formu"
+msgstr "Online Counseling Consent Form"
+
+msgid "İletişim"
+msgstr "Contact"
+
+msgid "Ana Sayfa"
+msgstr "Home"
+
+msgid "Kurumsal"
+msgstr "Corporate"
+
+msgid "Randevu Al"
+msgstr "Make an Appointment"
+
+#: .\templates\pages\ilkelerimiz.html:199
+msgid ""
+" İlkelerimiz, her danışanın benzersiz olduğunu ve terapi sürecinin bu "
+"farklılıklara saygı göstererek şekillenmesi gerektiğini kabul eder. "
+"Terapimizin temeli, danışanın bireysel ihtiyaçlarına göre esnek bir şekilde "
+"ilerlemek ve her adımda zarar vermemek, aksine fayda sağlamak üzerine "
+"kuruludur. Her bireyin yaşadığı duygusal ve psikolojik zorluklar farklı "
+"olduğundan, kişiye özel yaklaşımlar geliştirerek danışanın kendini daha iyi "
+"hissetmesine ve hedeflerine ulaşmasına yardımcı olmayı amaçlıyoruz. Bu "
+"süreçte, danışanın güvenliğini ve iyileşmesini her şeyin önünde tutuyoruz. "
+msgstr ""
+" Our principles recognize that each client is unique and that the therapy "
+"process should be shaped with respect for these differences. The foundation "
+"of our therapy is built on progressing flexibly according to the individual "
+"needs of the client, and on ensuring that every step is not harmful but "
+"rather beneficial. Since each person experiences emotional and psychological "
+"challenges differently, we aim to develop personalized approaches that help "
+"clients feel better and achieve their goals. Throughout this process, we "
+"prioritize the client’s safety and healing above all else. "
+
+#: .\templates\pages\ilkelerimiz.html:202
+msgid ""
+" Ayrıca, kültürel duyarlılığı ve çeşitliliği her zaman göz önünde "
+"bulundurarak, terapi sürecini her bireyin sosyal ve kültürel bağlamını "
+"dikkate alarak yürütüyoruz. Danışanlarımızın yaşam kalitesini artırmak, "
+"onlara psikolojik ve duygusal anlamda gerekli desteği sağlamak, "
+"ilkelerimizin en temel amacıdır. Terapinin, danışanın yaşamına anlam katması "
+"ve psikolojik sağlığını güçlendirmesi gerektiğini düşünüyoruz. Bu "
+"doğrultuda, her adımda onların gelişimlerine katkı sağlamayı hedefliyoruz. "
+msgstr ""
+" Additionally, we always consider cultural sensitivity and diversity, "
+"conducting the therapy process with attention to each individual’s social "
+"and cultural context. Our core principle is to improve the quality of life "
+"of our clients and to provide the psychological and emotional support they "
+"need. We believe therapy should add meaning to the client’s life and "
+"strengthen their mental well-being. In this direction, we aim to contribute "
+"to their growth at every step. "
+
+msgid "Bilgi Almak İçin İletişime Geçebilirsiniz."
+msgstr "You Can Contact Us for More Information."
+
+msgid "İsim Soyisim"
+msgstr "Full Name"
+
+msgid "Telefon Numarası"
+msgstr "Phone Number"
+
+msgid "Email Adresi"
+msgstr "Email Address"
+
+msgid "Konu"
+msgstr "Subject"
+
+msgid "Mesaj"
+msgstr "Message"
+
+msgid "Gönder"
+msgstr "Send"
+
+
+
+msgid "İncele"
+msgstr "View"
+
+msgid "Giriş Yap"
+msgstr "Login"
+
+msgid "E-mail Adresi"
+msgstr "Email Address"
+
+msgid "Şifre"
+msgstr "Password"
+
+msgid "Şifremi Unuttum"
+msgstr "Forgot My Password"
+
+msgid "Kayıt Ol"
+msgstr "Sign Up"
+
+msgid "İsim"
+msgstr "First Name"
+
+msgid "Soyisim"
+msgstr "Last Name"
+
+msgid "Adres"
+msgstr "Address"
+
+msgid "zorunlu değil"
+msgstr "optional"
+
+msgid "Randevu Oluştur"
+msgstr "Create Appointment"
+
+msgid "Tarih Seçin"
+msgstr "Select Date"
+
+msgid "Saat Seçin"
+msgstr "Select Time"
+
+msgid "Ek Notlar (opsiyonel)"
+msgstr "Additional Notes (optional)"
+
+msgid "Randevu oluşturabilmek için giriş yapmalısınız."
+msgstr "You must be logged in to create an appointment."
+
+msgid "You must provide an email address"
+msgstr "You must provide an email address"
+
+msgid "Password must include 8 characters at least"
+msgstr "Password must include at least 8 characters"
+
+msgid "email address"
+msgstr "email address"
+
+msgid "Hayat kalitenizi ve psikolojik sağlığınızı güçlendirmek için sizin yanınızdayız."
+msgstr "There must be text in here"

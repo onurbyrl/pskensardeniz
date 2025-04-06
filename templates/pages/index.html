@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="en">
+
+
+<!-- Mirrored from psikosaglikdanismanlik.co/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Mar 2025 05:30:15 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ensar Deniz</title>
+    <link rel="canonical" href="index.html" />
+    <base>
+    <meta name="description"
+        content="Psiko Sağlık Danışmanlık, uzman terapistlerle sağladığı bireysel ve çift terapisiyle psikolojik sağlık hizmetleri sunan önde gelen bir danışmanlık merkezidir. Depresyon, kaygı, ilişki sorunları ve daha fazlası gibi konularda uzmanlaşmış ekibimiz, sizi destekleyerek içsel iyilik halinizi yeniden keşfetmenize yardımcı olur.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.webp">
+
+    <link rel="stylesheet" href="../static/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/vendor/slick.css">
+    <link rel="stylesheet" href="../static/css/vendor/slick-theme.css">
+    <link rel="stylesheet" href="../static/css/plugins/sal.css">
+    <link rel="stylesheet" href="../static/css/plugins/feather.css">
+    <link rel="stylesheet" href="../static/css/plugins/fontawesome.min.css">
+    <link rel="stylesheet" href="../static/css/plugins/euclid-circulara.css">
+    <link rel="stylesheet" href="../static/css/plugins/swiper.css">
+    <link rel="stylesheet" href="../static/css/plugins/magnify.css">
+    <link rel="stylesheet" href="../static/css/plugins/odometer.css">
+    <link rel="stylesheet" href="../static/css/plugins/animation.css">
+    <link rel="stylesheet" href="../static/css/plugins/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../static/css/plugins/jquery-ui.css">
+    <link rel="stylesheet" href="../static/css/plugins/magnigy-popup.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/vendor/bootstrap.min.js"></script>
+
+    <script src="../static/js/vendor/jquery.js"></script>
+    <script src="../cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../static/js/vue.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            '../connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1152557622805558');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img loading="lazy" height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1152557622805558&amp;ev=PageView&amp;noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9TWP7FWTJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-S9TWP7FWTJ');
+    </script>
+    <!-- Google tag (gtag.js) end -->
+
+</head>
+
+<body class="rbt-header-sticky">
+    <div id="app">
+        <header class="rbt-header rbt-header-9">
+            <!-- Header Area -->
+            {% include '../header.html' %}
+
+            <!-- Navbar Area -->
+            {% include '../navbar.html' %}
+
+        </header>
+
+        <!-- Mobile Menu Section -->
+        {% include '../mobile-section.html' %}
+
+    </div>
+    <!-- Start Side Vav -->
+    <div class="rbt-cart-side-menu">
+        <div class="inner-wrapper">
+            <div class="inner-top">
+                <div class="content">
+                    <div class="title">
+                        <h4 class="title mb--0">Liste</h4>
+                    </div>
+                    <div class="rbt-btn-close" id="btn_sideNavClose">
+                        <button class="minicart-close-button rbt-round-btn"><i class="feather-x"></i></button>
+                    </div>
+                </div>
+            </div>
+            <nav class="side-nav w-100">
+                <ul class="rbt-minicart-wrapper">
+
+                    <li class="minicart-item" v-for="(item,index) in sepet" v-if="sepetCount > 0">
+                        <div class="thumbnail">
+                            <a :href="'uygulama/'+item.uygulamaurl" :title="item.uygulamabaslik">
+                                <img loading="lazy" :src="item.uygulamagorsel" :alt="item.uygulamabaslik">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <h6 class="title"><a :href="'uygulama/'+item.uygulamaurl"
+                                    :title="item.uygulamabaslik">{{item.uygulamabaslik}}</a></h6>
+
+                            <span class="quantity" v-if="item.uygulamaindirimlifiyat > 0">{{item.adet}} * <span
+                                    class="price">{{item.uygulamaindirimlifiyat}}₺</span></span>
+                            <span class="quantity" v-else="item.uygulamafiyat">{{item.adet}} * <span
+                                    class="price">{{item.uygulamafiyat}}₺</span></span>
+                        </div>
+                        <div class="close-btn">
+                            <button class="rbt-round-btn" @click="sepetUrunSil(index)"><i
+                                    class="feather-x"></i></button>
+                        </div>
+                    </li>
+
+
+                    <li class="minicart-item" v-for="(item,index) in seansSepet" v-if="seansSepetCount > 0">
+                        <div class="thumbnail">
+                            <a :href="'seans/'+item.seansurl" :title="item.seansbaslik">
+                                <img loading="lazy" :src="item.seansgorsel" :alt="item.seansbaslik">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <h6 class="title"><a :href="'seans/'+item.seansurl" :title="item.seansbaslik"></a></h6>
+
+                            <span class="quantity" v-if="item.seansindirimlifiyat > 0">{{item.adet}} * <span
+                                    class="price">{{item.seansindirimlifiyat}}₺</span></span>
+                            <span class="quantity" v-else="item.seansfiyat"><span
+                                    class="price">{{item.seansfiyat}}₺</span> <br> ({{item.seanspaketbaslik}})</span>
+                        </div>
+                        <div class="close-btn">
+                            <button class="rbt-round-btn" @click="seansSepetUrunSil(index)"><i
+                                    class="feather-x"></i></button>
+                        </div>
+                    </li>
+
+                    <li class="minicart-item" v-if="sepetCount <= 0 && seansSepetCount <= 0">
+                        <h5>Listeniz boş.</h5>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="rbt-minicart-footer" v-if="sepetCount > 0 || seansSepetCount > 0">
+                <hr class="mb--0">
+                <div class="rbt-cart-subttotal">
+                    <p class="subtotal"><strong>Toplam:</strong></p>
+                    <p class="price">{{sepetToplam}}₺</p>
+                </div>
+                <hr class="mb--0">
+                <div class="rbt-minicart-bottom mt--20">
+
+                    <div class="checkout-btn mt--20">
+                        <a class="rbt-btn btn-gradient icon-hover w-100 text-center" href="sepet.html" title="Sepet">
+                            <span class="btn-text">Listeyi Görüntüle</span>
+                            <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- End Side Vav -->
+    <a class="close_side_menu" href="javascript:void(0);" title="Menüyü Kapat"></a>
+
+
+    <div class="rbt-banner-area rbt-banner-1">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 pb--120 pt--70">
+                    <div class="content">
+                        <div class="inner">
+                            <h1 class="title text-white">Psk Ensar Deniz</h1>
+                            <p class="description text-white">{% trans "Hayat kalitenizi ve psikolojik sağlığınızı güçlendirmek için sizin yanınızdayız." %}</p>
+                            <div class="slider-btn">
+                                <!-- <a class="rbt-btn btn-gradient  slider-custom-btn hover-icon-reverse"
+                                    href="uygulamalar.html" title="Uygulamalar">
+                                    <span class="icon-reverse-wrapper">
+                                        <span class="btn-text text-dark">Uygulamalar</span>
+                                        <span class="btn-icon text-dark"><i class="feather-arrow-right"></i></span>
+                                        <span class="btn-icon text-dark"><i class="feather-arrow-right"></i></span>
+                                    </span>
+                                </a> -->
+                            </div>
+                        </div>
+                        <div class="shape-wrapper" id="scene">
+                            <img loading="lazy" src="resimler/slider.png" alt="Psk Ensar Deniz ">
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rbt-categories-area  pt--20 pb--20">
+        <div class="container">
+            <div class="row g-5">
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Course Area -->
+    <div class="rbt-course-area bg-color-white rbt-section-gap">
+        <div class="container">
+            <div class="row mb--55 g-5 align-items-end">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="section-title text-start">
+                        <span class="subtitle bg-pink-opacity">Psk Ensar Deniz</span>
+                        <h2 class="title">{% trans "Uygulamalar" %}<span class="color-primary"></span></h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="load-more-btn text-start text-md-end">
+                        <!-- <a class="rbt-btn rbt-switch-btn bg-primary-opacity" href="uygulamalar.html"
+                            title="Tüm Uygulamalar">
+                            <span data-text="Tüm Uygulamalar">Tüm Uygulamalar</span>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Start Card Area -->
+            <div class="row g-5">
+
+                {% for application in applications %}
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12" data-sal-delay="150" data-sal="slide-up"
+                    data-sal-duration="800">
+                    <div class="rbt-card variation-01 rbt-hover">
+                        <div class="rbt-card-img">
+                            <a href="{% url 'core:uygulama_detay' application.slug %}" title="{{ application.title }}"></a>
+                        </div>
+                        <div class="rbt-card-body">
+                            <div class="rbt-card-top">
+
+                            </div>
+
+                            <h4 class="rbt-card-title"><a href="{% url 'core:uygulama_detay' application.slug %}"
+                                    title="{{ application.title }}">{{ application.title }}</a>
+                            </h4>
+
+
+                            <!-- <ul class="rbt-meta">
+                                    <li><i class="feather-book"></i>0 Eğitim İçeriği</li>
+                                    <li><i class="feather-users"></i>21 Katılımcı</li>
+                                </ul> -->
+
+                            <div class="rbt-card-bottom">
+                                <div class="rbt-price">
+                                    {{ application.description|slice:":70" }}...
+                                </div>
+                                <a class="rbt-btn-link" href="{% url 'core:uygulama_detay' application.slug %}"
+                                    title="{{ application.title }}">{% trans "İncele" %}<i class="feather-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+        <!-- End Course Area -->
+
+
+
+
+        
+
+
+        <!-- Start Footer aera -->
+        {% include '../footer.html' %}
+        <!-- End Footer aera -->
+         
+        <div class="rbt-progress-parent">
+            <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+        <div class="whatsapp hidden-sm" id="scroll-to-top2">
+            <a href="https://wa.me/05367169453" target="_blank" title="Whatsapp İletişim Hattı"><img loading="lazy"
+                    src="/static/whatsapp.png"></a>
+        </div>
+        <div class="whatsapp hidden-sm" id="scroll-to-top2">
+            <a class=""
+                href="https://api.whatsapp.com/send?phone=05367169453&amp;text=Merhaba%20bilgi%20almak%20%C4%B0stiyorum&amp;source=&amp;data="
+                title="Whatsapp İletişim Hattı" target="_blank">
+                <img loading="lazy" src="/static/whatsapp.png">
+            </a>
+        </div>
+    </div>
+
+    <!-- <script src="../static/js/custom.js"></script>-->
+
+    <script src="../static/js/customd8a8.js?v=20250313"></script>
+
+
+
+
+
+    <!-- JS
+        ============================================ -->
+    <!-- Modernizer JS -->
+    <script src="../static/js/vendor/modernizr.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <!-- sal.js -->
+    <script src="../static/js/vendor/sal.js"></script>
+    <script src="../static/js/vendor/swiper.js"></script>
+    <script src="../static/js/vendor/magnify.min.js"></script>
+    <script src="../static/js/vendor/jquery-appear.js"></script>
+    <script src="../static/js/vendor/odometer.js"></script>
+    <script src="../static/js/vendor/backtotop.js"></script>
+    <script src="../static/js/vendor/isotop.js"></script>
+    <script src="../static/js/vendor/imageloaded.js"></script>
+
+    <script src="../static/js/vendor/wow.js"></script>
+    <script src="../static/js/vendor/waypoint.min.js"></script>
+    <script src="../static/js/vendor/easypie.js"></script>
+    <script src="../static/js/vendor/text-type.js"></script>
+    <script src="../static/js/vendor/jquery-one-page-nav.js"></script>
+    <script src="../static/js/vendor/bootstrap-select.min.js"></script>
+    <script src="../static/js/vendor/jquery-ui.js"></script>
+    <script src="../static/js/vendor/magnify-popup.min.js"></script>
+    <script src="../static/js/vendor/paralax-scroll.js"></script>
+    <script src="../static/js/vendor/paralax.min.js"></script>
+    <script src="../static/js/vendor/countdown.js"></script>
+    <!-- Main JS -->
+    <script src="../static/js/main.js"></script>
+
+</body>
+
+
+<!-- Mirrored from psikosaglikdanismanlik.co/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Mar 2025 05:30:38 GMT -->
+
+</html>

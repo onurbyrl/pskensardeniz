@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description"
+        content="Psiko Sağlık Danışmanlık, uzman terapistlerle sağladığı bireysel ve çift terapisiyle psikolojik sağlık hizmetleri sunan önde gelen bir danışmanlık merkezidir. Depresyon, kaygı, ilişki sorunları ve daha fazlası gibi konularda uzmanlaşmış ekibimiz, sizi destekleyerek içsel iyilik halinizi yeniden keşfetmenize yardımcı olur.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.webp">
+
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/sal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/euclid-circulara.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/magnify.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/odometer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/animation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/magnigy-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+    <script src="{% static 'js/vendor/jquery.js' %}"></script>
+    <script src="../cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{% static 'js/vue.js' %}"></script>
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div id="app">
+        <header class="rbt-header rbt-header-9">
+            {% include '../header.html' %}
+
+            {% include '../navbar.html' %}
+        </header>
+
+        <div class="rbt-breadcrumb-default ptb--100 ptb_md--50 ptb_sm--30 bg-gradient-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb-inner text-center">
+                            <h2 class="title">Randevu Oluştur</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            {% if user.is_authenticated %}
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-4">
+                    <h3 class="text-center mb-4">📅 {% trans "Randevu Oluştur" %}</h3>
+        
+                    <form id="appointmentForm" method="POST" action="{% url 'users:randevu_olustur' %}">
+                        {% csrf_token %}
+                        
+                        <!-- Tarih Seçimi -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">{% trans "Tarih Seçin" %}:</label>
+                            <input type="text" id="appointment_date" name="date" class="form-control datepicker" required>
+                        </div>
+        
+                        <!-- Saat Seçimi -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">{% trans "Saat Seçin" %}:</label>
+                            <input type="text" id="appointment_time" name="time" class="form-control timepicker" required>
+                        </div>
+        
+                        <!-- Not Alanı -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">{% trans "Ek Notlar (opsiyonel)" %}:</label>
+                            <textarea name="notes" class="form-control" rows="3" placeholder="Randevu hakkında eklemek istediğiniz notlar..."></textarea>
+                        </div>
+        
+                        <!-- Butonlar -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary px-4 btn-lg">
+                                <i class="fas fa-calendar-check"></i> {% trans "Randevu Oluştur" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {% else %}
+            <h3>{% trans "Randevu oluşturabilmek için giriş yapmalısınız." %}</h3>
+            {% endif %}
+        </div>
+
+        <!-- Start Footer aera -->
+        <div class="mt-5">
+            {% include '../footer.html' %}
+        </div>
+        <!-- End Footer aera -->
+    </div>
+</body>
+
+<!-- Gerekli JavaScript Kütüphaneleri -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+    $(document).ready(function () {
+        // Flatpickr ile Tarih Seçici
+        $("#appointment_date").flatpickr({
+            dateFormat: "Y-m-d",
+            minDate: new Date().fp_incr(7),  // bugünden itibaren 7 gün sonrası
+            disableMobile: true
+        });
+
+        // Flatpickr ile Saat Seçici
+        $("#appointment_time").flatpickr({
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true,
+            minuteIncrement: 60
+        });
+    });
+</script>
+
+<script>
+    document.getElementById('AppointmentForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+        const formData = {
+            date: document.querySelector('[name="date"]').value,
+            time: document.querySelector('[name="time"]').value,
+            notes: document.querySelector('[name="notes"]').value
+        };
+
+        fetch("{% url 'users:randevu_olustur' %}", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrfToken,
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())  // JSON formatında yanıtı işle
+        .then(data => {
+            console.log("Response Data: ", data);
+            if (data.status === "success") {
+                Swal.fire({
+                    icon: "success",
+                    title: "Randevunuz başarıyla oluşturuldu",
+                    text: data.message,
+                    timer: 4000,
+                    showConfirmButton: false
+                }).then(() => {
+                    // window.location.href = data.redirect_url;
+                });
+            } else if (data.status === "error") {
+                Swal.fire({
+                    icon: "error",
+                    title: "Hata!",
+                    test: data.message,
+                    timer: 6000,
+                    showConfirmButton: false
+                })
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Hata!",
+                    text: data.message
+                });
+            }
+        })
+        .catch(error => {
+            console.error("ERR: ", error);
+            Swal.fire({
+                icon: "error",
+                title: "Sunucu Hatası",
+                text: "Bir hata oluştu, lütfen tekrar deneyin."
+            });
+        });
+    });
+</script>
+
+</html>

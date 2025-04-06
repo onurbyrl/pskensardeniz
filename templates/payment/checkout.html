@@ -1,0 +1,27 @@
+<button id="pay-button">Ödeme Yap</button>
+
+<div id="iyzico-checkout-form"></div>
+
+<script>
+document.getElementById("pay-button").addEventListener("click", function() {
+    fetch("/payment/checkout/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": "{{ csrf_token }}"
+        },
+        body: JSON.stringify({
+            price: "100.00"  // Ödenecek tutar
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.token) {
+            document.getElementById("iyzico-checkout-form").innerHTML = data.html;
+        } else {
+            alert("Ödeme başlatılamadı!");
+        }
+    })
+    .catch(error => console.error("Hata:", error));
+});
+</script>

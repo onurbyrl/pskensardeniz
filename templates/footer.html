@@ -1,0 +1,137 @@
+{% load i18n %}
+<footer class="rbt-footer footer-style-1 bg-color-white overflow-hidden">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget">
+                        <div class="logo" style="max-height:140px; width: 200px;">
+                            <!-- <a href="#" title="Ana Sayfa" style="max-height:140px; width: 200px;">
+                                <img loading="lazy" src="resimler/footer-logo.png"
+                                    alt="Ensar Deniz Danışmanlık"
+                                    style="max-height:140px; width: 200px;">
+                            </a> -->
+                        </div>
+
+                        <p class="description mt--20">{% blocktrans %}Her biri alanında uzman klinik psikologlardan oluşan kadromuz ile;
+                            ergen, yetişkin, çift ve ailelere yönelik psikoterapi hizmeti verilmektedir.{% endblocktrans %}
+                        </p>
+
+                        <ul class="social-icon social-default justify-content-start">
+                            <li>
+                                <a href="https://www.instagram.com/psk.fatihresitcivelekoglu/" target="_blank"
+                                    title="Instagram Adresim">
+                                    <i class="feather-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/psk.fatihresitcivelekoglu/" target="_blank"
+                                    title="LinkedIn Adresim">
+                                    <i class="feather-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="contact-btn mt--30">
+                            <a class="rbt-btn hover-icon-reverse btn-border-gradient radius-round" href="{% url 'core:iletisim' %}"
+                                title="İletişim">
+                                <div class="icon-reverse-wrapper">
+                                    <span class="btn-text">{% trans "İletişime Geç" %}</span>
+                                    <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                                    <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget">
+                        <h5 class="ft-title">{% trans "Uygulamalar" %}</h5>
+                        <ul class="ft-link">
+                            {% for application in applications %}
+                            <li>
+                                <a href="{% url 'core:uygulama_detay' application.slug %}"
+                                    title="{{ application.title }}">
+                                    {{ application.title }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget">
+                        <h5 class="ft-title">Ensar Deniz Danışmanlık</h5>
+                        <ul class="ft-link">
+                            <li>
+                                <a href="{% url 'core:hakkimizda' %}" title="Hakkımızda">{% trans "Hakkımızda" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'core:ilkelerimiz' %}" title="İlkelerimiz">{% trans "İlkelerimiz" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'users:randevu_olustur' %}" title="Randevu">{% trans "Randevu" %}</a>
+                            </li>
+                            <li><a href="/static/hizmet-sozlesmesi.pdf" title="Hizmet Sözleşmesi" target="_blank">{% trans "Hizmet Sözleşmesi" %}</a></li>
+                            <li><a href="/static/online-danismanlik-onam-formu.pdf" title="Online Danışmanlık Onam Formu"
+                                    target="_blank">{% trans "Online Danışmanlık Onam Formu" %}</a></li>
+                            <li>
+                                <a href="{% url 'core:iletisim' %}" title="İletişim">{% trans "İletişim" %}</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget">
+                        <h5 class="ft-title">{% trans "İletişim" %}</h5>
+                        <ul class="ft-link">
+                            <li><span><i class="fa fa-phone"></i></span> <a href="tel:0850 308 21 53"
+                                    title="Telefon Numaramız">0850 308 21 53</a></li>
+                            <li>
+                                <span><i class="fab fa-whatsapp"></i></span> <a
+                                    href="https://api.whatsapp.com/send?phone=05367169453&amp;text=Merhaba%20bilgi%20almak%20%C4%B0stiyorum&amp;source=&amp;data="
+                                    title="Whatsapp İletişim Hattı">0536 716 94 53</a>
+                            </li>
+                            <li><span><i class="fa fa-envelope"></i></span> <a
+                                    href="mailto:info@psikosaglikdanismanlik.co"
+                                    title="Email Adresimiz">info@psikosaglikdanismanlik.co</a></li>
+                            <li><a title="Adresimiz"><span><i class="fa fa-map"></i></span>
+                                    Orhantepe Mahallesi, Söğüt Sokak No: 4 D:1 Kartal/ İstanbul</a></li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rbt-separator-mid">
+        <div class="container">
+            <hr class="rbt-separator m-0">
+        </div>
+    </div>
+    <!-- Start Copyright Area  -->
+    <div class="copyright-area copyright-style-1 ptb--20">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
+                    <!-- Bu Web Sitesi <a href="http://www.avrasyasoft.com/" target="_blank"
+                        title="Avrasyasoft Web Mühendisliği">AvrasyaSOFT </a>tarafından <img
+                        src="../www.avrasyasoft.com/sevgi.png" alt="Sevgi" title="SEVGİ"> ile yapılmıştır. -->
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
+                    <ul
+                        class="copyright-link rbt-link-hover justify-content-center justify-content-lg-end mt_sm--10 mt_md--10">
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Copyright Area  -->
+</footer>

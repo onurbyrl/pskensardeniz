@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-06 09:26+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\pskensar\settings.py:117
+msgid "Türkçe"
+msgstr ""
+
+#: .\pskensar\settings.py:118
+msgid "English"
+msgstr ""
+
+#: .\templates\footer.html:16
+msgid ""
+"Her biri alanında uzman klinik psikologlardan oluşan kadromuz ile;\n"
+"                            ergen, yetişkin, çift ve ailelere yönelik "
+"psikoterapi hizmeti verilmektedir."
+msgstr ""
+
+#: .\templates\footer.html:39
+msgid "İletişime Geç"
+msgstr ""
+
+#: .\templates\footer.html:50 .\templates\navbar.html:41
+#: .\templates\pages\index.html:235 .\templates\pages\uygulama.html:178
+msgid "Uygulamalar"
+msgstr ""
+
+#: .\templates\footer.html:69 .\templates\navbar.html:32
+#: .\templates\pages\hakkimizda.html:293
+msgid "Hakkımızda"
+msgstr ""
+
+#: .\templates\footer.html:72 .\templates\navbar.html:33
+#: .\templates\pages\ilkelerimiz.html:174
+msgid "İlkelerimiz"
+msgstr ""
+
+#: .\templates\footer.html:75
+msgid "Randevu"
+msgstr ""
+
+#: .\templates\footer.html:77
+msgid "Hizmet Sözleşmesi"
+msgstr ""
+
+#: .\templates\footer.html:79
+msgid "Online Danışmanlık Onam Formu"
+msgstr ""
+
+#: .\templates\footer.html:81 .\templates\footer.html:90
+#: .\templates\navbar.html:56 .\templates\pages\iletisim.html:203
+msgid "İletişim"
+msgstr ""
+
+#: .\templates\navbar.html:23
+msgid "Ana Sayfa"
+msgstr ""
+
+#: .\templates\navbar.html:27
+msgid "Kurumsal"
+msgstr ""
+
+#: .\templates\navbar.html:60
+msgid "Randevu Al"
+msgstr ""
+
+#: .\templates\pages\hakkimizda.html:318
+msgid ""
+"Psikolji alanındaki eğitimime ilk olarak Bursa'da başladım. Lisansımı Bursa "
+"Uludağ Üniversitesi Psikoloji bölümü'nde tamamladıktan sonra, Texas, "
+"A.B.D'de  Midwestern State Üniversitesi'nde klinik psikoloji alanında yüksek "
+"lisansımı yaparak psikoloji alanındaki eğitimime devam ettim. Eğitim sürecim "
+"boyunca çeşitli bozukluklar, yaş grupları ve kültürel geçmişlere sahip "
+"bireylerle çalışarak kapsamlı bir deneyim kazandım. Klinik psikoloji "
+"alanında yüzlerce saatlik doğrudan ve dolaylı danışan görüşmesi "
+"gerçekleştirdim. Bu süreç, bana psikolojik testler uygulama, bireysel terapi "
+"süreçleri yürütme ve farklı terapi yaklaşımlarını kullanma konusunda "
+"derinlemesine bir bilgi kazandırdı. Zeka, akademik başarı ve bunama gibi "
+"çeşitli alanlarda psikolojik testler uygulama tecrübem bulunmakta."
+msgstr ""
+
+#: .\templates\pages\hakkimizda.html:321
+msgid ""
+"Klinik psikolog olarak amacım, bireylerin psikolojik sağlıklarını "
+"iyileştirmek ve onların yaşam kalitelerini artırmaktır. Çeşitli psikolojik "
+"bozukluklar, travmalar, kaygı, depresyon gibi durumlarla başa çıkmalarına "
+"yardımcı olmak için kişiselleştirilmiş bir yaklaşım sunuyorum. Farklı yaş "
+"grupları ve etnik kökenlerden gelen danışanlarla çalışarak, her bireyin "
+"benzersiz bir deneyime sahip olduğunu ve tedavi sürecinin buna göre "
+"şekillendirilmesi gerektiğini biliyorum. Bu doğrultuda, her bir danışanın "
+"ihtiyaçlarına özel terapi planları oluşturarak, onların hem duygusal hem de "
+"psikolojik sağlıklarını iyileştirmeyi hedefliyorum."
+msgstr ""
+
+#: .\templates\pages\hakkimizda.html:324
+msgid ""
+"Chicago School of Psychology'den aldığım bütüncül psikoloji eğitimi ve "
+"farklı kurumlardan almış olduğum diğer eğitimleri., bana psikolojik destek "
+"sağlama ve kişisel gelişim süreçlerinde danışanlarıma daha etkili bir "
+"şekilde rehberlik etme konusunda derin bir bakış açısı kazandırdı. Bir uzman "
+"klinik psikolog olarak, insanın zihin sağlığını güçlendirmek, bireylerin "
+"potansiyellerini keşfetmelerine yardımcı olmak ve yaşamlarına anlam katmak "
+"en büyük hedefimdir."
+msgstr ""
+
+#: .\templates\pages\iletisim.html:264
+msgid "Bilgi Almak İçin İletişime Geçebilirsiniz."
+msgstr ""
+
+#: .\templates\pages\iletisim.html:269
+msgid "İsim Soyisim"
+msgstr ""
+
+#: .\templates\pages\iletisim.html:274 .\templates\users\kayit-ol.html:253
+msgid "Telefon Numarası"
+msgstr ""
+
+#: .\templates\pages\iletisim.html:279
+msgid "Email Adresi"
+msgstr ""
+
+#: .\templates\pages\iletisim.html:284
+msgid "Konu"
+msgstr ""
+
+#: .\templates\pages\iletisim.html:289
+msgid "Mesaj"
+msgstr ""
+
+#: .\templates\pages\iletisim.html:294
+msgid "Gönder"
+msgstr ""
+
+#: .\templates\pages\ilkelerimiz.html:199
+msgid ""
+" İlkelerimiz, her danışanın benzersiz olduğunu ve terapi sürecinin bu "
+"farklılıklara saygı göstererek şekillenmesi gerektiğini kabul eder. "
+"Terapimizin temeli, danışanın bireysel ihtiyaçlarına göre esnek bir şekilde "
+"ilerlemek ve her adımda zarar vermemek, aksine fayda sağlamak üzerine "
+"kuruludur. Her bireyin yaşadığı duygusal ve psikolojik zorluklar farklı "
+"olduğundan, kişiye özel yaklaşımlar geliştirerek danışanın kendini daha iyi "
+"hissetmesine ve hedeflerine ulaşmasına yardımcı olmayı amaçlıyoruz. Bu "
+"süreçte, danışanın güvenliğini ve iyileşmesini her şeyin önünde tutuyoruz. "
+msgstr ""
+
+#: .\templates\pages\ilkelerimiz.html:202
+msgid ""
+" Ayrıca, kültürel duyarlılığı ve çeşitliliği her zaman göz önünde "
+"bulundurarak, terapi sürecini her bireyin sosyal ve kültürel bağlamını "
+"dikkate alarak yürütüyoruz. Danışanlarımızın yaşam kalitesini artırmak, "
+"onlara psikolojik ve duygusal anlamda gerekli desteği sağlamak, "
+"ilkelerimizin en temel amacıdır. Terapinin, danışanın yaşamına anlam katması "
+"ve psikolojik sağlığını güçlendirmesi gerektiğini düşünüyoruz. Bu "
+"doğrultuda, her adımda onların gelişimlerine katkı sağlamayı hedefliyoruz. "
+msgstr ""
+
+#: .\templates\pages\index.html:190
+msgid ""
+"Hayat kalitenizi ve psikolojik sağlığınızı güçlendirmek için "
+"sizin yanınızdayız."
+msgstr ""
+
+#: .\templates\pages\index.html:277
+msgid "İncele"
+msgstr ""
+
+#: .\templates\users\giris-yap.html:219 .\templates\users\giris-yap.html:225
+#: .\templates\users\giris-yap.html:243 .\templates\users\giris-yap.html:272
+#: .\templates\users\kayit-ol.html:280
+msgid "Giriş Yap"
+msgstr ""
+
+#: .\templates\users\giris-yap.html:248 .\templates\users\kayit-ol.html:267
+msgid "E-mail Adresi"
+msgstr ""
+
+#: .\templates\users\giris-yap.html:253 .\templates\users\kayit-ol.html:272
+msgid "Şifre"
+msgstr ""
+
+#: .\templates\users\giris-yap.html:262
+msgid "Şifremi Unuttum"
+msgstr ""
+
+#: .\templates\users\giris-yap.html:264 .\templates\users\kayit-ol.html:206
+#: .\templates\users\kayit-ol.html:212 .\templates\users\kayit-ol.html:237
+#: .\templates\users\kayit-ol.html:288
+msgid "Kayıt Ol"
+msgstr ""
+
+#: .\templates\users\kayit-ol.html:242
+msgid "İsim"
+msgstr ""
+
+#: .\templates\users\kayit-ol.html:247
+msgid "Soyisim"
+msgstr ""
+
+#: .\templates\users\kayit-ol.html:260
+msgid "Adres"
+msgstr ""
+
+#: .\templates\users\kayit-ol.html:260
+msgid "zorunlu değil"
+msgstr ""
+
+#: .\templates\users\randevu.html:67 .\templates\users\randevu.html:93
+msgid "Randevu Oluştur"
+msgstr ""
+
+#: .\templates\users\randevu.html:74
+msgid "Tarih Seçin"
+msgstr ""
+
+#: .\templates\users\randevu.html:80
+msgid "Saat Seçin"
+msgstr ""
+
+#: .\templates\users\randevu.html:86
+msgid "Ek Notlar (opsiyonel)"
+msgstr ""
+
+#: .\templates\users\randevu.html:100
+msgid "Randevu oluşturabilmek için giriş yapmalısınız."
+msgstr ""
+
+#: .\users\models.py:33
+msgid "You must provide an email address"
+msgstr ""
+
+#: .\users\models.py:36
+msgid "Password must include 8 characters at least"
+msgstr ""
+
+#: .\users\models.py:49
+msgid "email address"
+msgstr ""

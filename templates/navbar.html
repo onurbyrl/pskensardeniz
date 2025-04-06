@@ -1,0 +1,84 @@
+{% load i18n %}
+<div class="rbt-header-wrapper  header-not-transparent header-sticky">
+    <div class="container">
+        <div class="mainbar-row rbt-navigation-end align-items-center">
+            <div class="header-left rbt-header-content">
+                <div class="header-info">
+                    <div class="logo">
+                        <a href="{% url 'core:home' %}" title="Ana Sayfa">
+                            <img loading="lazy" src="resimler/header-logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="header-info">
+
+                </div>
+            </div>
+
+            <div class="rbt-main-navigation d-none d-xl-block">
+                <nav class="mainmenu-nav">
+                    <ul class="mainmenu">
+
+                        <li class="with-megamenu has-menu-child-item position-static">
+                            <a href="{% url 'core:home' %}" title="Ana Sayfa">{% trans "Ana Sayfa" %}</a>
+                        </li>
+
+                        <li class="has-dropdown has-menu-child-item">
+                            <a href="#" title="Kurumsal">{% trans "Kurumsal" %}
+                                <i class="feather-chevron-down"></i>
+                            </a>
+                            <ul class="submenu">
+                            
+                                    <li><a href="{% url 'core:hakkimizda' %}" title="Hakkımızda">{% trans "Hakkımızda" %}</a></li>
+                                    <li><a href="{% url 'core:ilkelerimiz' %}" title="İlkelerimiz">{% trans "İlkelerimiz" %}</a></li>
+                                                           
+                            </ul>
+                        </li>
+
+
+
+                        <li class="has-dropdown has-menu-child-item">
+                            <a href="#" title="Uygulamalar">{% trans "Uygulamalar" %}
+                                <i class="feather-chevron-down"></i>
+                            </a>
+                            <ul class="submenu">
+                                {% for application in applications %}
+                                    <li>
+                                        <a href="{% url 'core:uygulama_detay' application.slug %}" title="{{ application.title }}">
+                                            {{ application.title }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+
+                        <li class="with-megamenu has-menu-child-item position-static">
+                            <a href="{% url 'core:iletisim' %}" title="İletişim">{% trans "İletişim" %}</a>
+                        </li>
+
+                        <li class="with-megamenu has-menu-child-item position-static">
+                            <a href="{% url 'users:randevu_olustur' %}" class="text-primary" title="Randevu Al">{% trans "Randevu Al" %}</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="rbt-btn-wrapper d-none d-xl-block">
+                    <!-- <a class="rbt-btn rbt-switch-btn btn-gradient btn-sm hover-transform-none" href="ogrenci/index.html" title="Eğitim Paneli">
+                        <span data-text="Eğitim Paneli">Eğitim Paneli</span>
+                    </a> -->
+                </div>
+                <!-- Start Mobile-Menu-Bar -->
+                <div class="mobile-menu-bar d-block d-xl-none">
+                    <div class="hamberger">
+                        <button class="hamberger-button rbt-round-btn">
+                            <i class="feather-menu"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Start Mobile-Menu-Bar -->
+            </div>
+        </div>
+    </div>
+</div>
