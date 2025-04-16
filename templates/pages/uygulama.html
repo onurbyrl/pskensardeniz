@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ application.title }} | Psk Ensar Deniz</title>
+    <title>{{ intervention.title }} | Psk Ensar Deniz</title>
     <link rel="canonical" href="index.html"/>
     <base >
     <meta name="description" content="Psiko Sağlık Danışmanlık, uzman terapistlerle sağladığı bireysel ve çift terapisiyle psikolojik sağlık hizmetleri sunan önde gelen bir danışmanlık merkezidir. Depresyon, kaygı, ilişki sorunları ve daha fazlası gibi konularda uzmanlaşmış ekibimiz, sizi destekleyerek içsel iyilik halinizi yeniden keşfetmenize yardımcı olur.">
@@ -179,9 +179,9 @@
 						<li>
 							<div class="icon-right"><i class="feather-chevron-right"></i></div>
 						</li>
-						<li class="rbt-breadcrumb-item active">{{ application.title }}</li>
+						<li class="rbt-breadcrumb-item active">{{ intervention.title }}</li>
 					</ul>
-					<h2 class="title">{{ application.title }}</h2>
+					<h2 class="title">{{ intervention.title }}</h2>
 					
 					<p class="description"></p>
 
@@ -229,16 +229,16 @@
 
 			<div class="col-lg-8">
 				<div class="course-details-content">
-					<!-- <div class="rbt-course-feature-box rbt-shadow-box thuumbnail">
-						<img class="w-100" src="../resimler/egitim/kadinligin-kesfi-atolyesi20241213170631.jpg" alt="Kadınlığın Keşfi">
-					</div> -->
+					<div class="rbt-course-feature-box rbt-shadow-box thuumbnail">
+						<img class="w-100" src="{{ intervention.image.url }}" alt="{{ intervention.title }}" style="width: 200px; height: 200px; object-fit: cover;">
+					</div>
 
 					
 
 					
 						<div class="rbt-instructor rbt-shadow-box intructor-wrapper comment-respond">
-							<h4 class="title">{{ application.title }}</h4>
-															<p>{{ application.description }}</p>
+							<h4 class="title">{{ intervention.title }}</h4>
+															<p>{{ intervention.description }}</p>
 								<!-- <a href="../giris-yap.html" class="rbt-btn btn-gradient icon-hover radius-round btn-md">Giriş Yap</a> -->
 																				</div>
 					</div>

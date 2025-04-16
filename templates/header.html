@@ -16,10 +16,10 @@
 
                 <!-- Sosyal Medya -->
                 <div class="d-flex gap-2">
-                    <a href="https://www.instagram.com/psk.fatihresitcivelekoglu/" target="_blank" class="text-dark">
+                    <a href="https://www.instagram.com/psikologensardeniz" target="_blank" class="text-dark">
                         <i class="feather-instagram"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/psk.fatihresitcivelekoglu/" target="_blank" class="text-dark">
+                    <a href="https://www.linkedin.com/in/ensar-deniz-b9ba79211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-dark">
                         <i class="feather-linkedin"></i>
                     </a>
                 </div>
@@ -30,11 +30,11 @@
                     <input type="hidden" name="next" value="{{ redirect_to }}">
                     <button type="submit" name="language" value="tr"
                         class="btn btn-sm {% if LANGUAGE_CODE == 'tr' %}btn-primary{% else %}btn-outline-primary{% endif %}">
-                        TR
+                        Türkçe
                     </button>
                     <button type="submit" name="language" value="en"
                         class="btn btn-sm {% if LANGUAGE_CODE == 'en' %}btn-primary{% else %}btn-outline-primary{% endif %}">
-                        EN
+                        English
                     </button>
                 </form>
             </div>
@@ -47,14 +47,14 @@
                             <i class="feather-user"></i> {{ user.name }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Profilim</a></li>
+                            <li><a class="dropdown-item" href="{% url 'users:profile' %}">{% trans "Profilim" %}</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="{% url 'users:logout' %}">Çıkış Yap</a></li>
+                            <li><a class="dropdown-item text-danger" href="{% url 'users:logout' %}">{% trans "Çıkış Yap" %}</a></li>
                         </ul>
                     </div>
                 {% else %}
                     <a href="{% url 'users:login' %}" class="btn btn-outline-primary">
-                        <i class="feather-user"></i> Giriş Yap
+                        <i class="feather-user"></i> {% trans "Giriş Yap" %}
                     </a>
                 {% endif %}
             </div>

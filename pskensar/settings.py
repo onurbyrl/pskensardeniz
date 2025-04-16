@@ -30,7 +30,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 
-# Application definition
+# Intervention definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'users',
     'payment',
     'modeltranslation',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -69,14 +70,14 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'core.context_processors.applications_context',
+                'core.context_processors.interventions_context',
                 'users.context_processors.auth_status',
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'pskensar.wsgi.application'
+WSGI_APPLICATION = 'pskensar.wsgi.intervention'
 
 
 # Database
@@ -148,3 +149,12 @@ LOGIN_URL = "/kullanici/giris-yap/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Email settings
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # test ortamı için
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'bloxine11@gmail.com'
+EMAIL_HOST_PASSWORD = 'x3is1byQNP123'  # Gmail'de uygulama şifresi gerekiyor
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

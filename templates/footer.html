@@ -13,19 +13,18 @@
                             </a> -->
                         </div>
 
-                        <p class="description mt--20">{% blocktrans %}Her biri alanında uzman klinik psikologlardan oluşan kadromuz ile;
-                            ergen, yetişkin, çift ve ailelere yönelik psikoterapi hizmeti verilmektedir.{% endblocktrans %}
+                        <p class="description mt--20">{% blocktrans %}Yetişkin, ergen, çocuk, çift, ve ailelere psikoterapi hizmetleri sunmaktayız.{% endblocktrans %}
                         </p>
 
                         <ul class="social-icon social-default justify-content-start">
                             <li>
-                                <a href="https://www.instagram.com/psk.fatihresitcivelekoglu/" target="_blank"
+                                <a href="https://www.instagram.com/psikologensardeniz" target="_blank"
                                     title="Instagram Adresim">
                                     <i class="feather-instagram"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/psk.fatihresitcivelekoglu/" target="_blank"
+                                <a href="https://www.linkedin.com/in/ensar-deniz-b9ba79211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
                                     title="LinkedIn Adresim">
                                     <i class="feather-linkedin"></i>
                                 </a>
@@ -49,11 +48,11 @@
                     <div class="footer-widget">
                         <h5 class="ft-title">{% trans "Uygulamalar" %}</h5>
                         <ul class="ft-link">
-                            {% for application in applications %}
+                            {% for intervention in interventions %}
                             <li>
-                                <a href="{% url 'core:uygulama_detay' application.slug %}"
-                                    title="{{ application.title }}">
-                                    {{ application.title }}
+                                <a href="{% url 'core:uygulama_detay' intervention.slug %}"
+                                    title="{{ intervention.title }}">
+                                    {{ intervention.title }}
                                 </a>
                             </li>
                             {% endfor %}
@@ -73,6 +72,9 @@
                             </li>
                             <li>
                                 <a href="{% url 'users:randevu_olustur' %}" title="Randevu">{% trans "Randevu" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'core:blog' %}" title="Blog">{% trans "Blog" %}</a>
                             </li>
                             <li><a href="/static/hizmet-sozlesmesi.pdf" title="Hizmet Sözleşmesi" target="_blank">{% trans "Hizmet Sözleşmesi" %}</a></li>
                             <li><a href="/static/online-danismanlik-onam-formu.pdf" title="Online Danışmanlık Onam Formu"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-06 09:26+0300\n"
+"POT-Creation-Date: 2025-04-17 00:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,55 +18,71 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\pskensar\settings.py:117
+#: .\pskensar\settings.py:118
 msgid "Türkçe"
 msgstr ""
 
-#: .\pskensar\settings.py:118
+#: .\pskensar\settings.py:119
 msgid "English"
 msgstr ""
 
 #: .\templates\footer.html:16
 msgid ""
-"Her biri alanında uzman klinik psikologlardan oluşan kadromuz ile;\n"
-"                            ergen, yetişkin, çift ve ailelere yönelik "
-"psikoterapi hizmeti verilmektedir."
+"Yetişkin, ergen, çocuk, çift, ve ailelere psikoterapi hizmetleri sunmaktayız."
 msgstr ""
 
-#: .\templates\footer.html:39
+#: .\templates\footer.html:38
 msgid "İletişime Geç"
 msgstr ""
 
-#: .\templates\footer.html:50 .\templates\navbar.html:41
+#: .\templates\footer.html:49 .\templates\navbar.html:43
 #: .\templates\pages\index.html:235 .\templates\pages\uygulama.html:178
 msgid "Uygulamalar"
 msgstr ""
 
-#: .\templates\footer.html:69 .\templates\navbar.html:32
+#: .\templates\footer.html:68 .\templates\navbar.html:32
 #: .\templates\pages\hakkimizda.html:293
 msgid "Hakkımızda"
 msgstr ""
 
-#: .\templates\footer.html:72 .\templates\navbar.html:33
+#: .\templates\footer.html:71 .\templates\navbar.html:33
 #: .\templates\pages\ilkelerimiz.html:174
 msgid "İlkelerimiz"
 msgstr ""
 
-#: .\templates\footer.html:75
+#: .\templates\footer.html:74
 msgid "Randevu"
 msgstr ""
 
-#: .\templates\footer.html:77
+#: .\templates\footer.html:77 .\templates\navbar.html:58
+msgid "Blog"
+msgstr ""
+
+#: .\templates\footer.html:79 .\templates\navbar.html:34
 msgid "Hizmet Sözleşmesi"
 msgstr ""
 
-#: .\templates\footer.html:79
+#: .\templates\footer.html:81 .\templates\navbar.html:35
 msgid "Online Danışmanlık Onam Formu"
 msgstr ""
 
-#: .\templates\footer.html:81 .\templates\footer.html:90
-#: .\templates\navbar.html:56 .\templates\pages\iletisim.html:203
+#: .\templates\footer.html:83 .\templates\footer.html:92
+#: .\templates\navbar.html:62 .\templates\pages\iletisim.html:203
 msgid "İletişim"
+msgstr ""
+
+#: .\templates\header.html:50
+msgid "Profilim"
+msgstr ""
+
+#: .\templates\header.html:52
+msgid "Çıkış Yap"
+msgstr ""
+
+#: .\templates\header.html:57 .\templates\users\giris-yap.html:219
+#: .\templates\users\giris-yap.html:225 .\templates\users\giris-yap.html:243
+#: .\templates\users\giris-yap.html:272 .\templates\users\kayit-ol.html:280
+msgid "Giriş Yap"
 msgstr ""
 
 #: .\templates\navbar.html:23
@@ -77,8 +93,12 @@ msgstr ""
 msgid "Kurumsal"
 msgstr ""
 
-#: .\templates\navbar.html:60
+#: .\templates\navbar.html:66
 msgid "Randevu Al"
+msgstr ""
+
+#: .\templates\pages\blog.html:321
+msgid "Şimdi Oku"
 msgstr ""
 
 #: .\templates\pages\hakkimizda.html:318
@@ -177,14 +197,8 @@ msgid ""
 "sizin yanınızdayız."
 msgstr ""
 
-#: .\templates\pages\index.html:277
+#: .\templates\pages\index.html:279
 msgid "İncele"
-msgstr ""
-
-#: .\templates\users\giris-yap.html:219 .\templates\users\giris-yap.html:225
-#: .\templates\users\giris-yap.html:243 .\templates\users\giris-yap.html:272
-#: .\templates\users\kayit-ol.html:280
-msgid "Giriş Yap"
 msgstr ""
 
 #: .\templates\users\giris-yap.html:248 .\templates\users\kayit-ol.html:267
@@ -221,7 +235,8 @@ msgstr ""
 msgid "zorunlu değil"
 msgstr ""
 
-#: .\templates\users\randevu.html:67 .\templates\users\randevu.html:93
+#: .\templates\users\randevu.html:55 .\templates\users\randevu.html:67
+#: .\templates\users\randevu.html:93
 msgid "Randevu Oluştur"
 msgstr ""
 

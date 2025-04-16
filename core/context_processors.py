@@ -1,7 +1,7 @@
-from .models import Application
+from .models import Intervention
 
-def applications_context(request):
+def interventions_context(request):
     return {
-        'applications': Application.objects.all(),
+        'intervention': Intervention.objects.all(),
         'redirect_to': request.path
     }

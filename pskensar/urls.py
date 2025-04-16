@@ -20,6 +20,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import gettext_lazy as _
+from django.utils.translation import override
+
+def english_admin_view(view):
+    def wrapper(*args, **kwargs):
+        with override('en'):
+            return view(*args, **kwargs)
+    return wrapper
+
+admin.site.login = english_admin_view(admin.site.login)
 
 # Dil değiştirme için URL
 urlpatterns = [
@@ -28,7 +37,7 @@ urlpatterns = [
     path('kullanici/', include('users.urls')),
     path("payment/", include("payment.urls")),
     path('i18n/', include('django.conf.urls.i18n')),  # Dil değiştirme için gerekli
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Çok dilli URL yapısı
 # urlpatterns += i18n_patterns(

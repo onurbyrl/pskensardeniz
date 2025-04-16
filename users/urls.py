@@ -9,4 +9,5 @@ urlpatterns = [
     path('kayit-ol/', views.register, name='register'),
     path("logout/", auth_views.LogoutView.as_view(next_page="/"), name="logout"),
     path('randevu-olustur/', views.randevu_olustur, name='randevu_olustur'),
+    path('profil/', views.user_profile, name='profile'),
 ]

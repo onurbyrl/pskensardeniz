@@ -1,31 +1,31 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Application, Message
+from .models import Intervention, Message, Article
 from django.http import JsonResponse
 import json
 
 
 def index(request):
-    applications = Application.objects.all()
+    interventions = Intervention.objects.all()
 
     return render(request, 'pages/index.html', {
-        "applications": applications
+        "interventions": interventions
     })
 
 
 def search_results(request):
     query = request.GET.get("search_query", "").strip()
-    results = Application.objects.none()  # Varsayılan olarak boş sonuç
+    results = Intervention.objects.none()  # Varsayılan olarak boş sonuç
 
     if query:
-        results = Application.objects.filter(title__icontains=query) | Application.objects.filter(description__icontains=query)
+        results = Intervention.objects.filter(title__icontains=query) | Intervention.objects.filter(description__icontains=query)
 
     return render(request, "search_results.html", {"query": query, "results": results})
 
 
 
 def uygulama_detay(request, slug):
-    application = get_object_or_404(Application, slug=slug)
-    return render(request, 'pages/uygulama.html', {'application': application})
+    intervention = get_object_or_404(Intervention, slug=slug)
+    return render(request, 'pages/uygulama.html', {'intervention': intervention})
 
 
 def iletisim(request):
@@ -63,3 +63,16 @@ def hakkimizda(request):
 
 def ilkelerimiz(request):
     return render(request, 'pages/ilkelerimiz.html', {})
+
+
+def blog(request):
+    Articles = Article.objects.all()
+
+    return render(request, 'pages/blog.html', {
+        "articles": Articles
+    })
+
+
+def article_detay(request, slug):
+    article = get_object_or_404(Article, slug=slug)
+    return render(request, 'pages/article.html', {'article': article})

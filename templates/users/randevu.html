@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="breadcrumb-inner text-center">
-                            <h2 class="title">Randevu Oluştur</h2>
+                            <h2 class="title">{% trans "Randevu Oluştur" %}</h2>
                             
                         </div>
                     </div>
@@ -148,7 +148,7 @@
         fetch("{% url 'users:randevu_olustur' %}", {
             method: "POST",
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'intervention/json',
                 'X-CSRFToken': csrfToken,
             },
             body: JSON.stringify(formData)

@@ -31,6 +31,8 @@
                             
                                     <li><a href="{% url 'core:hakkimizda' %}" title="Hakkımızda">{% trans "Hakkımızda" %}</a></li>
                                     <li><a href="{% url 'core:ilkelerimiz' %}" title="İlkelerimiz">{% trans "İlkelerimiz" %}</a></li>
+                                    <li><a href="/static/hizmet-sozlesmesi.pdf" target="_blank" title="Hizmet Sözleşmesi">{% trans "Hizmet Sözleşmesi" %}</a></li>
+                                    <li><a href="/static/online-danismanlik-onam-formu.pdf" target="_blank" title="Online Danışmanlık Onam Formu">{% trans "Online Danışmanlık Onam Formu" %}</a></li>
                                                            
                             </ul>
                         </li>
@@ -42,14 +44,18 @@
                                 <i class="feather-chevron-down"></i>
                             </a>
                             <ul class="submenu">
-                                {% for application in applications %}
+                                {% for intervention in interventions %}
                                     <li>
-                                        <a href="{% url 'core:uygulama_detay' application.slug %}" title="{{ application.title }}">
-                                            {{ application.title }}
+                                        <a href="{% url 'core:uygulama_detay' intervention.slug %}" title="{{ intervention.title }}">
+                                            {{ intervention.title }}
                                         </a>
                                     </li>
                                 {% endfor %}
                             </ul>
+                        </li>
+
+                        <li class="with-megamenu has-menu-child-item position-static">
+                            <a href="{% url 'core:blog' %}" title="İletişim">{% trans "Blog" %}</a>
                         </li>
 
                         <li class="with-megamenu has-menu-child-item position-static">

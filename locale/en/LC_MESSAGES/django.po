@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-06 09:08+0300\n"
+"POT-Creation-Date: 2025-04-17 00:29+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,90 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: .\pskensar\settings.py:118
 msgid "Türkçe"
 msgstr "Turkish"
 
+#: .\pskensar\settings.py:119
 msgid "English"
 msgstr "English"
+
+#: .\templates\footer.html:16
+msgid ""
+"Yetişkin, ergen, çocuk, çift, ve ailelere psikoterapi hizmetleri sunmaktayız."
+msgstr ""
+"We provide psychotherapy services for children, adolescents, adults, "
+"couples, and families."
+
+#: .\templates\footer.html:38
+msgid "İletişime Geç"
+msgstr "Contact Us"
+
+#: .\templates\footer.html:49 .\templates\navbar.html:43
+#: .\templates\pages\index.html:235 .\templates\pages\uygulama.html:178
+msgid "Uygulamalar"
+msgstr "Interventions"
+
+#: .\templates\footer.html:68 .\templates\navbar.html:32
+#: .\templates\pages\hakkimizda.html:293
+msgid "Hakkımızda"
+msgstr "About"
+
+#: .\templates\footer.html:71 .\templates\navbar.html:33
+#: .\templates\pages\ilkelerimiz.html:174
+msgid "İlkelerimiz"
+msgstr "Principles"
+
+#: .\templates\footer.html:74
+msgid "Randevu"
+msgstr "Appointment"
+
+#: .\templates\footer.html:77 .\templates\navbar.html:58
+msgid "Blog"
+msgstr "Blog"
+
+#: .\templates\footer.html:79 .\templates\navbar.html:34
+msgid "Hizmet Sözleşmesi"
+msgstr "Service Agreement"
+
+#: .\templates\footer.html:81 .\templates\navbar.html:35
+msgid "Online Danışmanlık Onam Formu"
+msgstr "Online Counseling Consent Form"
+
+#: .\templates\footer.html:83 .\templates\footer.html:92
+#: .\templates\navbar.html:62 .\templates\pages\iletisim.html:203
+msgid "İletişim"
+msgstr "Contact"
+
+#: .\templates\header.html:50
+msgid "Profilim"
+msgstr "Profile"
+
+#: .\templates\header.html:52
+msgid "Çıkış Yap"
+msgstr "Logout"
+
+#: .\templates\header.html:57 .\templates\users\giris-yap.html:219
+#: .\templates\users\giris-yap.html:225 .\templates\users\giris-yap.html:243
+#: .\templates\users\giris-yap.html:272 .\templates\users\kayit-ol.html:280
+msgid "Giriş Yap"
+msgstr "Login"
+
+#: .\templates\navbar.html:23
+msgid "Ana Sayfa"
+msgstr "Home"
+
+#: .\templates\navbar.html:27
+msgid "Kurumsal"
+msgstr "Corporate"
+
+#: .\templates\navbar.html:66
+msgid "Randevu Al"
+msgstr "Make an Appointment"
+
+#: .\templates\pages\blog.html:321
+msgid "Şimdi Oku"
+msgstr "Read"
 
 #: .\templates\pages\hakkimizda.html:318
 msgid ""
@@ -38,17 +117,18 @@ msgid ""
 "derinlemesine bir bilgi kazandırdı. Zeka, akademik başarı ve bunama gibi "
 "çeşitli alanlarda psikolojik testler uygulama tecrübem bulunmakta."
 msgstr ""
-"I began my education in psychology in Bursa. After completing my undergraduate "
-"degree in Psychology at Bursa Uludağ University, I continued my studies in the "
-"field by earning a master’s degree in Clinical Psychology at Midwestern State "
-"University in Texas, USA. Throughout my academic journey, I gained extensive "
-"experience working with individuals from various age groups, disorders, and "
-"cultural backgrounds. I conducted hundreds of hours of both direct and indirect "
-"client sessions in the field of clinical psychology. This experience provided me "
-"with in-depth knowledge in administering psychological tests, conducting "
-"individual therapy sessions, and utilizing different therapeutic approaches. I "
-"have experience administering psychological assessments in areas such as "
-"intelligence, academic performance, and dementia."
+"I began my education in psychology in Bursa. After completing my "
+"undergraduate degree in Psychology at Bursa Uludağ University, I continued "
+"my studies in the field by earning a master’s degree in Clinical Psychology "
+"at Midwestern State University in Texas, USA. Throughout my academic "
+"journey, I gained extensive experience working with individuals from various "
+"age groups, disorders, and cultural backgrounds. I conducted hundreds of "
+"hours of both direct and indirect client sessions in the field of clinical "
+"psychology. This experience provided me with in-depth knowledge in "
+"administering psychological tests, conducting individual therapy sessions, "
+"and utilizing different therapeutic approaches. I have experience "
+"administering psychological assessments in areas such as intelligence, "
+"academic performance, and dementia."
 
 #: .\templates\pages\hakkimizda.html:321
 msgid ""
@@ -64,12 +144,12 @@ msgid ""
 msgstr ""
 "As a clinical psychologist, my goal is to improve individuals’ mental health "
 "and enhance their quality of life. I provide a personalized approach to help "
-"them cope with various psychological disorders, trauma, anxiety, and depression. "
-"By working with clients from diverse age groups and ethnic backgrounds, I "
-"recognize that each individual has a unique experience and that treatment "
-"should be tailored accordingly. With this in mind, I create therapy plans "
-"designed specifically for each client's needs, aiming to support both their "
-"emotional and psychological well-being."
+"them cope with various psychological disorders, trauma, anxiety, and "
+"depression. By working with clients from diverse age groups and ethnic "
+"backgrounds, I recognize that each individual has a unique experience and "
+"that treatment should be tailored accordingly. With this in mind, I create "
+"therapy plans designed specifically for each client's needs, aiming to "
+"support both their emotional and psychological well-being."
 
 #: .\templates\pages\hakkimizda.html:324
 msgid ""
@@ -85,44 +165,37 @@ msgstr ""
 "Psychology and the additional trainings I completed at various institutions "
 "have given me a profound perspective in providing psychological support and "
 "guiding my clients more effectively in their personal development processes. "
-"As a specialist clinical psychologist, my greatest goal is to strengthen mental "
-"health, help individuals discover their potential, and add meaning to their lives."
+"As a specialist clinical psychologist, my greatest goal is to strengthen "
+"mental health, help individuals discover their potential, and add meaning to "
+"their lives."
 
-msgid "Her biri alanında uzman klinik psikologlardan oluşan kadromuz ile;\n                            ergen, yetişkin, çift ve ailelere yönelik psikoterapi hizmeti verilmektedir."
-msgstr "With our team of expert clinical psychologists; psychotherapy services are provided for adolescents, adults, couples, and families."
+#: .\templates\pages\iletisim.html:264
+msgid "Bilgi Almak İçin İletişime Geçebilirsiniz."
+msgstr "You Can Contact Us for More Information."
 
-msgid "İletişime Geç"
-msgstr "Contact Us"
+#: .\templates\pages\iletisim.html:269
+msgid "İsim Soyisim"
+msgstr "Full Name"
 
-msgid "Uygulamalar"
-msgstr "Applications"
+#: .\templates\pages\iletisim.html:274 .\templates\users\kayit-ol.html:253
+msgid "Telefon Numarası"
+msgstr "Phone Number"
 
-msgid "Hakkımızda"
-msgstr "About Us"
+#: .\templates\pages\iletisim.html:279
+msgid "Email Adresi"
+msgstr "Email Address"
 
-msgid "İlkelerimiz"
-msgstr "Our Principles"
+#: .\templates\pages\iletisim.html:284
+msgid "Konu"
+msgstr "Subject"
 
-msgid "Randevu"
-msgstr "Appointment"
+#: .\templates\pages\iletisim.html:289
+msgid "Mesaj"
+msgstr "Message"
 
-msgid "Hizmet Sözleşmesi"
-msgstr "Service Agreement"
-
-msgid "Online Danışmanlık Onam Formu"
-msgstr "Online Counseling Consent Form"
-
-msgid "İletişim"
-msgstr "Contact"
-
-msgid "Ana Sayfa"
-msgstr "Home"
-
-msgid "Kurumsal"
-msgstr "Corporate"
-
-msgid "Randevu Al"
-msgstr "Make an Appointment"
+#: .\templates\pages\iletisim.html:294
+msgid "Gönder"
+msgstr "Send"
 
 #: .\templates\pages\ilkelerimiz.html:199
 msgid ""
@@ -135,14 +208,15 @@ msgid ""
 "hissetmesine ve hedeflerine ulaşmasına yardımcı olmayı amaçlıyoruz. Bu "
 "süreçte, danışanın güvenliğini ve iyileşmesini her şeyin önünde tutuyoruz. "
 msgstr ""
-" Our principles recognize that each client is unique and that the therapy "
-"process should be shaped with respect for these differences. The foundation "
-"of our therapy is built on progressing flexibly according to the individual "
-"needs of the client, and on ensuring that every step is not harmful but "
-"rather beneficial. Since each person experiences emotional and psychological "
-"challenges differently, we aim to develop personalized approaches that help "
-"clients feel better and achieve their goals. Throughout this process, we "
-"prioritize the client’s safety and healing above all else. "
+" We commit to ethical principles such as beneficence and non maleficence, "
+"fidelity and responsibility integrity, justice, and respect for people's "
+"rights and dignity. The foundation of our therapy is built on progressing "
+"flexibly according to the individual needs of the client, and on ensuring "
+"that every step is not harmful but rather beneficial. Since each person "
+"experiences emotional and psychological challenges differently, we aim to "
+"develop personalized approaches that help clients feel better and achieve "
+"their goals. Throughout this process, we prioritize the client’s safety and "
+"healing above all else. "
 
 #: .\templates\pages\ilkelerimiz.html:202
 msgid ""
@@ -162,82 +236,87 @@ msgstr ""
 "strengthen their mental well-being. In this direction, we aim to contribute "
 "to their growth at every step. "
 
-msgid "Bilgi Almak İçin İletişime Geçebilirsiniz."
-msgstr "You Can Contact Us for More Information."
+#: .\templates\pages\index.html:190
+msgid ""
+"Hayat kalitenizi ve psikolojik sağlığınızı güçlendirmek için "
+"sizin yanınızdayız."
+msgstr "There must be text in here"
 
-msgid "İsim Soyisim"
-msgstr "Full Name"
-
-msgid "Telefon Numarası"
-msgstr "Phone Number"
-
-msgid "Email Adresi"
-msgstr "Email Address"
-
-msgid "Konu"
-msgstr "Subject"
-
-msgid "Mesaj"
-msgstr "Message"
-
-msgid "Gönder"
-msgstr "Send"
-
-
-
+#: .\templates\pages\index.html:279
 msgid "İncele"
 msgstr "View"
 
-msgid "Giriş Yap"
-msgstr "Login"
-
+#: .\templates\users\giris-yap.html:248 .\templates\users\kayit-ol.html:267
 msgid "E-mail Adresi"
 msgstr "Email Address"
 
+#: .\templates\users\giris-yap.html:253 .\templates\users\kayit-ol.html:272
 msgid "Şifre"
 msgstr "Password"
 
+#: .\templates\users\giris-yap.html:262
 msgid "Şifremi Unuttum"
 msgstr "Forgot My Password"
 
+#: .\templates\users\giris-yap.html:264 .\templates\users\kayit-ol.html:206
+#: .\templates\users\kayit-ol.html:212 .\templates\users\kayit-ol.html:237
+#: .\templates\users\kayit-ol.html:288
 msgid "Kayıt Ol"
 msgstr "Sign Up"
 
+#: .\templates\users\kayit-ol.html:242
 msgid "İsim"
 msgstr "First Name"
 
+#: .\templates\users\kayit-ol.html:247
 msgid "Soyisim"
 msgstr "Last Name"
 
+#: .\templates\users\kayit-ol.html:260
 msgid "Adres"
 msgstr "Address"
 
+#: .\templates\users\kayit-ol.html:260
 msgid "zorunlu değil"
 msgstr "optional"
 
+#: .\templates\users\randevu.html:55 .\templates\users\randevu.html:67
+#: .\templates\users\randevu.html:93
 msgid "Randevu Oluştur"
 msgstr "Create Appointment"
 
+#: .\templates\users\randevu.html:74
 msgid "Tarih Seçin"
 msgstr "Select Date"
 
+#: .\templates\users\randevu.html:80
 msgid "Saat Seçin"
 msgstr "Select Time"
 
+#: .\templates\users\randevu.html:86
 msgid "Ek Notlar (opsiyonel)"
 msgstr "Additional Notes (optional)"
 
+#: .\templates\users\randevu.html:100
 msgid "Randevu oluşturabilmek için giriş yapmalısınız."
 msgstr "You must be logged in to create an appointment."
 
+#: .\users\models.py:33
 msgid "You must provide an email address"
 msgstr "You must provide an email address"
 
+#: .\users\models.py:36
 msgid "Password must include 8 characters at least"
 msgstr "Password must include at least 8 characters"
 
+#: .\users\models.py:49
 msgid "email address"
 msgstr "email address"
 
-msgid "Hayat kalitenizi ve psikolojik sağlığınızı güçlendirmek için sizin yanınızdayız."
-msgstr "There must be text in here"
+#~ msgid ""
+#~ "Her biri alanında uzman klinik psikologlardan oluşan kadromuz ile;\n"
+#~ "                            ergen, yetişkin, çift ve ailelere yönelik "
+#~ "psikoterapi hizmeti verilmektedir."
+#~ msgstr ""
+#~ "With our team of expert clinical psychologists; psychotherapy services "
+#~ "are provided for adolescents, adults, couples, and families."

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Application, Message
+from .models import Intervention, Message, Article
 
 from django.contrib import admin
 from django.contrib.auth.models import Group
@@ -27,4 +27,6 @@ admin.site.index_title = "Welcome to Administration portal"
 
 class ApplicationAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
-admin.site.register(Application)
+admin.site.register(Intervention)
+
+admin.site.register(Article)

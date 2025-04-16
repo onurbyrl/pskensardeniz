@@ -200,7 +200,7 @@
                             </div>
                         </div>
                         <div class="shape-wrapper" id="scene">
-                            <img loading="lazy" src="resimler/slider.png" alt="Psk Ensar Deniz ">
+                            <img loading="lazy" src="{% static 'images/peterson.jpeg' %}" width="200" height="300" alt="Psk Ensar Deniz">
 
                         </div>
 
@@ -247,20 +247,22 @@
             <!-- Start Card Area -->
             <div class="row g-5">
 
-                {% for application in applications %}
+                {% for intervention in interventions %}
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12" data-sal-delay="150" data-sal="slide-up"
                     data-sal-duration="800">
                     <div class="rbt-card variation-01 rbt-hover">
                         <div class="rbt-card-img">
-                            <a href="{% url 'core:uygulama_detay' application.slug %}" title="{{ application.title }}"></a>
+                            <a href="{% url 'core:uygulama_detay' intervention.slug %}" title="{{ intervention.title }}">
+                                <img loading="lazy" src="{{ intervention.image.url }}" alt="{{ intervention.title }}" style="width: 200px; height: 200px; object-fit: cover;">
+                            </a>
                         </div>
                         <div class="rbt-card-body">
                             <div class="rbt-card-top">
 
                             </div>
 
-                            <h4 class="rbt-card-title"><a href="{% url 'core:uygulama_detay' application.slug %}"
-                                    title="{{ application.title }}">{{ application.title }}</a>
+                            <h4 class="rbt-card-title"><a href="{% url 'core:uygulama_detay' intervention.slug %}"
+                                    title="{{ intervention.title }}">{{ intervention.title }}</a>
                             </h4>
 
 
@@ -271,10 +273,10 @@
 
                             <div class="rbt-card-bottom">
                                 <div class="rbt-price">
-                                    {{ application.description|slice:":70" }}...
+                                    {{ intervention.description|slice:":70" }}...
                                 </div>
-                                <a class="rbt-btn-link" href="{% url 'core:uygulama_detay' application.slug %}"
-                                    title="{{ application.title }}">{% trans "İncele" %}<i class="feather-arrow-right"></i></a>
+                                <a class="rbt-btn-link" href="{% url 'core:uygulama_detay' intervention.slug %}"
+                                    title="{{ intervention.title }}">{% trans "İncele" %}<i class="feather-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -287,7 +289,9 @@
 
 
 
-
+        <div style="height: 200px;">
+            <br><br><br>
+        </div>
         
 
 

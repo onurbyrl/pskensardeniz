@@ -5,6 +5,8 @@ from .models import CustomUser, UserProfile, Appointment
 from django.db import transaction
 from django.http import JsonResponse
 import json
+from datetime import datetime
+from django.contrib.auth.decorators import login_required
 
 
 def user_login(request):
@@ -78,6 +80,24 @@ def register(request):
     return render(request, 'users/kayit-ol.html', {})
 
 
+@login_required
+def user_profile(request):
+    user = request.user
+    now = datetime.now()
+
+    # Geçmiş randevular
+    past_appointments = Appointment.objects.filter(client=user, date__lt=now.date()).order_by('-date', '-time')
+
+    # Gelecek randevular
+    future_appointments = Appointment.objects.filter(client=user, date__gte=datetime.now().date()).order_by('date', 'time')
+
+    return render(request, 'users/profil.html', {
+        'past_appointments': past_appointments,
+        'future_appointments': future_appointments
+    })
+
+
+@login_required
 def user_logout(request):
     logout(request) # bakılacak
     return redirect('users:login')
