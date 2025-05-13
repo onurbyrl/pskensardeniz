@@ -1,27 +1,336 @@
-<button id="pay-button">Ödeme Yap</button>
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="en">
 
-<div id="iyzico-checkout-form"></div>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
-<script>
-document.getElementById("pay-button").addEventListener("click", function() {
-    fetch("/payment/checkout/", {
-        method: "POST",
-        headers: {
-            "Content-Type": "intervention/json",
-            "X-CSRFToken": "{{ csrf_token }}"
-        },
-        body: JSON.stringify({
-            price: "100.00"  // Ödenecek tutar
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.token) {
-            document.getElementById("iyzico-checkout-form").innerHTML = data.html;
-        } else {
-            alert("Ödeme başlatılamadı!");
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Odeme | Ensar Deniz</title>
+    <link rel="canonical" href="index.html" />
+    <base>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.webp">
+
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/sal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/euclid-circulara.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/magnify.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/odometer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/animation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/magnigy-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+    <script src="../static/js/vendor/jquery.js"></script>
+    <script src="../cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../static/js/vue.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            '../connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1152557622805558');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img loading="lazy" height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1152557622805558&amp;ev=PageView&amp;noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9TWP7FWTJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-S9TWP7FWTJ');
+    </script>
+    <!-- Google tag (gtag.js) end -->
+
+</head>
+
+<body class="rbt-header-sticky">
+    <div id="app">
+        <header class="rbt-header rbt-header-9">
+            <!-- Start Header Area -->
+            {% include '../header.html' %}
+
+
+            {% include '../navbar.html' %}
+        </header>
+
+        <!-- Mobile Menu Section -->
+        {% include '../mobile-section.html' %}
+    </div>
+    <!-- Start Side Vav -->
+    <div class="rbt-cart-side-menu">
+        <div class="inner-wrapper">
+            <div class="inner-top">
+                <div class="content">
+                    <div class="title">
+                        <h4 class="title mb--0">Liste</h4>
+                    </div>
+                    <div class="rbt-btn-close" id="btn_sideNavClose">
+                        <button class="minicart-close-button rbt-round-btn"><i class="feather-x"></i></button>
+                    </div>
+                </div>
+            </div>
+            <nav class="side-nav w-100">
+                <ul class="rbt-minicart-wrapper">
+
+                    <li class="minicart-item" v-for="(item,index) in sepet" v-if="sepetCount > 0">
+                        <div class="thumbnail">
+                            <a :href="'uygulama/'+item.uygulamaurl" :title="item.uygulamabaslik">
+                                <img loading="lazy" :src="item.uygulamagorsel" :alt="item.uygulamabaslik">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <h6 class="title"><a :href="'uygulama/'+item.uygulamaurl"
+                                    :title="item.uygulamabaslik">{{item.uygulamabaslik}}</a></h6>
+
+                            <span class="quantity" v-if="item.uygulamaindirimlifiyat > 0">{{item.adet}} * <span
+                                    class="price">{{item.uygulamaindirimlifiyat}}₺</span></span>
+                            <span class="quantity" v-else="item.uygulamafiyat">{{item.adet}} * <span
+                                    class="price">{{item.uygulamafiyat}}₺</span></span>
+                        </div>
+                        <div class="close-btn">
+                            <button class="rbt-round-btn" @click="sepetUrunSil(index)"><i
+                                    class="feather-x"></i></button>
+                        </div>
+                    </li>
+
+
+                    <li class="minicart-item" v-for="(item,index) in seansSepet" v-if="seansSepetCount > 0">
+                        <div class="thumbnail">
+                            <a :href="'seans/'+item.seansurl" :title="item.seansbaslik">
+                                <img loading="lazy" :src="item.seansgorsel" :alt="item.seansbaslik">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <h6 class="title"><a :href="'seans/'+item.seansurl" :title="item.seansbaslik"></a></h6>
+
+                            <span class="quantity" v-if="item.seansindirimlifiyat > 0">{{item.adet}} * <span
+                                    class="price">{{item.seansindirimlifiyat}}₺</span></span>
+                            <span class="quantity" v-else="item.seansfiyat"><span
+                                    class="price">{{item.seansfiyat}}₺</span> <br> ({{item.seanspaketbaslik}})</span>
+                        </div>
+                        <div class="close-btn">
+                            <button class="rbt-round-btn" @click="seansSepetUrunSil(index)"><i
+                                    class="feather-x"></i></button>
+                        </div>
+                    </li>
+
+                    <li class="minicart-item" v-if="sepetCount <= 0 && seansSepetCount <= 0">
+                        <h5>Listeniz boş.</h5>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="rbt-minicart-footer" v-if="sepetCount > 0 || seansSepetCount > 0">
+                <hr class="mb--0">
+                <div class="rbt-cart-subttotal">
+                    <p class="subtotal"><strong>Toplam:</strong></p>
+                    <p class="price">{{sepetToplam}}₺</p>
+                </div>
+                <hr class="mb--0">
+                <div class="rbt-minicart-bottom mt--20">
+
+                    <div class="checkout-btn mt--20">
+                        <a class="rbt-btn btn-gradient icon-hover w-100 text-center" href="sepet.html" title="Sepet">
+                            <span class="btn-text">Listeyi Görüntüle</span>
+                            <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- End Side Vav -->
+    <a class="close_side_menu" href="javascript:void(0);" title="Menüyü Kapat"></a>
+
+
+    <!-- Start Banner Area -->
+    <div class="rbt-breadcrumb-default ptb--50 ptb_md--50 ptb_sm--30 bg-gradient-1">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="content">
+                        <div class="inner text-center">
+                            <h1 class="title">{% trans "Ödeme" %}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Banner Area -->
+
+
+    <div class="rbt-rbt-blog-area bg-color-extra2 mb--60 rbt-section-gap">
+        <div class="container">
+
+            <div class="row g-5">
+
+                <p>{% trans "Aşağıdaki IBAN adresine ödemeyi tamamladıktan sonra belirtilen iletişim numarasına dekont iletmenizi rica ederiz" %}</p>
+
+                <br>
+
+                <div class="container my-4">
+                    <div class="row g-4 justify-content-center">
+                        <!-- Yurtiçi IBAN Kartı -->
+                        <div class="col-md-5">
+                            <div class="card shadow-sm p-3 bg-white rounded h-100">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="card-subtitle mb-2 text-muted">Yurtiçi IBAN</h6>
+                                        <p id="iban-domestic" class="mb-0 fw-bold">TR71 0020 9000 0100 9370 0000 01</p>
+                                        <p class="mb-0 fw-bold">Ensar Yavuz Deniz</p>
+                                    </div>
+                                    <button id="copy-domestic" class="btn btn-primary btn-lg"
+                                        onclick="copyIban('iban-domestic', 'copy-domestic')">
+                                        Kopyala
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Yurtdışı IBAN Kartı -->
+                        <div class="col-md-5">
+                            <div class="card shadow-sm p-3 bg-white rounded h-100">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="card-subtitle mb-2 text-muted">Yurtdışı IBAN</h6>
+                                        <p id="iban-international" class="mb-0 fw-bold">TR17 0020 9000 0100 9370 0000 03
+                                        </p>
+                                        <p class="mb-0 fw-bold">Ensar Yavuz Deniz</p>
+                                    </div>
+                                    <button id="copy-international" class="btn btn-primary btn-lg"
+                                        onclick="copyIban('iban-international', 'copy-international')">
+                                        Kopyala
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <!-- End Card Area -->
+        </div>
+    </div>
+
+
+    <!-- Start Footer area -->
+    {% include '../footer.html' %}
+    <!-- End Footer area -->
+
+    <!-- <div class="rbt-progress-parent">
+        <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <div class="whatsapp hidden-sm" id="scroll-to-top2">
+        <a href="https://wa.me/05367169453" target="_blank" title="Whatsapp İletişim Hattı"><img loading="lazy"
+                src="resimler/whatsapp.png"></a>
+    </div>
+    <div class="whatsapp hidden-sm" id="scroll-to-top2">
+        <a class="" href="#" title="Whatsapp İletişim Hattı" target="_blank">
+            <img loading="lazy" src="resimler/whatsapp.png">
+        </a>
+    </div>
+    </div> -->
+
+
+    <script>
+        function copyIban(ibanId, buttonId) {
+          const ibanText = document.getElementById(ibanId).innerText;
+          const button = document.getElementById(buttonId);
+      
+          navigator.clipboard.writeText(ibanText).then(() => {
+            button.innerText = "Kopyalandı ✅";
+            button.classList.remove("btn-primary");
+            button.classList.add("btn-success");
+      
+            setTimeout(() => {
+              button.innerText = "Kopyala";
+              button.classList.remove("btn-success");
+              button.classList.add("btn-primary");
+            }, 4000);
+          });
         }
-    })
-    .catch(error => console.error("Hata:", error));
-});
-</script>
+      </script>
+
+
+
+
+    <!-- <script src="assets/js/custom.js"></script>-->
+
+    <script src="../static/js/customd8a8.js?v=20250313"></script>
+
+
+
+
+
+    <!-- JS
+        ============================================ -->
+    <!-- Modernizer JS -->
+    <script src="../static/js/vendor/modernizr.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <!-- sal.js -->
+    <script src="../static/js/vendor/sal.js"></script>
+    <script src="../static/js/vendor/swiper.js"></script>
+    <script src="../static/js/vendor/magnify.min.js"></script>
+    <script src="../static/js/vendor/jquery-appear.js"></script>
+    <script src="../static/js/vendor/odometer.js"></script>
+    <script src="../static/js/vendor/backtotop.js"></script>
+    <script src="../static/js/vendor/isotop.js"></script>
+    <script src="../static/js/vendor/imageloaded.js"></script>
+
+    <script src="../static/js/vendor/wow.js"></script>
+    <script src="../static/js/vendor/waypoint.min.js"></script>
+    <script src="../static/js/vendor/easypie.js"></script>
+    <script src="../static/js/vendor/text-type.js"></script>
+    <script src="../static/js/vendor/jquery-one-page-nav.js"></script>
+    <script src="../static/js/vendor/bootstrap-select.min.js"></script>
+    <script src="../static/js/vendor/jquery-ui.js"></script>
+    <script src="../static/js/vendor/magnify-popup.min.js"></script>
+    <script src="../static/js/vendor/paralax-scroll.js"></script>
+    <script src="../static/js/vendor/paralax.min.js"></script>
+    <script src="../static/js/vendor/countdown.js"></script>
+    <!-- Main JS -->
+    <script src="../static/js/main.js"></script>
+
+
+
+</body>
+
+</html>

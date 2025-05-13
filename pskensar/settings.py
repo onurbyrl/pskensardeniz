@@ -72,6 +72,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'core.context_processors.interventions_context',
                 'users.context_processors.auth_status',
+                'users.context_processors.interventions_context',
+                'payment.context_processors.interventions_context',
             ],
         },
     },
@@ -122,6 +124,7 @@ LANGUAGES = [
 LANGUAGE_CODE = 'tr'  # Varsayılan dil
 USE_I18N = True
 USE_L10N = True
+TIME_ZONE = 'Europe/Istanbul'
 USE_TZ = True
 
 LOCALE_PATHS = [
@@ -158,3 +161,10 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'bloxine11@gmail.com'
 EMAIL_HOST_PASSWORD = 'x3is1byQNP123'  # Gmail'de uygulama şifresi gerekiyor
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+
+# Payment method settings
+# IYZICO_API_KEY = "sandbox-api-key"
+# IYZICO_SECRET_KEY = "sandbox-secret-key"
+# IYZICO_BASE_URL = "https://sandbox-api.iyzipay.com"

@@ -6,7 +6,9 @@ from django.db import transaction
 from django.http import JsonResponse
 import json
 from datetime import datetime
+from django.utils.timezone import make_aware
 from django.contrib.auth.decorators import login_required
+from pytz import timezone
 
 
 def user_login(request):
@@ -108,17 +110,37 @@ def randevu_olustur(request):
         date = request.POST.get("date")
         time = request.POST.get("time")
         notes = request.POST.get("notes", "")
+        timezone_str = request.POST.get("timezone", "Europe/Istanbul")
 
         if not date or not time:
             return JsonResponse({"status": "error", "message": "Lütfen tüm alanları doldurun."}, status=400)
 
-        appointment = Appointment.objects.create(
-            client=request.user,  # Giriş yapmış kullanıcıyı ata
-            date=date,
-            time=time,
+        turkey_tz = timezone('Europe/Istanbul')
+        client_tz = timezone(request.POST.get('timezone'))  # formdan gelirse
+
+        datetime_str = f"{request.POST.get('date')} {request.POST.get('time')}"
+        client_dt = client_tz.localize(datetime.strptime(datetime_str, "%Y-%m-%d %H:%M"))
+        turkey_dt = client_dt.astimezone(turkey_tz)
+        print("türkiye saatiyle: ", turkey_dt)
+
+        # Aynı zamanda başka randevu var mı kontrolü
+        from users.models import Appointment
+        exists = Appointment.objects.filter(date=turkey_dt.date(), time=turkey_dt.time()).exists()
+
+        if exists:
+            return JsonResponse({
+                "status": "error",
+                "message": "Bu saat için zaten bir randevu mevcut. Lütfen başka bir saat seçin."
+            }, status=400)
+
+        # Randevuyu oluştur
+        Appointment.objects.create(
+            client=request.user,
+            date=turkey_dt.date(),
+            time=turkey_dt.time(),
             notes=notes
         )
 
-        return JsonResponse({"status": "success", "message": "Randevu başarıyla oluşturuldu."})
+        return redirect("payment:checkout")
     
     return render(request, 'users/randevu.html', {})

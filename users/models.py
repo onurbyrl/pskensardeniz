@@ -91,6 +91,8 @@ class Appointment(models.Model):
     time = models.TimeField()
     notes = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    is_paid = models.BooleanField(default=False)
+    my_notes = models.TextField(blank=True, null=True)
     
     def __str__(self):
         return f"{self.client.email} - {self.date} at {self.time}"

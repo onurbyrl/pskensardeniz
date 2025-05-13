@@ -24133,7 +24133,7 @@ blockquote.has-text-align-right cite,
   overflow: hidden;
   background-image: url(../images/bg/bg-image-10.jpg);
   background-position: top center;
-  background: linear-gradient(110deg, rgb(205, 245, 253, 0.8) 11%, rgb(0, 169, 255) 95%);
+  background: linear-gradient(110deg, rgba(132, 187, 199, 0.8) 11%, rgb(50, 240, 177) 95%);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .rbt-banner-1 {

@@ -1,3 +1,4 @@
+{% load i18n %}
 <div class="popup-mobile-menu">
     <div class="inner-wrapper">
         <div class="inner-top">
@@ -25,50 +26,39 @@
         <nav class="mainmenu-nav">
             <ul class="mainmenu">
                 <li class="position-static">
-                    <a href="{% url 'core:home' %}" title="Ana Sayfa">Ana Sayfa</a>
+                    <a href="{% url 'core:home' %}" title="Ana Sayfa">{% trans "Ana Sayfa" %}</a>
                 </li>
 
 
                 <li class="has-dropdown has-menu-child-item">
-                    <a href="#" title="Kurumsal">Kurumsal
+                    <a href="#" title="Kurumsal">{% trans "Kurumsal" %}
                         <i class="feather-chevron-down"></i>
                     </a>
                     <ul class="submenu">
-                            <li class=""><a href="hakkimizda.html" title="Hakkımızda">Hakkımızda</a></li>
-                            <li class=""><a href="ekibimiz.html" title="Kadromuz">İlkelerimiz</a></li>
+                            <li class=""><a href="{% url 'core:hakkimizda' %}" title="Hakkımızda">{% trans "Hakkımızda" %}</a></li>
+                            <li class=""><a href="{% url 'core:ilkelerimiz' %}" title="İlkelerimiz">{% trans "İlkelerimiz" %}</a></li>
 
                     </ul>
                 </li>
 
 
                 <li class="has-dropdown has-menu-child-item">
-                    <a href="uygulamalar.html" title="Uygulamalar">Uygulamalar
+                    <a href="#" title="Uygulamalar">{% trans "Uygulamalar" %}
                         <i class="feather-chevron-down"></i>
                     </a>
                     <ul class="submenu">
-                        <li class=""><a href="uygulamalar.html" title="Tüm Uygulamalar">Tüm Uygulamalar</a></li>
-                                                    <li class=""><a href="uygulama/fatih-hoca-ile-yetiskinlik-yolculugu.html" title="Fatih Hoca ile Yetişkinlik Yolculuğu">Fatih Hoca ile Yetişkinlik Yolculuğu</a></li>
-                                                    <li class=""><a href="uygulama/kadinligin-kesfi.html" title="Kadınlığın Keşfi">Kadınlığın Keşfi</a></li>
-                                                    <li class=""><a href="uygulama/kaygiyi-yenme-okulu.html" title="Kaygıyı Yenme Okulu">Kaygıyı Yenme Okulu</a></li>
-                                                    <li class=""><a href="uygulama/kurumsal-egitimler.html" title="Kurumsal Eğitimler">Kurumsal Eğitimler</a></li>
-                                                    <li class=""><a href="uygulama/o-kadin-olmak.html" title="'O' Kadın Olmak">'O' Kadın Olmak</a></li>
-                                            </ul>
-                </li>
-                <li class="position-static">
-                    <a href="seanslar.html" title="Seanslar">Seanslar</a>
-                </li>
-
-
-                <li class="position-static">
-                    <a href="kurumsal-egitimler.html" title="Kurumsal Eğitimler">Kurumsal Eğitimler</a>
+                        {% for intervention in interventions %}
+                        <li class=""><a href="{% url 'core:uygulama_detay' intervention.slug %}" title="{{ intervention.title }}">{{ intervention.title }}</a></li>
+                        {% endfor %}
+                    </ul>
                 </li>
 
                 <li class="position-static">
-                    <a href="blog.html" title="Blog">Blog</a>
+                    <a href="{% url 'core:blog' %}" title="Blog">Blog</a>
                 </li>
 
                 <li class="position-static">
-                    <a href="iletisim.html" title="İletişim">İletişim</a>
+                    <a href="{% url 'core:iletisim' %}" title="İletişim">{% trans "İletişim" %}</a>
                 </li>
 
             </ul>
@@ -76,36 +66,24 @@
 
         <div class="mobile-menu-bottom">
                             <div class="rbt-btn-wrapper mb--20">
-                    <a class="rbt-btn btn-border-gradient radius-round btn-sm hover-transform-none w-100 justify-content-center text-center" href="giris-yap.html" title="Giriş Yap">
-                        <span>Giriş Yap</span>
+                    <a class="rbt-btn btn-border-gradient radius-round btn-sm hover-transform-none w-100 justify-content-center text-center" href="{% url 'users:login' %}" title="Giriş Yap">
+                        <span>{% trans "Giriş Yap" %}</span>
                     </a>
                 </div>
             
             <div class="social-share-wrapper">
-                <span class="rbt-short-title d-block">Sosyal Medya Hesaplarımız</span>
+                <span class="rbt-short-title d-block">{% trans "Sosyal Medya Hesaplarım" %}</span>
                 <ul class="social-icon social-default transparent-with-border justify-content-start mt--20">
-                                       <li>
-                        <a href="https://www.facebook.com/FatihResitCivelekoglu" target="_blank" title="Facebook Adresimiz">
-                            <i class="feather-facebook"></i>
-                        </a>
-                    </li>
                 
                                     <li>
-                        <a href="https://www.instagram.com/psk.fatihresitcivelekoglu/" target="_blank" title="Instagram Adresimiz">
+                        <a href="https://www.instagram.com/psikologensardeniz" target="_blank" title="Instagram Adresim">
                             <i class="feather-instagram"></i>
                         </a>
                     </li>
-                
-                                    <li>
-                        <a href="https://twitter.com/fatihresit" target="_blank" title="Twitter Adresimiz">
-                            <i class="feather-twitter"></i>
-                        </a>
-                    </li>
-                
 
                                     <li>
-                        <a href="https://www.youtube.com/c/PskFatihReşitCivelekoğlu" target="_blank" title="Youtube Adresimiz">
-                            <i class="feather-youtube"></i>
+                        <a href="https://www.linkedin.com/in/ensar-deniz-b9ba79211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn Adresim">
+                            <i class="feather-linkedin"></i>
                         </a>
                     </li>
                 

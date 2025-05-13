@@ -4,9 +4,8 @@
 <html lang="en">
 
 
-<!-- Mirrored from psikosaglikdanismanlik.co/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Mar 2025 05:30:15 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
     <meta charset="utf-8">
@@ -14,8 +13,7 @@
     <title>Ensar Deniz</title>
     <link rel="canonical" href="index.html" />
     <base>
-    <meta name="description"
-        content="Psiko Sağlık Danışmanlık, uzman terapistlerle sağladığı bireysel ve çift terapisiyle psikolojik sağlık hizmetleri sunan önde gelen bir danışmanlık merkezidir. Depresyon, kaygı, ilişki sorunları ve daha fazlası gibi konularda uzmanlaşmış ekibimiz, sizi destekleyerek içsel iyilik halinizi yeniden keşfetmenize yardımcı olur.">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.webp">
@@ -46,7 +44,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -73,6 +71,29 @@
         gtag('config', 'G-S9TWP7FWTJ');
     </script>
     <!-- Google tag (gtag.js) end -->
+
+    <style>
+        @media (max-width: 768px) {
+            .banner-flex {
+                flex-direction: column !important;
+                text-align: center;
+            }
+
+            .banner-flex img {
+                width: 60% !important;
+                height: auto !important;
+                margin-top: 20px;
+            }
+
+            .banner-flex .inner h1 {
+                font-size: 40px !important;
+            }
+
+            .banner-flex .inner p {
+                font-size: 24px !important;
+            }
+        }
+    </style>
 
 </head>
 
@@ -184,25 +205,35 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 pb--120 pt--70">
-                    <div class="content">
+                    <div class="content d-flex align-items-center gap-4 banner-flex">
                         <div class="inner">
-                            <h1 class="title text-white">Psk Ensar Deniz</h1>
-                            <p class="description text-white">{% trans "Hayat kalitenizi ve psikolojik sağlığınızı güçlendirmek için sizin yanınızdayız." %}</p>
+                            <h1 class="title" style="color: rgb(64, 64, 64); font-size: 56px;">Ensar Deniz</h1>
+                            <p style="font-size: 42px; color: rgb(64, 64, 64);">{% trans "Uzman Klinik Psikolog" %}</p>
                             <div class="slider-btn">
-                                <!-- <a class="rbt-btn btn-gradient  slider-custom-btn hover-icon-reverse"
-                                    href="uygulamalar.html" title="Uygulamalar">
-                                    <span class="icon-reverse-wrapper">
-                                        <span class="btn-text text-dark">Uygulamalar</span>
-                                        <span class="btn-icon text-dark"><i class="feather-arrow-right"></i></span>
-                                        <span class="btn-icon text-dark"><i class="feather-arrow-right"></i></span>
-                                    </span>
-                                </a> -->
+
                             </div>
                         </div>
-                        <div class="shape-wrapper" id="scene">
-                            <img loading="lazy" src="{% static 'images/peterson.jpeg' %}" width="200" height="300" alt="Psk Ensar Deniz">
+                        <div style="text-align: center;">
+                            <img loading="lazy" src="{% static 'images/ensar-ana-sayfa.jpg' %}" alt="Psk Ensar Deniz"
+                                style="
+                                    border-radius: 10%;
+                                    width: 400px;
+                                    height: 600px;
+                                    object-fit: cover;
+                                    -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+                                    mask-image: radial-gradient(circle, black 60%, transparent 100%);
+                                    mask-size: 100% 100%;
+                                    -webkit-mask-size: 100% 100%;
+                                    mask-repeat: no-repeat;
+                                    -webkit-mask-repeat: no-repeat;
+                                    mask-position: center;
+                                    -webkit-mask-position: center;
+                                ">
 
                         </div>
+
+
+
 
 
                     </div>
@@ -231,8 +262,8 @@
             <div class="row mb--55 g-5 align-items-end">
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="section-title text-start">
-                        <span class="subtitle bg-pink-opacity">Psk Ensar Deniz</span>
-                        <h2 class="title">{% trans "Uygulamalar" %}<span class="color-primary"></span></h2>
+                        <h2 class="title" id="uygulamalar">{% trans "Uygulamalar" %}<span class="color-primary"></span>
+                        </h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
@@ -252,8 +283,10 @@
                     data-sal-duration="800">
                     <div class="rbt-card variation-01 rbt-hover">
                         <div class="rbt-card-img">
-                            <a href="{% url 'core:uygulama_detay' intervention.slug %}" title="{{ intervention.title }}">
-                                <img loading="lazy" src="{{ intervention.image.url }}" alt="{{ intervention.title }}" style="width: 200px; height: 200px; object-fit: cover;">
+                            <a href="{% url 'core:uygulama_detay' intervention.slug %}"
+                                title="{{ intervention.title }}">
+                                <img loading="lazy" src="{{ intervention.image.url }}" alt="{{ intervention.title }}"
+                                    style="width: 200px; height: 200px; object-fit: cover;">
                             </a>
                         </div>
                         <div class="rbt-card-body">
@@ -276,7 +309,8 @@
                                     {{ intervention.description|slice:":70" }}...
                                 </div>
                                 <a class="rbt-btn-link" href="{% url 'core:uygulama_detay' intervention.slug %}"
-                                    title="{{ intervention.title }}">{% trans "İncele" %}<i class="feather-arrow-right"></i></a>
+                                    title="{{ intervention.title }}">{% trans "İncele" %}<i
+                                        class="feather-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -292,13 +326,13 @@
         <div style="height: 200px;">
             <br><br><br>
         </div>
-        
+
 
 
         <!-- Start Footer aera -->
         {% include '../footer.html' %}
         <!-- End Footer aera -->
-         
+
         <div class="rbt-progress-parent">
             <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
                 <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
@@ -358,6 +392,5 @@
 </body>
 
 
-<!-- Mirrored from psikosaglikdanismanlik.co/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Mar 2025 05:30:38 GMT -->
 
 </html>

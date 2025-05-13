@@ -5,9 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Randevu</title>
     <meta name="description"
-        content="Psiko Sağlık Danışmanlık, uzman terapistlerle sağladığı bireysel ve çift terapisiyle psikolojik sağlık hizmetleri sunan önde gelen bir danışmanlık merkezidir. Depresyon, kaygı, ilişki sorunları ve daha fazlası gibi konularda uzmanlaşmış ekibimiz, sizi destekleyerek içsel iyilik halinizi yeniden keşfetmenize yardımcı olur.">
+        content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.webp">
@@ -40,12 +40,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
-    <div id="app">
-        <header class="rbt-header rbt-header-9">
-            {% include '../header.html' %}
-
-            {% include '../navbar.html' %}
-        </header>
+        <div id="app">
+            <header class="rbt-header rbt-header-9">
+                {% include '../header.html' %}
+                {% include '../navbar.html' %}
+            </header>
+            {% include '../mobile-section.html' %}
+        </div>
 
         <div class="rbt-breadcrumb-default ptb--100 ptb_md--50 ptb_sm--30 bg-gradient-1">
             <div class="container">
@@ -65,9 +66,29 @@
             <div class="card shadow-lg border-0 rounded-4">
                 <div class="card-body p-4">
                     <h3 class="text-center mb-4">📅 {% trans "Randevu Oluştur" %}</h3>
+
+                    
         
                     <form id="appointmentForm" method="POST" action="{% url 'users:randevu_olustur' %}">
                         {% csrf_token %}
+
+                        <!-- Ülke Seçimi -->
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">{% trans "Bulunduğunuz Ülke / Şehir" %}:</label>
+                            <select id="timezone-select" name="timezone" class="form-control">
+                                <option value="Europe/Istanbul">🇹🇷 Türkiye (İstanbul)</option>
+                                <option value="Europe/London">🇬🇧 İngiltere (Londra)</option>
+                                <option value="America/New_York">🇺🇸 ABD (New York)</option>
+                                <option value="Asia/Tokyo">🇯🇵 Japonya (Tokyo)</option>
+                                <option value="Australia/Sydney">🇦🇺 Avustralya (Sydney)</option>
+                                <option value="Europe/Berlin">🇩🇪 Almanya (Berlin)</option>
+                                <option value="Europe/Paris">🇫🇷 Fransa (Paris)</option>
+                                <option value="Europe/Moscow">🇷🇺 Rusya (Moskova)</option>
+                                <option value="America/Toronto">🇨🇦 Kanada (Toronto)</option>
+                                <option value="Pacific/Auckland">🇳🇿 Yeni Zelanda (Auckland)</option>
+                                <!-- Ülke sayısı artırılabilir -->
+                            </select>
+                        </div>
                         
                         <!-- Tarih Seçimi -->
                         <div class="mb-3">
@@ -112,26 +133,51 @@
 <!-- Gerekli JavaScript Kütüphaneleri -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
 
 <script>
-    $(document).ready(function () {
-        // Flatpickr ile Tarih Seçici
-        $("#appointment_date").flatpickr({
-            dateFormat: "Y-m-d",
-            minDate: new Date().fp_incr(7),  // bugünden itibaren 7 gün sonrası
-            disableMobile: true
-        });
+    
+</script>
 
-        // Flatpickr ile Saat Seçici
+<script>
+    const { DateTime } = luxon;
+
+    let selectedZone = "Europe/Istanbul";  // default zaman dilimi
+
+    // Flatpickr’ı güncellemek için yeniden başlatmak gerekiyor
+    function updateTimePicker(zone) {
+        const nowInZone = DateTime.now().setZone(zone);
+        $("#appointment_time").flatpickr().destroy(); // var olanı sil
+
         $("#appointment_time").flatpickr({
             enableTime: true,
             noCalendar: true,
             dateFormat: "H:i",
+            defaultDate: nowInZone.toFormat("HH:00"),
             time_24hr: true,
             minuteIncrement: 60
         });
+    }
+
+    $(document).ready(function () {
+        // Tarih için düz ayar
+        $("#appointment_date").flatpickr({
+            dateFormat: "Y-m-d",
+            minDate: new Date().fp_incr(7),
+            disableMobile: true
+        });
+
+        // İlk saat seçici başlat
+        updateTimePicker(selectedZone);
+
+        // Zaman dilimi değişince saat girişini güncelle
+        $("#timezone-select").on("change", function () {
+            selectedZone = this.value;
+            updateTimePicker(selectedZone);
+        });
     });
 </script>
+
 
 <script>
     document.getElementById('AppointmentForm').addEventListener('submit', function (e) {
@@ -142,7 +188,8 @@
         const formData = {
             date: document.querySelector('[name="date"]').value,
             time: document.querySelector('[name="time"]').value,
-            notes: document.querySelector('[name="notes"]').value
+            notes: document.querySelector('[name="notes"]').value,
+            timezone: document.querySelector('[name="timezone"]').value
         };
 
         fetch("{% url 'users:randevu_olustur' %}", {

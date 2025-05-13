@@ -4,9 +4,8 @@
 <html lang="en">
 
 
-<!-- Mirrored from psikosaglikdanismanlik.co/giris-yap by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Mar 2025 05:31:04 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
     <meta charset="utf-8">
@@ -15,7 +14,7 @@
     <link rel="canonical" href="index.html" />
     <base>
     <meta name="description"
-        content="Psiko Sağlık Danışmanlık, uzman terapistlerle sağladığı bireysel ve çift terapisiyle psikolojik sağlık hizmetleri sunan önde gelen bir danışmanlık merkezidir. Depresyon, kaygı, ilişki sorunları ve daha fazlası gibi konularda uzmanlaşmış ekibimiz, sizi destekleyerek içsel iyilik halinizi yeniden keşfetmenize yardımcı olur.">
+        content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.webp">
@@ -77,139 +76,16 @@
 </head>
 
 <body class="rbt-header-sticky">
-    <div id="app">
+        <div id="app">
+            <!-- Start Header Area -->
+            <header class="rbt-header rbt-header-9">
+                {% include '../header.html' %}
+                {% include '../navbar.html' %}
+            </header>
 
-        <!-- Start Header Area -->
-        <header class="rbt-header rbt-header-9">
-
-            <!--
-        <div class="rbt-sticky-placeholder"></div>
-        <div class="rbt-header-campaign rbt-header-campaign-1 rbt-header-top-news bg-image1">
-            <div class="wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="inner justify-content-center">
-                                <div class="content">
-                                    <span class="news-text color-white-off"><img loading="lazy" src="../static/images/icons/hand-emojji.svg" alt="Hand Emojji Images"></span>
-                                </div>
-                                <div class="right-button">
-                                    <a class="rbt-btn-link color-white" href="https://themeforest.net/checkout/from_item/42846507?license=regular">
-                                        <span> <i class="feather-arrow-right"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="icon-close position-right">
-                <button class="rbt-round-btn btn-white-off bgsection-activation">
-                    <i class="feather-x"></i>
-                </button>
-            </div>
-        </div>-->
-
-            {% include '../header.html' %}
-
-
-            {% include '../navbar.html' %}
-
-        </header>
-
-        <!-- Mobile Menu Section -->
-        
-
-        <!-- Start Side Vav -->
-        <div class="rbt-cart-side-menu">
-            <div class="inner-wrapper">
-                <div class="inner-top">
-                    <div class="content">
-                        <div class="title">
-                            <h4 class="title mb--0">Liste</h4>
-                        </div>
-                        <div class="rbt-btn-close" id="btn_sideNavClose">
-                            <button class="minicart-close-button rbt-round-btn"><i class="feather-x"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <nav class="side-nav w-100">
-                    <ul class="rbt-minicart-wrapper">
-
-                        <li class="minicart-item" v-for="(item,index) in sepet" v-if="sepetCount > 0">
-                            <div class="thumbnail">
-                                <a :href="'uygulama/'+item.uygulamaurl" :title="item.uygulamabaslik">
-                                    <img loading="lazy" :src="item.uygulamagorsel" :alt="item.uygulamabaslik">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                <h6 class="title"><a :href="'uygulama/'+item.uygulamaurl"
-                                        :title="item.uygulamabaslik">{{item.uygulamabaslik}}</a></h6>
-
-                                <span class="quantity" v-if="item.uygulamaindirimlifiyat > 0">{{item.adet}} * <span
-                                        class="price">{{item.uygulamaindirimlifiyat}}₺</span></span>
-                                <span class="quantity" v-else="item.uygulamafiyat">{{item.adet}} * <span
-                                        class="price">{{item.uygulamafiyat}}₺</span></span>
-                            </div>
-                            <div class="close-btn">
-                                <button class="rbt-round-btn" @click="sepetUrunSil(index)"><i
-                                        class="feather-x"></i></button>
-                            </div>
-                        </li>
-
-
-                        <li class="minicart-item" v-for="(item,index) in seansSepet" v-if="seansSepetCount > 0">
-                            <div class="thumbnail">
-                                <a :href="'seans/'+item.seansurl" :title="item.seansbaslik">
-                                    <img loading="lazy" :src="item.seansgorsel" :alt="item.seansbaslik">
-                                </a>
-                            </div>
-                            <div class="product-content">
-                                <h6 class="title"><a :href="'seans/'+item.seansurl" :title="item.seansbaslik"></a></h6>
-
-                                <span class="quantity" v-if="item.seansindirimlifiyat > 0">{{item.adet}} * <span
-                                        class="price">{{item.seansindirimlifiyat}}₺</span></span>
-                                <span class="quantity" v-else="item.seansfiyat"><span
-                                        class="price">{{item.seansfiyat}}₺</span> <br>
-                                    ({{item.seanspaketbaslik}})</span>
-                            </div>
-                            <div class="close-btn">
-                                <button class="rbt-round-btn" @click="seansSepetUrunSil(index)"><i
-                                        class="feather-x"></i></button>
-                            </div>
-                        </li>
-
-                        <li class="minicart-item" v-if="sepetCount <= 0 && seansSepetCount <= 0">
-                            <h5>Listeniz boş.</h5>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div class="rbt-minicart-footer" v-if="sepetCount > 0 || seansSepetCount > 0">
-                    <hr class="mb--0">
-                    <div class="rbt-cart-subttotal">
-                        <p class="subtotal"><strong>Toplam:</strong></p>
-                        <p class="price">{{sepetToplam}}₺</p>
-                    </div>
-                    <hr class="mb--0">
-                    <div class="rbt-minicart-bottom mt--20">
-
-                        <div class="checkout-btn mt--20">
-                            <a class="rbt-btn btn-gradient icon-hover w-100 text-center" href="sepet.html"
-                                title="Sepet">
-                                <span class="btn-text">Listeyi Görüntüle</span>
-                                <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+            <!-- Mobile Menu Section -->
+            {% include '../mobile-section.html' %}
         </div>
-        <!-- End Side Vav -->
-        <a class="close_side_menu" href="javascript:void(0);" title="Menüyü Kapat"></a>
-
 
         <div class="rbt-breadcrumb-default ptb--100 ptb_md--50 ptb_sm--30 bg-gradient-1">
             <div class="container">
@@ -392,6 +268,5 @@
 </body>
 
 
-<!-- Mirrored from psikosaglikdanismanlik.co/giris-yap by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Mar 2025 05:31:05 GMT -->
 
 </html>

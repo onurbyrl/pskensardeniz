@@ -1,9 +1,8 @@
 from django.urls import path
-from .views import create_payment, payment_callback
+from . import views
 
 app_name = "payment"
 
 urlpatterns = [
-    path("checkout/", create_payment, name="checkout"),
-    path("callback/", payment_callback, name="callback"),
+    path("checkout/", views.odeme, name="checkout"),
 ]
