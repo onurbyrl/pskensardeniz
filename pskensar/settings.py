@@ -162,9 +162,5 @@ EMAIL_HOST_USER = 'bloxine11@gmail.com'
 EMAIL_HOST_PASSWORD = 'x3is1byQNP123'  # Gmail'de uygulama şifresi gerekiyor
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-
-
-# Payment method settings
-# IYZICO_API_KEY = "sandbox-api-key"
-# IYZICO_SECRET_KEY = "sandbox-secret-key"
-# IYZICO_BASE_URL = "https://sandbox-api.iyzipay.com"
+# Cookies
+CSRF_COOKIE_SECURE = True  # HTTPS için True olmalı

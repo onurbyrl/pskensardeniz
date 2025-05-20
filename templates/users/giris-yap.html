@@ -94,7 +94,7 @@
                         <div class="breadcrumb-inner text-center">
                             <h2 class="title">{% trans "Giriş Yap" %}</h2>
                             <ul class="page-list">
-                                <li class="rbt-breadcrumb-item"><a href="{% url 'core:home' %}">Ensar Deniz Danışmanlık</a></li>
+                                <!-- <li class="rbt-breadcrumb-item"><a href="{% url 'core:home' %}">Ensar Deniz Danışmanlık</a></li> -->
                                 <li>
                                     <div class="icon-right"><i class="feather-chevron-right"></i></div>
                                 </li>
@@ -134,7 +134,7 @@
 
                                     <div class="col-lg-6">
                                         <div class="rbt-lost-password">
-                                            <a class="rbt-btn-link" href="sifremi-unuttum.html"
+                                            <a class="rbt-btn-link" href="{% url 'users:password_reset_page' %}"
                                                 title="Şifremi Unuttum?">{% trans "Şifremi Unuttum" %}?</a>
                                             <br>
                                             <a class="rbt-btn-link" href="{% url 'users:register' %}" title="Kayıt Ol">{% trans "Kayıt Ol" %}</a>
@@ -218,10 +218,28 @@
 
 
     <script>
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== "") {
+                const cookies = document.cookie.split(";");
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Çerez ismini kontrol et
+                    if (cookie.substring(0, name.length + 1) === (name + "=")) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        const csrfToken = getCookie("csrftoken");
+
         document.getElementById('loginForm').addEventListener('submit', function (e) {
             e.preventDefault();
     
-            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            // const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
             const email = document.getElementById('email').value;
             const sifre = document.getElementById('sifre').value;
     
@@ -241,7 +259,7 @@
                 if (data.status === 'success') {
                     Swal.fire({
                         icon: 'success',
-                        title: 'Giriş Başarılı!',
+                        title: '{% trans "Giriş Başarılı!" %}',
                         text: data.message,
                         timer: 2000,
                         showConfirmButton: false
@@ -251,7 +269,7 @@
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Hata!',
+                        title: '{% trans "Hata!" %}',
                         text: data.message
                     });
                 }
@@ -259,8 +277,8 @@
             .catch(error => {
                 Swal.fire({
                     icon: 'error',
-                    title: 'Hatalı Giriş',
-                    text: 'Email adresi veya şifre hatalı!'
+                    title: '{% trans "Hatalı Giriş" %}',
+                    text: '{% trans "Email adresi veya şifre hatalı!" %}'
                 });
             });
         });

@@ -9,6 +9,10 @@ from datetime import datetime
 from django.utils.timezone import make_aware
 from django.contrib.auth.decorators import login_required
 from pytz import timezone
+from django.contrib.auth.tokens import default_token_generator
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.utils.encoding import force_bytes
+from django.urls import reverse
 
 
 def user_login(request):
@@ -144,3 +148,104 @@ def randevu_olustur(request):
         return redirect("payment:checkout")
     
     return render(request, 'users/randevu.html', {})
+
+
+from django.contrib.auth.tokens import default_token_generator
+from django.utils.http import urlsafe_base64_encode
+from django.utils.encoding import force_bytes
+from django.core.mail import send_mail
+from django.contrib.auth import get_user_model
+from django.http import JsonResponse
+from django.shortcuts import render
+
+User = get_user_model()
+
+def password_reset_view(request):
+    return render(request, "users/sifremi-unuttum.html")
+
+def password_reset_ajax(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            email = data.get("email")
+            user = User.objects.filter(email=email).first()
+
+            if user:
+                uid = urlsafe_base64_encode(force_bytes(user.pk))
+                token = default_token_generator.make_token(user)
+                reset_link = request.build_absolute_uri(
+                    reverse("users:password_reset_confirm", kwargs={"uidb64": uid, "token": token})
+                )
+
+                # E-posta gönderimi
+                send_mail(
+                    subject="Şifre Sıfırlama",
+                    message=f"Şifrenizi sıfırlamak için aşağıdaki bağlantıya tıklayın:\n{reset_link}",
+                    from_email="noreply@example.com",
+                    recipient_list=[email],
+                )
+
+                return JsonResponse({
+                    "status": "success",
+                    "message": "Şifre sıfırlama bağlantısı e-posta adresinize gönderildi."
+                })
+
+            return JsonResponse({
+                "status": "error",
+                "message": "Bu e-posta adresi sistemde kayıtlı değil."
+            }, status=400)
+
+        except Exception as e:
+            return JsonResponse({
+                "status": "error",
+                "message": f"Hata oluştu: {str(e)}"
+            }, status=500)
+
+
+
+def password_reset_confirm(request, uidb64, token):
+    try:
+        uid = urlsafe_base64_decode(uidb64).decode()
+        user = User.objects.get(pk=uid)
+    except (User.DoesNotExist, ValueError, TypeError, OverflowError):
+        user = None
+
+    if request.method == "POST":
+        if user is not None and default_token_generator.check_token(user, token):
+            try:
+                data = json.loads(request.body)
+                password = data.get("password")
+                password2 = data.get("password2")
+
+                if password != password2:
+                    return JsonResponse({
+                        "status": "error",
+                        "message": "Şifreler uyuşmuyor!"
+                    })
+
+                if len(password) < 8:
+                    return JsonResponse({
+                        "status": "error",
+                        "message": "Şifre en az 8 karakter olmalı."
+                    })
+
+                user.set_password(password)
+                user.save()
+
+                return JsonResponse({
+                    "status": "success",
+                    "message": "Şifreniz başarıyla güncellendi."
+                })
+
+            except Exception as e:
+                return JsonResponse({
+                    "status": "error",
+                    "message": "Bir hata oluştu: " + str(e)
+                })
+
+        return JsonResponse({
+            "status": "error",
+            "message": "Bağlantı geçersiz veya süresi dolmuş."
+        })
+
+    return render(request, 'users/password_reset_confirm.html')

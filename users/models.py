@@ -32,8 +32,8 @@ class CustomAccountManager(BaseUserManager):
         if not email:
             raise ValueError(_('You must provide an email address'))
         
-        if len(password) < 8:
-            raise ValueError(_('Password must include 8 characters at least'))
+        if len(password) < 6:
+            raise ValueError(_('Password must include 6 characters at least'))
 
         email = self.normalize_email(email)
         user = self.model(email=email, name=name,

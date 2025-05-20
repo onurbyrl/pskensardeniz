@@ -180,10 +180,28 @@
 
 
 <script>
+    function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== "") {
+                const cookies = document.cookie.split(";");
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Çerez ismini kontrol et
+                    if (cookie.substring(0, name.length + 1) === (name + "=")) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+    const csrfToken = getCookie("csrftoken");
+
     document.getElementById('AppointmentForm').addEventListener('submit', function (e) {
         e.preventDefault();
 
-        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        // const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
         const formData = {
             date: document.querySelector('[name="date"]').value,
