@@ -12,9 +12,9 @@
     <title>{{ article.title }} | Psk Ensar Deniz</title>
     <link rel="canonical" href="index.html"/>
     <base >
-    <meta name="description" content="">
+    <meta name="description" content="{{ article.text|safe }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="author" content="Psikolog Ensar Deniz">
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.webp">
 
     <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">

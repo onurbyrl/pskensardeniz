@@ -2,10 +2,35 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Intervention, Message, Article
 from django.http import JsonResponse
 import json
+import requests
+
+
+
+def get_client_ip(request):
+    """Kullanıcının IP adresini alır."""
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
 
 
 def index(request):
     interventions = Intervention.objects.all()
+    ip = get_client_ip(request)
+    print("USER IP: ", ip)
+    ip = "176.237.204.97"
+    try:
+        response = requests.get(f"https://ipwho.is/{ip}")
+        data = response.json()
+        country = data.get("country")
+        is_turkey = (country == "Turkey")
+    except Exception:
+        is_turkey = False
+    request.session['is_from_turkey'] = is_turkey
+
+    print("country: ", country)
 
     return render(request, 'pages/index.html', {
         "interventions": interventions
@@ -76,3 +101,5 @@ def blog(request):
 def article_detay(request, slug):
     article = get_object_or_404(Article, slug=slug)
     return render(request, 'pages/article.html', {'article': article})
+
+

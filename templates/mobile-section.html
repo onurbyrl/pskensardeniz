@@ -1,11 +1,12 @@
 {% load i18n %}
+{% load static %}
 <div class="popup-mobile-menu">
     <div class="inner-wrapper">
         <div class="inner-top">
             <div class="content">
-                <div class="logo">
+                <div>
                     <a href="{% url 'core:home' %}" title="Psk Ensar Deniz">
-                        <img loading="lazy" src="resimler/header-logo.png" alt="Psk Ensar Deniz">
+                        <img loading="lazy" style="height: 400px;" src="{% static 'images/ensar-img2.jpg' %}" alt="Psk Ensar Deniz">
                     </a>
                 </div>
                 <div class="rbt-btn-close">
