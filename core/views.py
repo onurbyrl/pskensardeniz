@@ -26,6 +26,7 @@ def index(request):
         response = requests.get(f"https://ipwho.is/{ip}")
         data = response.json()
         country = data.get("country")
+        print("Detected country: ", country)
         is_turkey = (country == "Turkey")
     except Exception:
         is_turkey = False
