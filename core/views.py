@@ -18,6 +18,7 @@ def get_client_ip(request):
 
 def index(request):
     interventions = Intervention.objects.all()
+    country = ""
     ip = get_client_ip(request)
     print("USER IP: ", ip)
     ip = "176.237.204.97"
