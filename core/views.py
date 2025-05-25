@@ -28,7 +28,8 @@ def index(request):
         country = data.get("country")
         print("Detected country: ", country)
         is_turkey = (country == "Turkey")
-    except Exception:
+    except Exception as e:
+        print("Country detection error: ", e)
         is_turkey = False
     request.session['is_from_turkey'] = is_turkey
 
