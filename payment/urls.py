@@ -5,4 +5,5 @@ app_name = "payment"
 
 urlpatterns = [
     path("checkout/", views.odeme, name="checkout"),
+    path('services/', views.services, name='services'),
 ]

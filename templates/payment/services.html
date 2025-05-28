@@ -3,38 +3,35 @@
 {% load i18n %}
 <html lang="en">
 
-
-
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Ensar Deniz</title>
+    <title>Odeme | Ensar Deniz</title>
     <link rel="canonical" href="index.html" />
     <base>
-    <meta name="description" content="psikolojik danışman">
-    <meta name="keywords" content="psikoloji, psikolog, psychologist, psychology, terapi, therapy, ">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.webp">
 
-    <link rel="stylesheet" href="../static/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/vendor/slick.css">
-    <link rel="stylesheet" href="../static/css/vendor/slick-theme.css">
-    <link rel="stylesheet" href="../static/css/plugins/sal.css">
-    <link rel="stylesheet" href="../static/css/plugins/feather.css">
-    <link rel="stylesheet" href="../static/css/plugins/fontawesome.min.css">
-    <link rel="stylesheet" href="../static/css/plugins/euclid-circulara.css">
-    <link rel="stylesheet" href="../static/css/plugins/swiper.css">
-    <link rel="stylesheet" href="../static/css/plugins/magnify.css">
-    <link rel="stylesheet" href="../static/css/plugins/odometer.css">
-    <link rel="stylesheet" href="../static/css/plugins/animation.css">
-    <link rel="stylesheet" href="../static/css/plugins/bootstrap-select.min.css">
-    <link rel="stylesheet" href="../static/css/plugins/jquery-ui.css">
-    <link rel="stylesheet" href="../static/css/plugins/magnigy-popup.min.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <script src="../static/js/vendor/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/sal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/euclid-circulara.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/magnify.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/odometer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/animation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/magnigy-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
 
     <script src="../static/js/vendor/jquery.js"></script>
 
@@ -73,59 +70,20 @@
     </script>
     <!-- Google tag (gtag.js) end -->
 
-    <style>
-        #statu {
-            font-size: 46px;
-        }
-        #universite {
-            font-size: 36px;
-        }
-        @media (max-width: 768px) {
-            .banner-flex {
-                flex-direction: column !important;
-                text-align: center;
-            }
-
-            .banner-flex img {
-                width: 60% !important;
-                height: auto !important;
-                margin-top: 20px;
-            }
-
-            .banner-flex .inner h1 {
-                font-size: 40px !important;
-            }
-
-            .banner-flex .inner p {
-                font-size: 24px !important;
-            }
-
-            #statu {
-                font-size: 25px;
-            }
-
-            #universite {
-                font-size: 18px;
-            }
-        }
-    </style>
-
 </head>
 
 <body class="rbt-header-sticky">
     <div id="app">
         <header class="rbt-header rbt-header-9">
-            <!-- Header Area -->
+            <!-- Start Header Area -->
             {% include '../header.html' %}
 
-            <!-- Navbar Area -->
-            {% include '../navbar.html' %}
 
+            {% include '../navbar.html' %}
         </header>
 
         <!-- Mobile Menu Section -->
         {% include '../mobile-section.html' %}
-
     </div>
     <!-- Start Side Vav -->
     <div class="rbt-cart-side-menu">
@@ -216,160 +174,109 @@
     <a class="close_side_menu" href="javascript:void(0);" title="Menüyü Kapat"></a>
 
 
-    <div class="rbt-banner-area rbt-banner-1">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 pb--120 pt--70">
-                    <div class="content d-flex align-items-center gap-4 banner-flex">
-                        <div class="inner">
-                            <h1 class="title" style="color: rgb(64, 64, 64); font-size: 56px; height: 50px;">Ensar Deniz</h1>
-                            <p style="font-size: 42px; font-weight: bold; color: rgb(64, 64, 64);">{% trans "Uzman Klinik Psikolog" %}</p>
-                            <br><br>
-                            <h3 id="statu">Clinical/Counselling Psychology, M.A.</h3>
-                            <h5 id="universite">Midwestern State University, Texas</h5>
-                            <div class="slider-btn">
-
-                            </div>
+    <!-- Start Banner Area -->
+    <div class="rbt-breadcrumb-default ptb--50 ptb_md--50 ptb_sm--30 bg-gradient-1">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="content">
+                        <div class="inner text-center">
+                            <h1 class="title">{% trans "Hizmetler" %}</h1>
                         </div>
-                        <div style="text-align: center;">
-                            <img loading="lazy" src="{% static 'images/ensar-ana-sayfa.jpg' %}" alt="Psk Ensar Deniz"
-                                style="
-                                    border-radius: 10%;
-                                    width: 400px;
-                                    height: 600px;
-                                    object-fit: cover;
-                                    -webkit-mask-image: radial-gradient(ellipse at center, black 75%, transparent 100%);
-                                    mask-image: radial-gradient(ellipse at center, black 75%, transparent 100%);
-                                    -webkit-mask-size: 100% 100%;
-                                    mask-size: 100% 100%;
-                                    -webkit-mask-repeat: no-repeat;
-                                    mask-repeat: no-repeat;
-                                    -webkit-mask-position: center;
-                                    mask-position: center;
-                                ">
-
-                        </div>
-
-
-
-
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- End Banner Area -->
 
-    <div class="rbt-categories-area  pt--20 pb--20">
+
+    <div class="rbt-rbt-blog-area bg-color-extra2 mb--60 rbt-section-gap">
         <div class="container">
+
             <div class="row g-5">
 
+                <p>{% trans "Lütfen almak istediğiniz terapi hizmetini seçiniz." %}</p>
 
+                <br>
 
-
-
-
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Start Course Area -->
-    <div class="rbt-course-area bg-color-white rbt-section-gap">
-        <div class="container">
-            <div class="row mb--55 g-5 align-items-end">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="section-title text-start">
-                        <h2 class="title" id="uygulamalar">{% trans "Uygulamalar" %}<span class="color-primary"></span>
-                        </h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="load-more-btn text-start text-md-end">
-                        <!-- <a class="rbt-btn rbt-switch-btn bg-primary-opacity" href="uygulamalar.html"
-                            title="Tüm Uygulamalar">
-                            <span data-text="Tüm Uygulamalar">Tüm Uygulamalar</span>
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-            <!-- Start Card Area -->
-            <div class="row g-5">
-
-                {% for intervention in interventions %}
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12" data-sal-delay="150" data-sal="slide-up"
-                    data-sal-duration="800">
-                    <div class="rbt-card variation-01 rbt-hover">
-                        <div class="rbt-card-img">
-                            <a href="{% url 'core:uygulama_detay' intervention.slug %}"
-                                title="{{ intervention.title }}">
-                                <img loading="lazy" src="{{ intervention.image.url }}" alt="{{ intervention.title }}"
-                                    style="width: 200px; height: 200px; object-fit: cover;">
-                            </a>
-                        </div>
-                        <div class="rbt-card-body">
-                            <div class="rbt-card-top">
-
-                            </div>
-
-                            <h4 class="rbt-card-title"><a href="{% url 'core:uygulama_detay' intervention.slug %}"
-                                    title="{{ intervention.title }}">{{ intervention.title }}</a>
-                            </h4>
-
-
-                            <!-- <ul class="rbt-meta">
-                                    <li><i class="feather-book"></i>0 Eğitim İçeriği</li>
-                                    <li><i class="feather-users"></i>21 Katılımcı</li>
-                                </ul> -->
-
-                            <div class="rbt-card-bottom">
-                                <div class="rbt-price">
-                                    {{ intervention.description|slice:":70" }}...
+                <div class="container my-4">
+                    <div class="row g-4 justify-content-center">
+                        <!-- Yurtiçi IBAN Kartı -->
+                        {% for service in services %}
+                        <div class="col-md-5">
+                            <div class="card shadow-sm p-3 bg-white rounded h-100">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="card-subtitle mb-2 text-muted"></h6>
+                                        <p id="iban-domestic" class="mb-0 fw-bold">{{ service.description }}</p>
+                                        <p class="mb-0 fw-bold" style="font-size: 36px;">
+                                            {{ service.price }}
+                                        </p>
+                                    </div>
+                                    
                                 </div>
-                                <a class="rbt-btn-link" href="{% url 'core:uygulama_detay' intervention.slug %}"
-                                    title="{{ intervention.title }}">{% trans "İncele" %}<i
-                                        class="feather-arrow-right"></i></a>
                             </div>
                         </div>
+                        {% endfor %}
+                        <!-- Yurtdışı IBAN Kartı -->
+                        
                     </div>
                 </div>
-                {% endfor %}
 
-            </div>
-        </div>
-        <!-- End Course Area -->
 
 
 
-        <div style="height: 200px;">
-            <br><br><br>
-        </div>
-
-
-
-        <!-- Start Footer aera -->
-        {% include '../footer.html' %}
-        <!-- End Footer aera -->
-
-        <div class="rbt-progress-parent">
-            <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-            </svg>
-        </div>
-        <div class="whatsapp hidden-sm" id="scroll-to-top2">
-            <a href="https://wa.me/05367169453" target="_blank" title="Whatsapp İletişim Hattı"><img loading="lazy"
-                    src="/static/whatsapp.png"></a>
-        </div>
-        <div class="whatsapp hidden-sm" id="scroll-to-top2">
-            <a class=""
-                href="https://api.whatsapp.com/send?phone=05367169453&amp;text=Merhaba%20bilgi%20almak%20%C4%B0stiyorum&amp;source=&amp;data="
-                title="Whatsapp İletişim Hattı" target="_blank">
-                <img loading="lazy" src="/static/whatsapp.png">
-            </a>
+            </div>
+            <!-- End Card Area -->
         </div>
     </div>
 
-    <!-- <script src="../static/js/custom.js"></script>-->
+
+    <!-- Start Footer area -->
+    {% include '../footer.html' %}
+    <!-- End Footer area -->
+
+    <!-- <div class="rbt-progress-parent">
+        <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <div class="whatsapp hidden-sm" id="scroll-to-top2">
+        <a href="https://wa.me/05367169453" target="_blank" title="Whatsapp İletişim Hattı"><img loading="lazy"
+                src="resimler/whatsapp.png"></a>
+    </div>
+    <div class="whatsapp hidden-sm" id="scroll-to-top2">
+        <a class="" href="#" title="Whatsapp İletişim Hattı" target="_blank">
+            <img loading="lazy" src="resimler/whatsapp.png">
+        </a>
+    </div>
+    </div> -->
+
+
+    <script>
+        function copyIban(ibanId, buttonId) {
+          const ibanText = document.getElementById(ibanId).innerText;
+          const button = document.getElementById(buttonId);
+      
+          navigator.clipboard.writeText(ibanText).then(() => {
+            button.innerText = "Kopyalandı ✅";
+            button.classList.remove("btn-primary");
+            button.classList.add("btn-success");
+      
+            setTimeout(() => {
+              button.innerText = "Kopyala";
+              button.classList.remove("btn-success");
+              button.classList.add("btn-primary");
+            }, 4000);
+          });
+        }
+      </script>
+
+
+
+
+    <!-- <script src="assets/js/custom.js"></script>-->
 
     <script src="../static/js/customd8a8.js?v=20250313"></script>
 
@@ -407,8 +314,8 @@
     <!-- Main JS -->
     <script src="../static/js/main.js"></script>
 
+
+
 </body>
-
-
 
 </html>

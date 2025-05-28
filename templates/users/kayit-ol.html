@@ -41,7 +41,7 @@
     <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
 
     <script src="{% static 'js/vendor/jquery.js' %}"></script>
-    <script src="../cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script src="{% static 'js/vue.js' %}"></script>
     
 
@@ -200,8 +200,6 @@
                     <div class="breadcrumb-inner text-center">
                         <h2 class="title">{% trans "Kayıt Ol" %}</h2>
                         <ul class="page-list">
-                            <li class="rbt-breadcrumb-item"><a href="{% url 'core:home' %}">Ensar Deniz Danışmanlık</a>
-                            </li>
                             <li>
                                 <div class="icon-right"><i class="feather-chevron-right"></i></div>
                             </li>
@@ -253,8 +251,7 @@
                             <!-- Adres Alanı -->
                             <div class="form-group">
                                 <input id="adres" name="adres" type="text" minlength="5" />
-                                <label>{% trans "Adres" %} <span style="font-size: 12px;">({% trans "zorunlu değil"
-                                        %})</span></label>
+                                <label>{% trans "Adres" %} <span style="font-size: 12px;">( {% trans "zorunlu değil" %} )</span></label>
                                 <span class="focus-border"></span>
                             </div>
 

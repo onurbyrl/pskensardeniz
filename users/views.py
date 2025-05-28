@@ -145,9 +145,12 @@ def randevu_olustur(request):
             notes=notes
         )
 
-        return redirect("payment:checkout")
+        return redirect("payment:services")
     
     return render(request, 'users/randevu.html', {})
+
+
+
 
 
 from django.contrib.auth.tokens import default_token_generator

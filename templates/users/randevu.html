@@ -31,7 +31,7 @@
     <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
 
     <script src="{% static 'js/vendor/jquery.js' %}"></script>
-    <script src="../cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script src="{% static 'js/vue.js' %}"></script>
     <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -119,7 +119,9 @@
                 </div>
             </div>
             {% else %}
-            <h3>{% trans "Randevu oluşturabilmek için giriş yapmalısınız." %}</h3>
+            <h3>{% trans "Randevu oluşturmak için giriş yapın." %}</h3>
+            <br>
+            <a href="{% url 'users:login' %}" class="btn btn-primary btn-lg">Giriş Yap</a>
             {% endif %}
         </div>
 

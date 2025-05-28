@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-17 00:29+0300\n"
+"POT-Creation-Date: 2025-05-27 23:53+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,56 +18,58 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\pskensar\settings.py:118
+#: .\pskensar\settings.py:123
 msgid "Türkçe"
 msgstr ""
 
-#: .\pskensar\settings.py:119
+#: .\pskensar\settings.py:124
 msgid "English"
 msgstr ""
 
-#: .\templates\footer.html:16
+#: .\templates\footer.html:11
 msgid ""
 "Yetişkin, ergen, çocuk, çift, ve ailelere psikoterapi hizmetleri sunmaktayız."
 msgstr ""
 
-#: .\templates\footer.html:38
+#: .\templates\footer.html:33
 msgid "İletişime Geç"
 msgstr ""
 
-#: .\templates\footer.html:49 .\templates\navbar.html:43
-#: .\templates\pages\index.html:235 .\templates\pages\uygulama.html:178
+#: .\templates\footer.html:44 .\templates\mobile-section.html:47
+#: .\templates\navbar.html:43 .\templates\pages\index.html:283
+#: .\templates\pages\uygulama.html:179
 msgid "Uygulamalar"
 msgstr ""
 
-#: .\templates\footer.html:68 .\templates\navbar.html:32
-#: .\templates\pages\hakkimizda.html:293
+#: .\templates\footer.html:63 .\templates\mobile-section.html:39
+#: .\templates\navbar.html:32 .\templates\pages\hakkimizda.html:175
 msgid "Hakkımızda"
 msgstr ""
 
-#: .\templates\footer.html:71 .\templates\navbar.html:33
-#: .\templates\pages\ilkelerimiz.html:174
+#: .\templates\footer.html:66 .\templates\mobile-section.html:40
+#: .\templates\navbar.html:33 .\templates\pages\ilkelerimiz.html:174
 msgid "İlkelerimiz"
 msgstr ""
 
-#: .\templates\footer.html:74
+#: .\templates\footer.html:69
 msgid "Randevu"
 msgstr ""
 
-#: .\templates\footer.html:77 .\templates\navbar.html:58
+#: .\templates\footer.html:72 .\templates\navbar.html:58
 msgid "Blog"
 msgstr ""
 
-#: .\templates\footer.html:79 .\templates\navbar.html:34
+#: .\templates\footer.html:74 .\templates\navbar.html:34
 msgid "Hizmet Sözleşmesi"
 msgstr ""
 
-#: .\templates\footer.html:81 .\templates\navbar.html:35
+#: .\templates\footer.html:76 .\templates\navbar.html:35
 msgid "Online Danışmanlık Onam Formu"
 msgstr ""
 
-#: .\templates\footer.html:83 .\templates\footer.html:92
-#: .\templates\navbar.html:62 .\templates\pages\iletisim.html:203
+#: .\templates\footer.html:78 .\templates\footer.html:87
+#: .\templates\mobile-section.html:62 .\templates\navbar.html:62
+#: .\templates\pages\iletisim.html:202
 msgid "İletişim"
 msgstr ""
 
@@ -79,29 +81,38 @@ msgstr ""
 msgid "Çıkış Yap"
 msgstr ""
 
-#: .\templates\header.html:57 .\templates\users\giris-yap.html:219
-#: .\templates\users\giris-yap.html:225 .\templates\users\giris-yap.html:243
-#: .\templates\users\giris-yap.html:272 .\templates\users\kayit-ol.html:280
+#: .\templates\header.html:57 .\templates\mobile-section.html:71
+#: .\templates\users\giris-yap.html:96 .\templates\users\giris-yap.html:102
+#: .\templates\users\giris-yap.html:120 .\templates\users\giris-yap.html:149
+#: .\templates\users\kayit-ol.html:274
+#: .\templates\users\sifremi-unuttum.html:95
+#: .\templates\users\sifremi-unuttum.html:102
+#: .\templates\users\sifreyi-yenile.html:95
+#: .\templates\users\sifreyi-yenile.html:102
 msgid "Giriş Yap"
 msgstr ""
 
-#: .\templates\navbar.html:23
+#: .\templates\mobile-section.html:30 .\templates\navbar.html:23
 msgid "Ana Sayfa"
 msgstr ""
 
-#: .\templates\navbar.html:27
+#: .\templates\mobile-section.html:35 .\templates\navbar.html:27
 msgid "Kurumsal"
+msgstr ""
+
+#: .\templates\mobile-section.html:76
+msgid "Sosyal Medya"
 msgstr ""
 
 #: .\templates\navbar.html:66
 msgid "Randevu Al"
 msgstr ""
 
-#: .\templates\pages\blog.html:321
+#: .\templates\pages\blog.html:204
 msgid "Şimdi Oku"
 msgstr ""
 
-#: .\templates\pages\hakkimizda.html:318
+#: .\templates\pages\hakkimizda.html:200
 msgid ""
 "Psikolji alanındaki eğitimime ilk olarak Bursa'da başladım. Lisansımı Bursa "
 "Uludağ Üniversitesi Psikoloji bölümü'nde tamamladıktan sonra, Texas, "
@@ -116,7 +127,7 @@ msgid ""
 "çeşitli alanlarda psikolojik testler uygulama tecrübem bulunmakta."
 msgstr ""
 
-#: .\templates\pages\hakkimizda.html:321
+#: .\templates\pages\hakkimizda.html:203
 msgid ""
 "Klinik psikolog olarak amacım, bireylerin psikolojik sağlıklarını "
 "iyileştirmek ve onların yaşam kalitelerini artırmaktır. Çeşitli psikolojik "
@@ -129,7 +140,7 @@ msgid ""
 "psikolojik sağlıklarını iyileştirmeyi hedefliyorum."
 msgstr ""
 
-#: .\templates\pages\hakkimizda.html:324
+#: .\templates\pages\hakkimizda.html:206
 msgid ""
 "Chicago School of Psychology'den aldığım bütüncül psikoloji eğitimi ve "
 "farklı kurumlardan almış olduğum diğer eğitimleri., bana psikolojik destek "
@@ -140,31 +151,31 @@ msgid ""
 "en büyük hedefimdir."
 msgstr ""
 
-#: .\templates\pages\iletisim.html:264
-msgid "Bilgi Almak İçin İletişime Geçebilirsiniz."
+#: .\templates\pages\iletisim.html:263
+msgid "Bilgi Almak İçin Bizimle İletişime Geçin"
 msgstr ""
 
-#: .\templates\pages\iletisim.html:269
+#: .\templates\pages\iletisim.html:268
 msgid "İsim Soyisim"
 msgstr ""
 
-#: .\templates\pages\iletisim.html:274 .\templates\users\kayit-ol.html:253
+#: .\templates\pages\iletisim.html:273 .\templates\users\kayit-ol.html:247
 msgid "Telefon Numarası"
 msgstr ""
 
-#: .\templates\pages\iletisim.html:279
+#: .\templates\pages\iletisim.html:278
 msgid "Email Adresi"
 msgstr ""
 
-#: .\templates\pages\iletisim.html:284
+#: .\templates\pages\iletisim.html:283
 msgid "Konu"
 msgstr ""
 
-#: .\templates\pages\iletisim.html:289
+#: .\templates\pages\iletisim.html:288
 msgid "Mesaj"
 msgstr ""
 
-#: .\templates\pages\iletisim.html:294
+#: .\templates\pages\iletisim.html:293
 msgid "Gönder"
 msgstr ""
 
@@ -191,69 +202,137 @@ msgid ""
 "doğrultuda, her adımda onların gelişimlerine katkı sağlamayı hedefliyoruz. "
 msgstr ""
 
-#: .\templates\pages\index.html:190
-msgid ""
-"Hayat kalitenizi ve psikolojik sağlığınızı güçlendirmek için "
-"sizin yanınızdayız."
+#: .\templates\pages\index.html:226
+msgid "Uzman Klinik Psikolog"
 msgstr ""
 
-#: .\templates\pages\index.html:279
+#: .\templates\pages\index.html:330
 msgid "İncele"
 msgstr ""
 
-#: .\templates\users\giris-yap.html:248 .\templates\users\kayit-ol.html:267
+#: .\templates\payment\checkout.html:184
+msgid "Ödeme"
+msgstr ""
+
+#: .\templates\payment\checkout.html:199
+msgid ""
+"Aşağıdaki IBAN adresine ödemeyi tamamladıktan sonra belirtilen iletişim "
+"numarasına dekont iletmenizi rica ederiz"
+msgstr ""
+
+#: .\templates\payment\checkout.html:210
+msgid "Yurtiçi IBAN - Türk Lirası"
+msgstr ""
+
+#: .\templates\payment\checkout.html:216 .\templates\payment\checkout.html:234
+msgid "Kopyala"
+msgstr ""
+
+#: .\templates\payment\checkout.html:227
+msgid "Yurtdışı IBAN - Dolar"
+msgstr ""
+
+#: .\templates\users\giris-yap.html:125 .\templates\users\kayit-ol.html:261
 msgid "E-mail Adresi"
 msgstr ""
 
-#: .\templates\users\giris-yap.html:253 .\templates\users\kayit-ol.html:272
+#: .\templates\users\giris-yap.html:130 .\templates\users\kayit-ol.html:266
 msgid "Şifre"
 msgstr ""
 
-#: .\templates\users\giris-yap.html:262
+#: .\templates\users\giris-yap.html:139
 msgid "Şifremi Unuttum"
 msgstr ""
 
-#: .\templates\users\giris-yap.html:264 .\templates\users\kayit-ol.html:206
-#: .\templates\users\kayit-ol.html:212 .\templates\users\kayit-ol.html:237
-#: .\templates\users\kayit-ol.html:288
+#: .\templates\users\giris-yap.html:141 .\templates\users\kayit-ol.html:201
+#: .\templates\users\kayit-ol.html:206 .\templates\users\kayit-ol.html:231
+#: .\templates\users\kayit-ol.html:282
 msgid "Kayıt Ol"
 msgstr ""
 
-#: .\templates\users\kayit-ol.html:242
+#: .\templates\users\giris-yap.html:263
+msgid "Giriş Başarılı!"
+msgstr ""
+
+#: .\templates\users\giris-yap.html:273 .\templates\users\kayit-ol.html:426
+msgid "Hata!"
+msgstr ""
+
+#: .\templates\users\giris-yap.html:281
+msgid "Hatalı Giriş"
+msgstr ""
+
+#: .\templates\users\giris-yap.html:282
+msgid "Email adresi veya şifre hatalı!"
+msgstr ""
+
+#: .\templates\users\kayit-ol.html:236
 msgid "İsim"
 msgstr ""
 
-#: .\templates\users\kayit-ol.html:247
+#: .\templates\users\kayit-ol.html:241
 msgid "Soyisim"
 msgstr ""
 
-#: .\templates\users\kayit-ol.html:260
+#: .\templates\users\kayit-ol.html:254
 msgid "Adres"
 msgstr ""
 
-#: .\templates\users\kayit-ol.html:260
+#: .\templates\users\kayit-ol.html:254
 msgid "zorunlu değil"
 msgstr ""
 
-#: .\templates\users\randevu.html:55 .\templates\users\randevu.html:67
-#: .\templates\users\randevu.html:93
+#: .\templates\users\kayit-ol.html:416
+msgid "Kayıt Başarılı"
+msgstr ""
+
+#: .\templates\users\kayit-ol.html:435
+msgid "Sunucu Hatası"
+msgstr ""
+
+#: .\templates\users\kayit-ol.html:436
+msgid "Bir hata oluştu, lütfen tekrar deneyin."
+msgstr ""
+
+#: .\templates\users\randevu.html:57 .\templates\users\randevu.html:69
+#: .\templates\users\randevu.html:115
 msgid "Randevu Oluştur"
 msgstr ""
 
-#: .\templates\users\randevu.html:74
+#: .\templates\users\randevu.html:78
+msgid "Bulunduğunuz Ülke / Şehir"
+msgstr ""
+
+#: .\templates\users\randevu.html:96
 msgid "Tarih Seçin"
 msgstr ""
 
-#: .\templates\users\randevu.html:80
+#: .\templates\users\randevu.html:102
 msgid "Saat Seçin"
 msgstr ""
 
-#: .\templates\users\randevu.html:86
+#: .\templates\users\randevu.html:108
 msgid "Ek Notlar (opsiyonel)"
 msgstr ""
 
-#: .\templates\users\randevu.html:100
-msgid "Randevu oluşturabilmek için giriş yapmalısınız."
+#: .\templates\users\randevu.html:122
+msgid "Randevu oluşturmak için giriş yapın."
+msgstr ""
+
+#: .\templates\users\sifremi-unuttum.html:120
+msgid "Şifreni mi unuttun?"
+msgstr ""
+
+#: .\templates\users\sifremi-unuttum.html:125
+msgid "E-posta Adresi"
+msgstr ""
+
+#: .\templates\users\sifremi-unuttum.html:130
+msgid "Şifre Sıfırlama Bağlantısı Gönder"
+msgstr ""
+
+#: .\templates\users\sifreyi-yenile.html:120
+msgid "Yeni şifreni belirle"
 msgstr ""
 
 #: .\users\models.py:33
@@ -261,7 +340,7 @@ msgid "You must provide an email address"
 msgstr ""
 
 #: .\users\models.py:36
-msgid "Password must include 8 characters at least"
+msgid "Password must include 6 characters at least"
 msgstr ""
 
 #: .\users\models.py:49
