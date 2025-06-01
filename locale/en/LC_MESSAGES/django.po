@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-27 23:53+0300\n"
+"POT-Creation-Date: 2025-06-02 00:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,8 +38,8 @@ msgid "İletişime Geç"
 msgstr "Contact"
 
 #: .\templates\footer.html:44 .\templates\mobile-section.html:47
-#: .\templates\navbar.html:43 .\templates\pages\index.html:283
-#: .\templates\pages\uygulama.html:179
+#: .\templates\navbar.html:42 .\templates\pages\index.html:285
+#: .\templates\pages\uygulama.html:182
 msgid "Uygulamalar"
 msgstr "Interventions"
 
@@ -49,7 +49,7 @@ msgid "Hakkımızda"
 msgstr "About"
 
 #: .\templates\footer.html:66 .\templates\mobile-section.html:40
-#: .\templates\navbar.html:33 .\templates\pages\ilkelerimiz.html:174
+#: .\templates\navbar.html:33 .\templates\pages\ilkelerimiz.html:178
 msgid "İlkelerimiz"
 msgstr "Principles"
 
@@ -57,21 +57,19 @@ msgstr "Principles"
 msgid "Randevu"
 msgstr "Appointment"
 
-#: .\templates\footer.html:72 .\templates\navbar.html:58
+#: .\templates\footer.html:72 .\templates\navbar.html:57
 msgid "Blog"
 msgstr "Blog"
 
-#: .\templates\footer.html:74 .\templates\navbar.html:34
-msgid "Hizmet Sözleşmesi"
-msgstr "Service Agreement"
-
-#: .\templates\footer.html:76 .\templates\navbar.html:35
-msgid "Online Danışmanlık Onam Formu"
+#: .\templates\footer.html:75 .\templates\navbar.html:34
+#, fuzzy
+#| msgid "Online Danışmanlık Onam Formu"
+msgid "Danışmanlık Onam Formu"
 msgstr "Online Counseling Consent Form"
 
-#: .\templates\footer.html:78 .\templates\footer.html:87
-#: .\templates\mobile-section.html:62 .\templates\navbar.html:62
-#: .\templates\pages\iletisim.html:202
+#: .\templates\footer.html:77 .\templates\footer.html:86
+#: .\templates\mobile-section.html:62 .\templates\navbar.html:61
+#: .\templates\pages\iletisim.html:204
 msgid "İletişim"
 msgstr "Contact"
 
@@ -108,7 +106,7 @@ msgstr "Corporate"
 msgid "Sosyal Medya"
 msgstr "Social Media"
 
-#: .\templates\navbar.html:66
+#: .\templates\navbar.html:65
 msgid "Randevu Al"
 msgstr "Make an Appointment"
 
@@ -182,37 +180,37 @@ msgstr ""
 "mental health, help individuals discover their potential, and add meaning to "
 "their lives."
 
-#: .\templates\pages\iletisim.html:263
+#: .\templates\pages\iletisim.html:265
 #, fuzzy
 #| msgid "Bilgi Almak İçin İletişime Geçebilirsiniz."
 msgid "Bilgi Almak İçin Bizimle İletişime Geçin"
 msgstr "Contact Us for More Information"
 
-#: .\templates\pages\iletisim.html:268
+#: .\templates\pages\iletisim.html:270
 msgid "İsim Soyisim"
 msgstr "Full Name"
 
-#: .\templates\pages\iletisim.html:273 .\templates\users\kayit-ol.html:247
+#: .\templates\pages\iletisim.html:275 .\templates\users\kayit-ol.html:247
 msgid "Telefon Numarası"
 msgstr "Phone Number"
 
-#: .\templates\pages\iletisim.html:278
+#: .\templates\pages\iletisim.html:280
 msgid "Email Adresi"
 msgstr "Email Address"
 
-#: .\templates\pages\iletisim.html:283
+#: .\templates\pages\iletisim.html:285
 msgid "Konu"
 msgstr "Subject"
 
-#: .\templates\pages\iletisim.html:288
+#: .\templates\pages\iletisim.html:290
 msgid "Mesaj"
 msgstr "Message"
 
-#: .\templates\pages\iletisim.html:293
+#: .\templates\pages\iletisim.html:295
 msgid "Gönder"
 msgstr "Send"
 
-#: .\templates\pages\ilkelerimiz.html:199
+#: .\templates\pages\ilkelerimiz.html:203
 msgid ""
 " İlkelerimiz, her danışanın benzersiz olduğunu ve terapi sürecinin bu "
 "farklılıklara saygı göstererek şekillenmesi gerektiğini kabul eder. "
@@ -233,7 +231,7 @@ msgstr ""
 "their goals. Throughout this process, we prioritize the client’s safety and "
 "healing above all else. "
 
-#: .\templates\pages\ilkelerimiz.html:202
+#: .\templates\pages\ilkelerimiz.html:206
 msgid ""
 " Ayrıca, kültürel duyarlılığı ve çeşitliliği her zaman göz önünde "
 "bulundurarak, terapi sürecini her bireyin sosyal ve kültürel bağlamını "
@@ -251,37 +249,55 @@ msgstr ""
 "strengthen their mental well-being. In this direction, we aim to contribute "
 "to their growth at every step. "
 
-#: .\templates\pages\index.html:226
+#: .\templates\pages\index.html:228
 msgid "Uzman Klinik Psikolog"
 msgstr " "
 
-#: .\templates\pages\index.html:330
+#: .\templates\pages\index.html:332
 msgid "İncele"
 msgstr "View"
 
-#: .\templates\payment\checkout.html:184
+#: .\templates\payment\checkout.html:190
 msgid "Ödeme"
 msgstr "Payment"
 
-#: .\templates\payment\checkout.html:199
+#: .\templates\payment\checkout.html:205
 msgid ""
 "Aşağıdaki IBAN adresine ödemeyi tamamladıktan sonra belirtilen iletişim "
 "numarasına dekont iletmenizi rica ederiz"
 msgstr ""
-"Upon sending the payment to the provided account, "
-"please send proof of payment to our contact number."
+"Upon sending the payment to the provided account, please send proof of "
+"payment to our contact number."
 
-#: .\templates\payment\checkout.html:210
+#: .\templates\payment\checkout.html:206
+msgid "(Bu bir ön görüşme ise herhangi bir ücret ödemenize gerek yoktur)"
+msgstr "(If this is your first session, no payment is needed.)"
+
+#: .\templates\payment\checkout.html:217
 msgid "Yurtiçi IBAN - Türk Lirası"
 msgstr "Turkish Lira"
 
-#: .\templates\payment\checkout.html:216 .\templates\payment\checkout.html:234
+#: .\templates\payment\checkout.html:223
 msgid "Kopyala"
 msgstr "Copy"
 
-#: .\templates\payment\checkout.html:227
+#: .\templates\payment\checkout.html:234
 msgid "Yurtdışı IBAN - Dolar"
 msgstr "U.S. Dollar"
+
+#: .\templates\payment\checkout.html:253
+#, fuzzy
+#| msgid "Ödeme"
+msgid "Öde"
+msgstr "Payment"
+
+#: .\templates\payment\services.html:184
+msgid "Hizmetler"
+msgstr "Services"
+
+#: .\templates\payment\services.html:199
+msgid "Lütfen almak istediğiniz terapi hizmetini seçiniz."
+msgstr "Please choose a service."
 
 #: .\templates\users\giris-yap.html:125 .\templates\users\kayit-ol.html:261
 msgid "E-mail Adresi"
@@ -306,6 +322,8 @@ msgid "Giriş Başarılı!"
 msgstr "Login Successful!"
 
 #: .\templates\users\giris-yap.html:273 .\templates\users\kayit-ol.html:426
+#: .\templates\users\randevu.html:238 .\templates\users\randevu.html:246
+#: .\templates\users\randevu.html:254
 msgid "Hata!"
 msgstr "Error!"
 
@@ -337,11 +355,11 @@ msgstr "optional"
 msgid "Kayıt Başarılı"
 msgstr "Signup Successful"
 
-#: .\templates\users\kayit-ol.html:435
+#: .\templates\users\kayit-ol.html:435 .\templates\users\randevu.html:264
 msgid "Sunucu Hatası"
 msgstr "Server Error"
 
-#: .\templates\users\kayit-ol.html:436
+#: .\templates\users\kayit-ol.html:436 .\templates\users\randevu.html:265
 msgid "Bir hata oluştu, lütfen tekrar deneyin."
 msgstr "Error, please try again."
 
@@ -371,6 +389,22 @@ msgstr "Additional Notes (optional)"
 #| msgid "Randevu oluşturabilmek için giriş yapmalısınız."
 msgid "Randevu oluşturmak için giriş yapın."
 msgstr "You must be logged in to create an appointment."
+
+#: .\templates\users\randevu.html:229
+msgid "Randevunuz başarıyla oluşturuldu"
+msgstr "Appointment successfully created"
+
+#: .\templates\users\randevu.html:239
+msgid "Lütfen tüm alanları doldurun."
+msgstr "Please fill in all required fields."
+
+#: .\templates\users\randevu.html:247
+msgid "Bu tarihte bir randevu mevcut, lütfen farklı tarih seçiniz."
+msgstr "This time slot is full. Please choose another time."
+
+#: .\templates\users\randevu.html:255
+msgid "Beklenmedik Hata"
+msgstr "Unexpected Error"
 
 #: .\templates\users\sifremi-unuttum.html:120
 #, fuzzy
@@ -405,6 +439,9 @@ msgstr "Password must include at least 8 characters"
 #: .\users\models.py:49
 msgid "email address"
 msgstr "email address"
+
+#~ msgid "Hizmet Sözleşmesi"
+#~ msgstr "Service Agreement"
 
 #~ msgid ""
 #~ "Hayat kalitenizi ve psikolojik sağlığınızı güçlendirmek için "

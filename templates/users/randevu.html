@@ -70,7 +70,7 @@
 
                     
         
-                    <form id="appointmentForm" method="POST" action="{% url 'users:randevu_olustur' %}">
+                    <form id="AppointmentForm">
                         {% csrf_token %}
 
                         <!-- Ülke Seçimi -->
@@ -111,7 +111,7 @@
         
                         <!-- Butonlar -->
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary px-4 btn-lg">
+                            <button type="submit" class="btn btn-primary px-4 btn-lg" id="randevu-olustur-button">
                                 <i class="fas fa-calendar-check"></i> {% trans "Randevu Oluştur" %}
                             </button>
                         </div>
@@ -204,8 +204,6 @@
     document.getElementById('AppointmentForm').addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-
         const formData = {
             date: document.querySelector('[name="date"]').value,
             time: document.querySelector('[name="time"]').value,
@@ -213,52 +211,63 @@
             timezone: document.querySelector('[name="timezone"]').value
         };
 
+        console.log("form data: ", formData);
+
         fetch("{% url 'users:randevu_olustur' %}", {
             method: "POST",
             headers: {
-                'Content-Type': 'intervention/json',
+                'Content-Type': 'application/json',
                 'X-CSRFToken': csrfToken,
             },
             body: JSON.stringify(formData)
         })
-        .then(response => response.json())  // JSON formatında yanıtı işle
+        .then(response => response.json())
         .then(data => {
-            console.log("Response Data: ", data);
             if (data.status === "success") {
                 Swal.fire({
                     icon: "success",
-                    title: "Randevunuz başarıyla oluşturuldu",
-                    text: data.message,
+                    title: "{% trans 'Randevunuz başarıyla oluşturuldu' %}",
                     timer: 4000,
                     showConfirmButton: false
                 }).then(() => {
-                    // window.location.href = data.redirect_url;
+                    window.location.href = data.redirect_url;
                 });
-            } else if (data.status === "error") {
+            } else if (data.status === "empty_field") {
                 Swal.fire({
                     icon: "error",
-                    title: "Hata!",
-                    test: data.message,
+                    title: "{% trans 'Hata!' %}",
+                    text: "{% trans 'Lütfen tüm alanları doldurun.' %}",
                     timer: 6000,
                     showConfirmButton: false
-                })
+                });
+            } else if (data.status === 'already_exists') {
+                Swal.fire({
+                    icon: "error",
+                    title: "{% trans 'Hata!' %}",
+                    text: "{% trans 'Bu tarihte bir randevu mevcut, lütfen farklı tarih seçiniz.' %}",
+                    timer: 6000,
+                    showConfirmButton: false
+                });
             } else {
                 Swal.fire({
                     icon: "error",
-                    title: "Hata!",
-                    text: data.message
+                    title: "{% trans 'Hata!' %}",
+                    text: "{% trans 'Beklenmedik Hata' %}",
+                    timer: 6000,
+                    showConfirmButton: false
                 });
             }
         })
         .catch(error => {
-            console.error("ERR: ", error);
             Swal.fire({
                 icon: "error",
-                title: "Sunucu Hatası",
-                text: "Bir hata oluştu, lütfen tekrar deneyin."
+                title: "{% trans 'Sunucu Hatası' %}",
+                text: "{% trans 'Bir hata oluştu, lütfen tekrar deneyin.' %}"
             });
         });
     });
+
+
 </script>
 
 </html>

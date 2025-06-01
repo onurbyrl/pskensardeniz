@@ -111,33 +111,33 @@ def user_logout(request):
 
 def randevu_olustur(request):
     if request.method == "POST":
-        date = request.POST.get("date")
-        time = request.POST.get("time")
-        notes = request.POST.get("notes", "")
-        timezone_str = request.POST.get("timezone", "Europe/Istanbul")
+        try:
+            data = json.loads(request.body)
+        except json.JSONDecodeError:
+            return JsonResponse({"status": "error", "message": "Geçersiz JSON verisi."}, status=400)
+        
+        date = data.get("date")
+        time = data.get("time")
+        notes = data.get("notes", "")
+        timezone_str = data.get("timezone", "Europe/Istanbul")
 
         if not date or not time:
-            return JsonResponse({"status": "error", "message": "Lütfen tüm alanları doldurun."}, status=400)
+            return JsonResponse({"status": "empty_field", "message": "Lütfen tüm alanları doldurun."}, status=400)
 
         turkey_tz = timezone('Europe/Istanbul')
-        client_tz = timezone(request.POST.get('timezone'))  # formdan gelirse
+        client_tz = timezone(timezone_str)
 
-        datetime_str = f"{request.POST.get('date')} {request.POST.get('time')}"
+        datetime_str = f"{date} {time}"
         client_dt = client_tz.localize(datetime.strptime(datetime_str, "%Y-%m-%d %H:%M"))
         turkey_dt = client_dt.astimezone(turkey_tz)
-        print("türkiye saatiyle: ", turkey_dt)
 
-        # Aynı zamanda başka randevu var mı kontrolü
-        from users.models import Appointment
         exists = Appointment.objects.filter(date=turkey_dt.date(), time=turkey_dt.time()).exists()
-
         if exists:
             return JsonResponse({
-                "status": "error",
+                "status": "already_exists",
                 "message": "Bu saat için zaten bir randevu mevcut. Lütfen başka bir saat seçin."
             }, status=400)
 
-        # Randevuyu oluştur
         Appointment.objects.create(
             client=request.user,
             date=turkey_dt.date(),
@@ -145,8 +145,12 @@ def randevu_olustur(request):
             notes=notes
         )
 
-        return redirect("payment:services")
-    
+        return JsonResponse({
+            "status": "success",
+            "message": "Randevunuz başarıyla oluşturuldu.",
+            "redirect_url": reverse("payment:checkout")
+        })
+
     return render(request, 'users/randevu.html', {})
 
 
