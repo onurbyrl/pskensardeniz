@@ -5,7 +5,7 @@
             <div class="header-left rbt-header-content">
                 <div class="header-info">
                     <div class="logo">
-                        <a href="{% url 'core:home' %}" title="Ana Sayfa">
+                        <a href="{% url 'core:home' %}">
                             <img loading="lazy" src="resimler/header-logo.png" alt="">
                         </a>
                     </div>
@@ -20,18 +20,18 @@
                     <ul class="mainmenu">
 
                         <li class="with-megamenu has-menu-child-item position-static">
-                            <a href="{% url 'core:home' %}" title="Ana Sayfa">{% trans "Ana Sayfa" %}</a>
+                            <a href="{% url 'core:home' %}">{% trans "Ana Sayfa" %}</a>
                         </li>
 
                         <li class="has-dropdown has-menu-child-item">
-                            <a href="#" title="Kurumsal">{% trans "Kurumsal" %}
+                            <a href="#">{% trans "Kurumsal" %}
                                 <i class="feather-chevron-down"></i>
                             </a>
                             <ul class="submenu">
                             
-                                    <li><a href="{% url 'core:hakkimizda' %}" title="Hakkımızda">{% trans "Hakkımızda" %}</a></li>
-                                    <li><a href="{% url 'core:ilkelerimiz' %}" title="İlkelerimiz">{% trans "İlkelerimiz" %}</a></li>
-                                    <li><a href="/static/online-danismanlik-onam-formu.pdf" target="_blank" title="Danışmanlık Onam Formu">{% trans "Danışmanlık Onam Formu" %}</a></li>
+                                    <li><a href="{% url 'core:hakkimizda' %}">{% trans "Hakkımızda" %}</a></li>
+                                    <li><a href="{% url 'core:ilkelerimiz' %}">{% trans "İlkelerimiz" %}</a></li>
+                                    <li><a href="/static/online-danismanlik-onam-formu.pdf" target="_blank">{% trans "Danışmanlık Onam Formu" %}</a></li>
                                                            
                             </ul>
                         </li>
@@ -54,15 +54,15 @@
                         </li>
 
                         <li class="with-megamenu has-menu-child-item position-static">
-                            <a href="{% url 'core:blog' %}" title="{% trans 'Blog' %}">{% trans "Blog" %}</a>
+                            <a href="{% url 'core:blog' %}">{% trans "Blog" %}</a>
                         </li>
 
                         <li class="with-megamenu has-menu-child-item position-static">
-                            <a href="{% url 'core:iletisim' %}" title="{% trans 'İletişim' %}">{% trans "İletişim" %}</a>
+                            <a href="{% url 'core:iletisim' %}">{% trans "İletişim" %}</a>
                         </li>
 
                         <li class="with-megamenu has-menu-child-item position-static">
-                            <a href="{% url 'users:randevu_olustur' %}" class="text-primary" title="{% trans 'Randevu Al' %}">{% trans "Randevu Al" %}</a>
+                            <a href="{% url 'users:randevu_olustur' %}" class="text-primary">{% trans "Randevu Al" %}</a>
                         </li>
 
                         {% if is_from_turkey %}

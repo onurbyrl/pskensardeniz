@@ -20,9 +20,8 @@ def index(request):
     interventions = Intervention.objects.all()
     country = ""
     ip = get_client_ip(request)
-    
-    ip = "163.230.138.140"
     print("USER IP: ", ip)
+    
     try:
         response = requests.get(f"https://ipwho.is/{ip}")
         data = response.json()
