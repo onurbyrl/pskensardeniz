@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-02 00:19+0300\n"
+"POT-Creation-Date: 2025-06-05 12:54+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,18 +36,18 @@ msgid "İletişime Geç"
 msgstr ""
 
 #: .\templates\footer.html:44 .\templates\mobile-section.html:47
-#: .\templates\navbar.html:42 .\templates\pages\index.html:285
-#: .\templates\pages\uygulama.html:182
+#: .\templates\navbar.html:42 .\templates\pages\index.html:286
+#: .\templates\pages\uygulama.html:183
 msgid "Uygulamalar"
 msgstr ""
 
 #: .\templates\footer.html:63 .\templates\mobile-section.html:39
-#: .\templates\navbar.html:32 .\templates\pages\hakkimizda.html:175
+#: .\templates\navbar.html:32 .\templates\pages\hakkimizda.html:176
 msgid "Hakkımızda"
 msgstr ""
 
 #: .\templates\footer.html:66 .\templates\mobile-section.html:40
-#: .\templates\navbar.html:33 .\templates\pages\ilkelerimiz.html:178
+#: .\templates\navbar.html:33 .\templates\pages\ilkelerimiz.html:179
 msgid "İlkelerimiz"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr ""
 
 #: .\templates\footer.html:77 .\templates\footer.html:86
 #: .\templates\mobile-section.html:62 .\templates\navbar.html:61
-#: .\templates\pages\iletisim.html:204
+#: .\templates\pages\iletisim.html:205
 msgid "İletişim"
 msgstr ""
 
@@ -80,11 +80,11 @@ msgstr ""
 #: .\templates\header.html:57 .\templates\mobile-section.html:71
 #: .\templates\users\giris-yap.html:96 .\templates\users\giris-yap.html:102
 #: .\templates\users\giris-yap.html:120 .\templates\users\giris-yap.html:149
-#: .\templates\users\kayit-ol.html:274
-#: .\templates\users\sifremi-unuttum.html:95
-#: .\templates\users\sifremi-unuttum.html:102
-#: .\templates\users\sifreyi-yenile.html:95
-#: .\templates\users\sifreyi-yenile.html:102
+#: .\templates\users\kayit-ol.html:275
+#: .\templates\users\sifremi-unuttum.html:96
+#: .\templates\users\sifremi-unuttum.html:103
+#: .\templates\users\sifreyi-yenile.html:96
+#: .\templates\users\sifreyi-yenile.html:103
 msgid "Giriş Yap"
 msgstr ""
 
@@ -104,11 +104,11 @@ msgstr ""
 msgid "Randevu Al"
 msgstr ""
 
-#: .\templates\pages\blog.html:204
+#: .\templates\pages\blog.html:206
 msgid "Şimdi Oku"
 msgstr ""
 
-#: .\templates\pages\hakkimizda.html:200
+#: .\templates\pages\hakkimizda.html:201
 msgid ""
 "Psikolji alanındaki eğitimime ilk olarak Bursa'da başladım. Lisansımı Bursa "
 "Uludağ Üniversitesi Psikoloji bölümü'nde tamamladıktan sonra, Texas, "
@@ -123,7 +123,7 @@ msgid ""
 "çeşitli alanlarda psikolojik testler uygulama tecrübem bulunmakta."
 msgstr ""
 
-#: .\templates\pages\hakkimizda.html:203
+#: .\templates\pages\hakkimizda.html:204
 msgid ""
 "Klinik psikolog olarak amacım, bireylerin psikolojik sağlıklarını "
 "iyileştirmek ve onların yaşam kalitelerini artırmaktır. Çeşitli psikolojik "
@@ -136,7 +136,7 @@ msgid ""
 "psikolojik sağlıklarını iyileştirmeyi hedefliyorum."
 msgstr ""
 
-#: .\templates\pages\hakkimizda.html:206
+#: .\templates\pages\hakkimizda.html:207
 msgid ""
 "Chicago School of Psychology'den aldığım bütüncül psikoloji eğitimi ve "
 "farklı kurumlardan almış olduğum diğer eğitimleri., bana psikolojik destek "
@@ -147,35 +147,35 @@ msgid ""
 "en büyük hedefimdir."
 msgstr ""
 
-#: .\templates\pages\iletisim.html:265
+#: .\templates\pages\iletisim.html:266
 msgid "Bilgi Almak İçin Bizimle İletişime Geçin"
 msgstr ""
 
-#: .\templates\pages\iletisim.html:270
+#: .\templates\pages\iletisim.html:271
 msgid "İsim Soyisim"
 msgstr ""
 
-#: .\templates\pages\iletisim.html:275 .\templates\users\kayit-ol.html:247
+#: .\templates\pages\iletisim.html:276 .\templates\users\kayit-ol.html:248
 msgid "Telefon Numarası"
 msgstr ""
 
-#: .\templates\pages\iletisim.html:280
+#: .\templates\pages\iletisim.html:281
 msgid "Email Adresi"
 msgstr ""
 
-#: .\templates\pages\iletisim.html:285
+#: .\templates\pages\iletisim.html:286
 msgid "Konu"
 msgstr ""
 
-#: .\templates\pages\iletisim.html:290
+#: .\templates\pages\iletisim.html:291
 msgid "Mesaj"
 msgstr ""
 
-#: .\templates\pages\iletisim.html:295
+#: .\templates\pages\iletisim.html:296
 msgid "Gönder"
 msgstr ""
 
-#: .\templates\pages\ilkelerimiz.html:203
+#: .\templates\pages\ilkelerimiz.html:204
 msgid ""
 " İlkelerimiz, her danışanın benzersiz olduğunu ve terapi sürecinin bu "
 "farklılıklara saygı göstererek şekillenmesi gerektiğini kabul eder. "
@@ -187,7 +187,7 @@ msgid ""
 "süreçte, danışanın güvenliğini ve iyileşmesini her şeyin önünde tutuyoruz. "
 msgstr ""
 
-#: .\templates\pages\ilkelerimiz.html:206
+#: .\templates\pages\ilkelerimiz.html:207
 msgid ""
 " Ayrıca, kültürel duyarlılığı ve çeşitliliği her zaman göz önünde "
 "bulundurarak, terapi sürecini her bireyin sosyal ve kültürel bağlamını "
@@ -198,57 +198,57 @@ msgid ""
 "doğrultuda, her adımda onların gelişimlerine katkı sağlamayı hedefliyoruz. "
 msgstr ""
 
-#: .\templates\pages\index.html:228
+#: .\templates\pages\index.html:229
 msgid "Uzman Klinik Psikolog"
 msgstr ""
 
-#: .\templates\pages\index.html:332
+#: .\templates\pages\index.html:333
 msgid "İncele"
 msgstr ""
 
-#: .\templates\payment\checkout.html:190
+#: .\templates\payment\checkout.html:192
 msgid "Ödeme"
 msgstr ""
 
-#: .\templates\payment\checkout.html:205
+#: .\templates\payment\checkout.html:207
 msgid ""
 "Aşağıdaki IBAN adresine ödemeyi tamamladıktan sonra belirtilen iletişim "
 "numarasına dekont iletmenizi rica ederiz"
 msgstr ""
 
-#: .\templates\payment\checkout.html:206
+#: .\templates\payment\checkout.html:208
 msgid "(Bu bir ön görüşme ise herhangi bir ücret ödemenize gerek yoktur)"
 msgstr ""
 
-#: .\templates\payment\checkout.html:217
+#: .\templates\payment\checkout.html:219
 msgid "Yurtiçi IBAN - Türk Lirası"
 msgstr ""
 
-#: .\templates\payment\checkout.html:223
+#: .\templates\payment\checkout.html:225
 msgid "Kopyala"
 msgstr ""
 
-#: .\templates\payment\checkout.html:234
+#: .\templates\payment\checkout.html:236
 msgid "Yurtdışı IBAN - Dolar"
 msgstr ""
 
-#: .\templates\payment\checkout.html:253
+#: .\templates\payment\checkout.html:255
 msgid "Öde"
 msgstr ""
 
-#: .\templates\payment\services.html:184
+#: .\templates\payment\services.html:185
 msgid "Hizmetler"
 msgstr ""
 
-#: .\templates\payment\services.html:199
+#: .\templates\payment\services.html:200
 msgid "Lütfen almak istediğiniz terapi hizmetini seçiniz."
 msgstr ""
 
-#: .\templates\users\giris-yap.html:125 .\templates\users\kayit-ol.html:261
+#: .\templates\users\giris-yap.html:125 .\templates\users\kayit-ol.html:262
 msgid "E-mail Adresi"
 msgstr ""
 
-#: .\templates\users\giris-yap.html:130 .\templates\users\kayit-ol.html:266
+#: .\templates\users\giris-yap.html:130 .\templates\users\kayit-ol.html:267
 msgid "Şifre"
 msgstr ""
 
@@ -256,9 +256,9 @@ msgstr ""
 msgid "Şifremi Unuttum"
 msgstr ""
 
-#: .\templates\users\giris-yap.html:141 .\templates\users\kayit-ol.html:201
-#: .\templates\users\kayit-ol.html:206 .\templates\users\kayit-ol.html:231
-#: .\templates\users\kayit-ol.html:282
+#: .\templates\users\giris-yap.html:141 .\templates\users\kayit-ol.html:202
+#: .\templates\users\kayit-ol.html:207 .\templates\users\kayit-ol.html:232
+#: .\templates\users\kayit-ol.html:283
 msgid "Kayıt Ol"
 msgstr ""
 
@@ -266,7 +266,7 @@ msgstr ""
 msgid "Giriş Başarılı!"
 msgstr ""
 
-#: .\templates\users\giris-yap.html:273 .\templates\users\kayit-ol.html:426
+#: .\templates\users\giris-yap.html:273 .\templates\users\kayit-ol.html:427
 #: .\templates\users\randevu.html:238 .\templates\users\randevu.html:246
 #: .\templates\users\randevu.html:254
 msgid "Hata!"
@@ -280,31 +280,31 @@ msgstr ""
 msgid "Email adresi veya şifre hatalı!"
 msgstr ""
 
-#: .\templates\users\kayit-ol.html:236
+#: .\templates\users\kayit-ol.html:237
 msgid "İsim"
 msgstr ""
 
-#: .\templates\users\kayit-ol.html:241
+#: .\templates\users\kayit-ol.html:242
 msgid "Soyisim"
 msgstr ""
 
-#: .\templates\users\kayit-ol.html:254
+#: .\templates\users\kayit-ol.html:255
 msgid "Adres"
 msgstr ""
 
-#: .\templates\users\kayit-ol.html:254
+#: .\templates\users\kayit-ol.html:255
 msgid "zorunlu değil"
 msgstr ""
 
-#: .\templates\users\kayit-ol.html:416
+#: .\templates\users\kayit-ol.html:417
 msgid "Kayıt Başarılı"
 msgstr ""
 
-#: .\templates\users\kayit-ol.html:435 .\templates\users\randevu.html:264
+#: .\templates\users\kayit-ol.html:436 .\templates\users\randevu.html:264
 msgid "Sunucu Hatası"
 msgstr ""
 
-#: .\templates\users\kayit-ol.html:436 .\templates\users\randevu.html:265
+#: .\templates\users\kayit-ol.html:437 .\templates\users\randevu.html:265
 msgid "Bir hata oluştu, lütfen tekrar deneyin."
 msgstr ""
 
@@ -349,19 +349,19 @@ msgstr ""
 msgid "Beklenmedik Hata"
 msgstr ""
 
-#: .\templates\users\sifremi-unuttum.html:120
+#: .\templates\users\sifremi-unuttum.html:121
 msgid "Şifreni mi unuttun?"
 msgstr ""
 
-#: .\templates\users\sifremi-unuttum.html:125
+#: .\templates\users\sifremi-unuttum.html:126
 msgid "E-posta Adresi"
 msgstr ""
 
-#: .\templates\users\sifremi-unuttum.html:130
+#: .\templates\users\sifremi-unuttum.html:131
 msgid "Şifre Sıfırlama Bağlantısı Gönder"
 msgstr ""
 
-#: .\templates\users\sifreyi-yenile.html:120
+#: .\templates\users\sifreyi-yenile.html:121
 msgid "Yeni şifreni belirle"
 msgstr ""
 

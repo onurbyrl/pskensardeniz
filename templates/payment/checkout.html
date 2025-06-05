@@ -220,7 +220,7 @@
                                         <p id="iban-domestic" class="mb-0 fw-bold">TR71 0020 9000 0100 9370 0000 01</p>
                                         <p class="mb-0 fw-bold">Ensar Yavuz Deniz</p>
                                     </div>
-                                    <button class="btn btn-primary btn-lg"
+                                    <button id="copy-domestic" class="btn btn-primary btn-lg"
                                         onclick="copyIban('iban-domestic', 'copy-domestic')">
                                         {% trans "Kopyala" %}
                                     </button>
@@ -237,7 +237,7 @@
                                         <p id="iban-international" class="mb-0 fw-bold">TR17 0020 9000 0100 9370 0000 03</p>
                                         <p class="mb-0 fw-bold">Ensar Yavuz Deniz</p>
                                     </div>
-                                    <button class="btn btn-primary btn-lg"
+                                    <button id="copy-international" class="btn btn-primary btn-lg"
                                         onclick="copyIban('iban-international', 'copy-international')">
                                         Kopyala
                                     </button>
@@ -252,7 +252,7 @@
                                     <div>
                                         <img src="{% static 'images/paypal-logo.png' %}" style="width: 130px; height: 120px;" alt="paypal-logo">
                                     </div>
-                                    <a href="https://www.paypal.com/paypalme/ensardeniz24" class="btn btn-primary btn-lg">&nbsp;&nbsp;&nbsp;&nbsp; {% trans "Öde" %} &nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                    <a href="https://www.paypal.com/paypalme/ensardeniz24" target="_blank" class="btn btn-primary btn-lg">&nbsp;&nbsp;&nbsp;&nbsp; {% trans "Öde" %} &nbsp;&nbsp;&nbsp;&nbsp;</a>
                                 </div>
                             </div>
                         </div>
