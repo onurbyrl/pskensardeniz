@@ -31,7 +31,11 @@
                             
                                     <li><a href="{% url 'core:hakkimizda' %}">{% trans "Hakkımızda" %}</a></li>
                                     <li><a href="{% url 'core:ilkelerimiz' %}">{% trans "İlkelerimiz" %}</a></li>
-                                    <li><a href="/static/online-danismanlik-onam-formu.pdf" target="_blank">{% trans "Danışmanlık Onam Formu" %}</a></li>
+                                    {% if request.LANGUAGE_CODE == 'en' %}
+                                        <li><a href="/static/counseling-consent-form.pdf" target="_blank">Counseling Consent Form</a></li>
+                                    {% else %}
+                                        <li><a href="/static/online-danismanlik-onam-formu.pdf" target="_blank">Danışmanlık Onam Formu</a></li>
+                                    {% endif %}
                                                            
                             </ul>
                         </li>
