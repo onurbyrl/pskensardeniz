@@ -214,8 +214,8 @@
                             <i class="feather-headphones"></i>
                         </div>
                         <div class="inner">
-                            <h4 class="title">Psikoterapi, Seans ve Atölye için:</h4>
-                            <p><a href="tel:0850 308 21 53" title="Telefon Numaramız"> 0850 308 21 53</a></p>
+                            <h4 class="title"></h4>
+                            <p><a href="tel:0850 308 21 53" title="Telefon Numaramız"></a></p>
                             <p><a href="tel:" title="Telefon Numaramız"></a></p>
                         </div>
                     </div>
@@ -227,11 +227,11 @@
                             <i class="feather-mail"></i>
                         </div>
                         <div class="inner">
-                            <h4 class="title">E-Mail Adresimiz</h4>
+                            <h4 class="title"></h4>
                             <p><a href="mailto:info@psikosaglikdanismanlik.co" title="Email Adresimiz">
-                                    info@psikosaglikdanismanlik.co</a></p>
+                                    </a></p>
                             <p><a href="mailto:iletisim@psikosaglikdanismanlik.com" title="Email Adresimiz">
-                                    iletisim@psikosaglikdanismanlik.com</a></p>
+                                    </a></p>
                         </div>
                     </div>
                 </div>
@@ -242,7 +242,7 @@
                             <i class="feather-map-pin"></i>
                         </div>
                         <div class="inner">
-                            <h4 class="title">Adresimiz</h4>
+                            <h4 class="title"></h4>
                             <p></p>
                         </div>
                     </div>
@@ -263,7 +263,7 @@
                 <div class="col-lg-6">
                     <div class="rbt-contact-form contact-form-style-1 max-width-auto">
 
-                        <h3 class="title">{% trans "Bilgi Almak İçin Bizimle İletişime Geçin" %}</h3>
+                        <h3 class="title">{% if request.LANGUAGE_CODE == 'en' %}Contact Us for More Information{% else %}Bilgi Almak İçin Bizimle İletişime Geçin{% endif %}</h3>
                         <form id="messageForm" class=" max-width-auto">
                             {% csrf_token %}
                             <div class="form-group">

@@ -206,6 +206,11 @@
 
 					<p class="description">{% blocktrans %}Chicago School of Psychology'den aldığım bütüncül psikoloji eğitimi ve farklı kurumlardan almış olduğum diğer eğitimleri., bana psikolojik destek sağlama ve kişisel gelişim süreçlerinde danışanlarıma daha etkili bir şekilde rehberlik etme konusunda derin bir bakış açısı kazandırdı. Bir uzman klinik psikolog olarak, insanın zihin sağlığını güçlendirmek, bireylerin potansiyellerini keşfetmelerine yardımcı olmak ve yaşamlarına anlam katmak en büyük hedefimdir.{% endblocktrans %}</p>
 				</div>
+
+                <a href="{% if request.LANGUAGE_CODE == 'en' %} {% static 'ensar-cv-en.pdf' %} {% else %} {% static 'ensar-cv-tr.pdf' %} {% endif %}" target="_blank" class="btn btn-primary btn-lg mt-5" style="font-size: 16px;">
+                    CV
+                </a>
+
 			</div>
 			
 		</div>

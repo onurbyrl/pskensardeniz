@@ -57,7 +57,7 @@
 
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="footer-widget">
-                        <h5 class="ft-title">Ensar Deniz Danışmanlık</h5>
+                        <h5 class="ft-title">{% if request.LANGUAGE_CODE == 'en' %} Counselling {% else %} Terapi Hizmetleri {% endif %}</h5>
                         <ul class="ft-link">
                             <li>
                                 <a href="{% url 'core:hakkimizda' %}" title="Hakkımızda">{% trans "Hakkımızda" %}</a>
@@ -72,7 +72,7 @@
                                 <a href="{% url 'core:blog' %}" title="Blog">{% trans "Blog" %}</a>
                             </li>
                             <li><a href="/static/online-danismanlik-onam-formu.pdf" title="Danışmanlık Onam Formu"
-                                    target="_blank">{% trans "Danışmanlık Onam Formu" %}</a></li>
+                                    target="_blank">{% if request.LANGUAGE_CODE == 'en' %} Informed Consent Form {% else %} Danışmanlık Onam Formu {% endif %}</a></li>
                             <li>
                                 <a href="{% url 'core:iletisim' %}" title="İletişim">{% trans "İletişim" %}</a>
                             </li>
