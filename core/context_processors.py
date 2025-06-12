@@ -3,7 +3,7 @@ import requests
 
 def interventions_context(request):
     return {
-        'intervention': Intervention.objects.all(),
+        'interventions': Intervention.objects.all(),
         'redirect_to': request.path
     }
 

@@ -99,7 +99,7 @@ msgstr "Home"
 
 #: .\templates\mobile-section.html:35 .\templates\navbar.html:27
 msgid "Kurumsal"
-msgstr "Corporate"
+msgstr "About"
 
 #: .\templates\mobile-section.html:76
 #, fuzzy

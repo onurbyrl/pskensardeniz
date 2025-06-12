@@ -36,7 +36,7 @@ def index(request):
     print("country: ", country)
 
     return render(request, 'pages/index.html', {
-        "interventions": interventions
+        
     })
 
 
