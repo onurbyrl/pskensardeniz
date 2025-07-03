@@ -14,3 +14,4 @@ requests==2.31.0
 stripe==10.8.0
 tzdata==2023.3
 phonenumbers==9.0.8
+gunicorn
