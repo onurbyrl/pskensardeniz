@@ -8,9 +8,9 @@ django-timezone-field==7.0
 django-unfold==0.18.0
 iyzipay==1.0.45
 opencv-python==4.9.0.80
-phonenumbers==8.3.27
 Pillow==10.1.0
 python-crontab==3.2.0
 requests==2.31.0
 stripe==10.8.0
 tzdata==2023.3
+phonenumbers==9.0.8
