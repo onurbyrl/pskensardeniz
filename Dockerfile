@@ -1,32 +1,24 @@
-# 1. Temel Python imajını al
-FROM python:3.10
+ARG PYTHON_VERSION=3.10-slim
 
-# 2. Ortam değişkenleri
+FROM python:${PYTHON_VERSION}
+
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# 3. Sistem kütüphanelerini yükle
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    libpq-dev \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
+RUN mkdir -p /code
 
-# 4. Çalışma dizinini oluştur
-WORKDIR /app
+WORKDIR /code
 
-# 5. Gerekli dosyaları kopyala
-COPY requirements.txt /app/
+COPY requirements.txt /tmp/requirements.txt
+RUN set -ex && \
+    pip install --upgrade pip && \
+    pip install -r /tmp/requirements.txt && \
+    rm -rf /root/.cache/
+COPY . /code
 
-# 6. Bağımlılıkları yükle
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-# 7. Proje dosyalarını kopyala
-COPY . /app/
-
-# 8. Statik dosyaları topla (deployment öncesi)
+ENV SECRET_KEY "Qa2Ta3W5fHFGOtmPyR9uUuQc0wq8nPzZAd8AdqqaxvNe5gIhXe"
 RUN python manage.py collectstatic --noinput
 
-# 9. Uygulama başlatıcı komut
-CMD ["gunicorn", "pskensar.wsgi:intervention", "--bind", "0.0.0.0:8000"]
+EXPOSE 8000
+
+CMD ["gunicorn","--bind",":8000","--workers","2","pskensar.wsgi"]
