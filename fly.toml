@@ -30,4 +30,4 @@ console_command = '/code/manage.py shell'
   url_prefix = '/static/'
 
 [deploy]
-  release_command = "bash -c 'python manage.py makemigrations && python manage.py migrate'"
+  release_command = "bash -c 'python manage.py migrate'"
