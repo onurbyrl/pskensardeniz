@@ -16,3 +16,6 @@ tzdata==2023.3
 phonenumbers==9.0.8
 gunicorn
 pytz
+dj-database-url
+psycopg2-binary
+python-dotenv

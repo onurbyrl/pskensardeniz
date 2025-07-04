@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for pskensar on 2025-07-03T23:47:34+03:00
+# fly.toml app configuration file generated for pskensar-blue-leaf-3286 on 2025-07-03T23:56:19+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'pskensar'
+app = 'pskensar-blue-leaf-3286'
 primary_region = 'fra'
 console_command = '/code/manage.py shell'
 
@@ -28,3 +28,6 @@ console_command = '/code/manage.py shell'
 [[statics]]
   guest_path = '/code/static'
   url_prefix = '/static/'
+
+[deploy]
+  release_command = "bash -c 'python manage.py makemigrations && python manage.py migrate'"
