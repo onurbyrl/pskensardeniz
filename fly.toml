@@ -29,5 +29,3 @@ console_command = '/code/manage.py shell'
   guest_path = '/code/static'
   url_prefix = '/static/'
 
-[deploy]
-  release_command = "bash -c 'python manage.py migrate'"
