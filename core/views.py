@@ -106,3 +106,5 @@ def article_detay(request, slug):
     return render(request, 'pages/article.html', {'article': article})
 
 
+def therapy_in_english(request):
+    return render(request, 'pages/therapy-in-english.html', {})

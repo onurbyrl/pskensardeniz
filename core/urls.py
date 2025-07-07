@@ -15,4 +15,5 @@ urlpatterns = [
     path('hakkimizda/', views.hakkimizda, name='hakkimizda'),
     path('<slug:slug>/', views.uygulama_detay, name='uygulama_detay'),
     path("search/", views.search_results, name="search_results"),
+    path('therapy-in-english/', views.therapy_in_english, name='therapy_in_english'),
 ]

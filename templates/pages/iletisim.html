@@ -206,7 +206,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row g-5">
+            <div class="row g-5 justify-content-center"> <!-- üçüncü kutu aktif olunca justfiy-content-center satırını kaldır -->
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-delay="150"
                     data-sal-duration="800">
                     <div class="rbt-address">
@@ -214,9 +214,9 @@
                             <i class="feather-headphones"></i>
                         </div>
                         <div class="inner">
-                            <h4 class="title"></h4>
-                            <p><a href="tel:0850 308 21 53" title="Telefon Numaramız"></a></p>
-                            <p><a href="tel:" title="Telefon Numaramız"></a></p>
+                            <h4 class="title">{% if request.LANGUAGE_CODE == 'en' %} Phone {% else %} Telefon {% endif %}</h4>
+                            <p><a href="tel:+905317672450">{% if request.LANGUAGE_CODE == 'en' %} Phone {% else %} Telefon Numaramız {% endif %}</a></p>
+                            <p><a href="tel:+905317672450">0531 767 2450</a></p>
                         </div>
                     </div>
                 </div>
@@ -227,15 +227,15 @@
                             <i class="feather-mail"></i>
                         </div>
                         <div class="inner">
-                            <h4 class="title"></h4>
-                            <p><a href="mailto:info@psikosaglikdanismanlik.co" title="Email Adresimiz">
-                                    </a></p>
-                            <p><a href="mailto:iletisim@psikosaglikdanismanlik.com" title="Email Adresimiz">
+                            <h4 class="title">Email</h4>
+                            <p><a href="mailto:info@pskensardeniz.com">
+                                    info@pskensardeniz.com</a></p>
+                            <p><a href="mailto:info@pskensardeniz.com">
                                     </a></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-delay="250"
+                <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12 sal-animate" data-sal="slide-up" data-sal-delay="250"
                     data-sal-duration="800">
                     <div class="rbt-address">
                         <div class="icon">
@@ -246,7 +246,7 @@
                             <p></p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -320,12 +320,12 @@
         </svg>
     </div>
     <div class="whatsapp hidden-sm" id="scroll-to-top2">
-        <a href="https://wa.me/05317672450" target="_blank" title="Whatsapp İletişim Hattı"><img loading="lazy"
+        <a href="https://wa.me/+905317672450" target="_blank" title="Whatsapp İletişim Hattı"><img loading="lazy"
                 src="/static/whatsapp.png"></a>
     </div>
     <div class="whatsapp hidden-sm" id="scroll-to-top2">
         <a class=""
-            href="https://api.whatsapp.com/send?phone=05317672450&amp;text=Merhaba%20bilgi%20almak%20%C4%B0stiyorum&amp;source=&amp;data="
+            href="https://api.whatsapp.com/send?phone=+905317672450&amp;text=Merhaba%20bilgi%20almak%20%C4%B0stiyorum&amp;source=&amp;data="
             title="Whatsapp İletişim Hattı" target="_blank">
             <img loading="lazy" src="/static/whatsapp.png">
         </a>

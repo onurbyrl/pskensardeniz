@@ -25,12 +25,12 @@ STATIC_DIR = BASE_DIR / "static"
 SECRET_KEY = 'django-insecure-y77ua6x!b704o&u-ddbrc$fq0lz^sfe%o4egr8%!=rd5l8w!=*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False # NEVER FORGET # False yap
 
 ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://pskensar-blue-leaf-3286.fly.dev',
+    'https://pskensar-blue-leaf-3286.fly.dev', # NEVER FORGET # buraya pskensardeniz.com yazmak gerekebilir.
 ]
 
 USE_X_FORWARDED_HOST = True
@@ -98,6 +98,7 @@ WSGI_APPLICATION = 'pskensar.wsgi.intervention'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# NEVER FORGET # sqlite satırlarını yorum satırı yap
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -105,6 +106,7 @@ WSGI_APPLICATION = 'pskensar.wsgi.intervention'
 #     }
 # }
 
+# NEVER FORGET # fly.io postgresql istediği için postgresql youm satırlarını kaldır
 import dj_database_url
 import os
 from pathlib import Path
