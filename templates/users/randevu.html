@@ -119,9 +119,9 @@
                 </div>
             </div>
             {% else %}
-            <h3>{% trans "Randevu oluşturmak için giriş yapın." %}</h3>
+            <h3>{% if request.LANGUAGE_CODE == 'en' %} Log in to make an appointment. {% else %} Randevu oluşturmak için giriş yapın. {% endif %}</h3>
             <br>
-            <a href="{% url 'users:login' %}" class="btn btn-primary btn-lg">Giriş Yap</a>
+            <a href="{% url 'users:login' %}" class="btn btn-primary btn-lg">{% if request.LANGUAGE_CODE == 'en' %} Login {% else %} Giriş Yap {% endif %}</a>
             {% endif %}
         </div>
 

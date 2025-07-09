@@ -70,9 +70,13 @@
                         </li>
 
                         {% if is_from_turkey %}
-                        <li class="with-megamenu has-menu-child-item position-static">
-                            <a href="#" title="Therapy in English">Therapy in English</a>
-                        </li>
+                            {% if request.LANGUAGE_CODE == 'en' %}
+                                
+                            {% else %}
+                                <li class="with-megamenu has-menu-child-item position-static">
+                                    <a href="{% url 'users:randevu_olustur' %}">Therapy in English</a>
+                                </li>
+                            {% endif %}
                         {% endif %}
                         
                     </ul>

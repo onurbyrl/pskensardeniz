@@ -99,12 +99,12 @@ WSGI_APPLICATION = 'pskensar.wsgi.intervention'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 # NEVER FORGET # sqlite satırlarını yorum satırı yap
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # NEVER FORGET # fly.io postgresql istediği için postgresql youm satırlarını kaldır
 import dj_database_url
